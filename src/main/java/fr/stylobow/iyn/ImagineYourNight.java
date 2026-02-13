@@ -47,15 +47,7 @@ public class ImagineYourNight {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.TOURNEVIS);
-            event.accept(ModItems.BAGUETTE_BLEUE);
-            event.accept(ModItems.BAGUETTE_JAUNE);
-            event.accept(ModItems.BAGUETTE_ORANGE);
-            event.accept(ModItems.BAGUETTE_ROUGE);
-            event.accept(ModItems.BAGUETTE_VERTE);
-            event.accept(ModItems.BAGUETTE_VIOLETTE);
-        }
+
     }
 
     @SubscribeEvent
