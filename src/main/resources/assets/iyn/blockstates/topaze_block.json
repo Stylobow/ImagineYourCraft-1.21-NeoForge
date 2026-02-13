@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "iyn:block/topaze_block"
+    }
+  }
+}

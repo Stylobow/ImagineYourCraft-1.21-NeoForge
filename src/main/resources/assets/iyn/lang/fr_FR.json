@@ -1,0 +1,16 @@
+{
+  "creative.iyn.blocks" : "Blocs d'IYN",
+  "creative.iyn.materials" : "Matières premières d'IYN",
+
+  "item.iyn.tournevis": "Tournevis sonic",
+  "item.iyn.baguette_bleue": "Baguette bleue",
+  "item.iyn.baguette_jaune": "Baguette jaune",
+  "item.iyn.baguette_orange": "Baguette orange",
+  "item.iyn.baguette_rouge": "Baguette rouge",
+  "item.iyn.baguette_verte": "Baguette verte",
+  "item.iyn.baguette_violette": "Baguette violette",
+  "item.iyn.obsidian_ingot": "Lingot d'obsidienne",
+
+  "block.iyn.topaze_block": "Bloc de topaze",
+  "block.iyn.topaze_ore": "Minerai de topaze"
+}

@@ -1,5 +1,10 @@
 package fr.stylobow.iyn;
 
+import fr.stylobow.iyn.block.ModBlocks;
+import fr.stylobow.iyn.item.ModCreativeModeTabs;
+import fr.stylobow.iyn.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -27,6 +32,11 @@ public class ImagineYourNight {
 
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -37,7 +47,15 @@ public class ImagineYourNight {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.TOURNEVIS);
+            event.accept(ModItems.BAGUETTE_BLEUE);
+            event.accept(ModItems.BAGUETTE_JAUNE);
+            event.accept(ModItems.BAGUETTE_ORANGE);
+            event.accept(ModItems.BAGUETTE_ROUGE);
+            event.accept(ModItems.BAGUETTE_VERTE);
+            event.accept(ModItems.BAGUETTE_VIOLETTE);
+        }
     }
 
     @SubscribeEvent

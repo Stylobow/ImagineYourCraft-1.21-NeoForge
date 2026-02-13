@@ -1,0 +1,16 @@
+{
+  "creative.iyn.blocks" : "Blocks of IYN",
+  "creative.iyn.materials" : "Materials of IYN",
+
+  "item.iyn.tournevis": "Sonic screwdriver",
+  "item.iyn.baguette_bleue": "Blue wand",
+  "item.iyn.baguette_jaune": "Yellow wand",
+  "item.iyn.baguette_orange": "Orange wand",
+  "item.iyn.baguette_rouge": "Red wand",
+  "item.iyn.baguette_verte": "Green wand",
+  "item.iyn.baguette_violette": "Purple wand",
+  "item.iyn.obsidian_ingot": "Obsidian ingot",
+
+  "block.iyn.topaze_block": "Topaze block",
+  "block.iyn.topaze_ore": "Topaze ore"
+}
