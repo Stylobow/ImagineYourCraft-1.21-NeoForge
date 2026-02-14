@@ -47,7 +47,6 @@ public class CustomScreen extends Screen {
         this.addRenderableWidget(Button.builder(
                         getColorText(),
                         (btn) -> {
-                            // CORRECTION : Idem pour la couleur
                             ClientConfig.HudColor current = ClientConfig.CLIENT.textColor.get();
                             int nextOrdinal = (current.ordinal() + 1) % ClientConfig.HudColor.values().length;
 
