@@ -1,0 +1,116 @@
+package fr.stylobow.iyn.overlay;
+
+import fr.stylobow.iyn.config.ClientConfig;
+import fr.stylobow.iyn.util.CpsSystem;
+import net.minecraft.client.DeltaTracker;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.LayeredDraw;
+import net.minecraft.network.chat.Component;
+
+import java.awt.Color;
+
+public class KeystrokesOverlay implements LayeredDraw.Layer {
+
+    @Override
+    public void render(GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
+        if (!ClientConfig.CLIENT.showKeystrokes.get()) return;
+
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.options.hideGui) return;
+
+        int boxSize = 20;
+        int gap = 2;
+        int totalWidth = (boxSize * 3) + (gap * 2);
+        int totalHeight = (boxSize * 2) + gap + 15;
+
+        int screenWidth = guiGraphics.guiWidth();
+        int screenHeight = guiGraphics.guiHeight();
+        int x = 10, y = 10;
+
+        switch (ClientConfig.CLIENT.position.get()) {
+            case TOP_LEFT -> { x = 10; y = 10; }
+            case TOP_RIGHT -> { x = screenWidth - totalWidth - 10; y = 10; }
+            case BOTTOM_LEFT -> { x = 10; y = screenHeight - totalHeight - 10; }
+            case BOTTOM_RIGHT -> { x = screenWidth - totalWidth - 10; y = screenHeight - totalHeight - 10; }
+        }
+
+        // --- ZQSD ---
+        drawKey(guiGraphics, mc.options.keyUp, x + boxSize + gap, y, boxSize, boxSize);
+
+        int yRow2 = y + boxSize + gap;
+        drawKey(guiGraphics, mc.options.keyLeft, x, yRow2, boxSize, boxSize);
+        drawKey(guiGraphics, mc.options.keyDown, x + boxSize + gap, yRow2, boxSize, boxSize);
+        drawKey(guiGraphics, mc.options.keyRight, x + (boxSize + gap) * 2, yRow2, boxSize, boxSize);
+
+        // --- SOURIS ---
+        int yRow3 = yRow2 + boxSize + gap;
+        int mouseWidth = (totalWidth - gap) / 2;
+        int mouseHeight = 22;
+
+        drawMouseBox(guiGraphics, x, yRow3, mouseWidth, mouseHeight,
+                mc.mouseHandler.isLeftPressed(),
+                Component.translatable("key.mouse.left").getString(),
+                CpsSystem.getLeftCps());
+
+        drawMouseBox(guiGraphics, x + mouseWidth + gap, yRow3, mouseWidth, mouseHeight,
+                mc.mouseHandler.isRightPressed(),
+                Component.translatable("key.mouse.right").getString(),
+                CpsSystem.getRightCps());
+    }
+
+    private void drawKey(GuiGraphics gfx, KeyMapping key, int x, int y, int w, int h) {
+        boolean pressed = key.isDown();
+        String keyName = key.getTranslatedKeyMessage().getString().toUpperCase();
+        if(keyName.length() > 1) keyName = keyName.substring(0, 1);
+
+        drawBoxBackground(gfx, x, y, w, h, pressed);
+
+        int color = pressed ? 0x000000 : getTextColor();
+        gfx.drawCenteredString(Minecraft.getInstance().font, keyName, x + w / 2, y + (h - 8) / 2, color);
+    }
+
+    private void drawMouseBox(GuiGraphics gfx, int x, int y, int w, int h, boolean pressed, String label, int cps) {
+        drawBoxBackground(gfx, x, y, w, h, pressed);
+        int color = pressed ? 0x000000 : getTextColor();
+
+        Minecraft mc = Minecraft.getInstance();
+
+        boolean showCps = ClientConfig.CLIENT.showCps.get();
+
+        int labelY = showCps ? y + 3 : y + (h - 8) / 2;
+        gfx.drawCenteredString(mc.font, label, x + w / 2, labelY, color);
+
+        if (showCps) {
+            String cpsText = cps + " CPS";
+            gfx.pose().pushPose();
+            float scale = 0.6f;
+            float centerX = x + w / 2.0f;
+            float cpsY = y + 14;
+
+            gfx.pose().translate(centerX, cpsY, 0);
+            gfx.pose().scale(scale, scale, scale);
+            gfx.drawCenteredString(mc.font, cpsText, 0, 0, color);
+            gfx.pose().popPose();
+        }
+    }
+
+    private void drawBoxBackground(GuiGraphics gfx, int x, int y, int w, int h, boolean pressed) {
+        int bgColor = pressed ? 0x99FFFFFF : 0x90000000;
+        gfx.fill(x, y, x + w, y + h, bgColor);
+    }
+
+    private int getTextColor() {
+        if (ClientConfig.CLIENT.textColor.get() == ClientConfig.HudColor.CHROMA) {
+            return getRainbowColor();
+        }
+        return ClientConfig.CLIENT.textColor.get().hex;
+    }
+
+    private int getRainbowColor() {
+        float speed = 4000f;
+        float hue = (System.currentTimeMillis() % (int)speed) / speed;
+        return Color.HSBtoRGB(hue, 1.0f, 1.0f);
+    }
+}

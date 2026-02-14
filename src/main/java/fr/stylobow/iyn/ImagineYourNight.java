@@ -1,6 +1,7 @@
 package fr.stylobow.iyn;
 
 import fr.stylobow.iyn.block.ModBlocks;
+import fr.stylobow.iyn.config.ClientConfig;
 import fr.stylobow.iyn.item.ModCreativeModeTabs;
 import fr.stylobow.iyn.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -40,6 +41,7 @@ public class ImagineYourNight {
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.CLIENT, ClientConfig.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
