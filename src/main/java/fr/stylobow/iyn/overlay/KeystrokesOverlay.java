@@ -36,7 +36,6 @@ public class KeystrokesOverlay implements LayeredDraw.Layer {
             case BOTTOM_RIGHT -> { x = screenWidth - totalWidth - 10; y = screenHeight - totalHeight - 10; }
         }
 
-        // --- ZQSD ---
         drawKey(guiGraphics, mc.options.keyUp, x + boxSize + gap, y, boxSize, boxSize);
 
         int yRow2 = y + boxSize + gap;
@@ -44,7 +43,6 @@ public class KeystrokesOverlay implements LayeredDraw.Layer {
         drawKey(guiGraphics, mc.options.keyDown, x + boxSize + gap, yRow2, boxSize, boxSize);
         drawKey(guiGraphics, mc.options.keyRight, x + (boxSize + gap) * 2, yRow2, boxSize, boxSize);
 
-        // --- SOURIS ---
         int yRow3 = yRow2 + boxSize + gap;
         int mouseWidth = (totalWidth - gap) / 2;
         int mouseHeight = 22;
