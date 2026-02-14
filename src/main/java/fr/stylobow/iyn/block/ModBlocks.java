@@ -51,7 +51,67 @@ public class ModBlocks {
             )
     );
 
+    public static final DeferredBlock RUBIS_BLOCK = registerBlock("rubis_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f)
+                    .explosionResistance(6f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE))
+    );
+    public static final DeferredBlock RUBIS_ORE = registerBlock("rubis_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.0F, 3.0F)
+            )
+    );
+    public static final DeferredBlock DEEPSLATE_RUBIS_ORE = registerBlock("deepslate_rubis_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DEEPSLATE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(4.5F, 3.0F)
+                            .sound(SoundType.DEEPSLATE)
+            )
+    );
 
+    public static final DeferredBlock SAPHIR_BLOCK = registerBlock("saphir_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f)
+                    .explosionResistance(6f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE))
+    );
+    public static final DeferredBlock SAPHIR_ORE = registerBlock("saphir_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.0F, 3.0F)
+            )
+    );
+    public static final DeferredBlock DEEPSLATE_SAPHIR_ORE = registerBlock("deepslate_saphir_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DEEPSLATE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(4.5F, 3.0F)
+                            .sound(SoundType.DEEPSLATE)
+            )
+    );
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "rubis",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": "iyn:rubis"
+  },
+  "result": {
+    "id": "iyn:rubis_block",
+    "count": 1
+  }
+}

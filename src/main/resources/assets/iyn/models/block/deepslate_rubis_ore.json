@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "iyn:block/deepslate_rubis_ore",
+    "particle": "iyn:block/deepslate_rubis_ore"
+  },
+  "render_type": "solid"
+}

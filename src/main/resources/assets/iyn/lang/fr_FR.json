@@ -11,8 +11,16 @@
   "item.iyn.baguette_violette": "Baguette violette",
   "item.iyn.obsidian_ingot": "Lingot d'obsidienne",
   "item.iyn.topaze": "Topaze",
+  "item.iyn.rubis": "Rubis",
+  "item.iyn.saphir": "Saphir",
 
+  "block.iyn.rubis_block": "Bloc de rubis",
+  "block.iyn.rubis_ore": "Minerai de rubis",
+  "block.iyn.deepslate_rubis_ore": "Minerai de rubis des abîmes",
   "block.iyn.topaze_block": "Bloc de topaze",
   "block.iyn.topaze_ore": "Minerai de topaze",
-  "block.iyn.deepslate_topaze_ore": "Minerai de topaze des abîmes"
+  "block.iyn.deepslate_topaze_ore": "Minerai de topaze des abîmes",
+  "block.iyn.saphir_block": "Bloc de saphir",
+  "block.iyn.saphir_ore": "Minerai de saphir",
+  "block.iyn.deepslate_saphir_ore": "Minerai de saphir des abîmes"
 }

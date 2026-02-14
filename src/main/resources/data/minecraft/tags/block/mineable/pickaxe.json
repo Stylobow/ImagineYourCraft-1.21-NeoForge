@@ -1,8 +1,14 @@
 {
   "replace": false,
   "values": [
+    "iyn:rubis_block",
+    "iyn:rubis_ore",
+    "iyn:deepslate_rubis_ore",
     "iyn:topaze_block",
     "iyn:topaze_ore",
-    "iyn:deepslate_topaze_ore"
+    "iyn:deepslate_topaze_ore",
+    "iyn:saphir_block",
+    "iyn:saphir_ore",
+    "iyn:deepslate_saphir_ore"
   ]
 }

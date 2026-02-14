@@ -11,8 +11,16 @@
   "item.iyn.baguette_violette": "Purple wand",
   "item.iyn.obsidian_ingot": "Obsidian ingot",
   "item.iyn.topaze": "Topaze",
+  "item.iyn.rubis": "Rubis",
+  "item.iyn.saphir": "Saphir",
 
+  "block.iyn.rubis_block": "Rubis block",
+  "block.iyn.rubis_ore": "Rubis ore",
+  "block.iyn.deepslate_rubis_ore": "Deepslate rubis ore",
   "block.iyn.topaze_block": "Topaze block",
   "block.iyn.topaze_ore": "Topaze ore",
-  "block.iyn.deepslate_topaze_ore": "Deepslate topaze ore"
+  "block.iyn.deepslate_topaze_ore": "Deepslate topaze ore",
+  "block.iyn.saphir_block": "Saphir block",
+  "block.iyn.saphir_ore": "Saphir ore",
+  "block.iyn.deepslate_saphir_ore": "Deepslate saphir ore"
 }

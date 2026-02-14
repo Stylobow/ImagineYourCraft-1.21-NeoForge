@@ -21,9 +21,15 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TOPAZE_BLOCK.asItem()))
                     .title(Component.translatable("creative.iyn.blocks"))
                     .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.RUBIS_BLOCK);
                         output.accept(ModBlocks.TOPAZE_BLOCK);
+                        output.accept(ModBlocks.SAPHIR_BLOCK);
+                        output.accept(ModBlocks.RUBIS_ORE);
                         output.accept(ModBlocks.TOPAZE_ORE);
+                        output.accept(ModBlocks.SAPHIR_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_RUBIS_ORE);
                         output.accept(ModBlocks.DEEPSLATE_TOPAZE_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_SAPHIR_ORE);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYN_MATERIALS_TAB = CREATIVE_MODE_TAB.register("iyn_materials_tab",
@@ -32,6 +38,8 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                     .title(Component.translatable("creative.iyn.materials"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.OBSIDIAN_INGOT);
+                        output.accept(ModItems.RUBIS);
+                        output.accept(ModItems.SAPHIR);
                         output.accept(ModItems.TOPAZE);
                     }).build());
 

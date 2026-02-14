@@ -33,6 +33,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().fireResistant()));
     public static final DeferredItem<Item> TOPAZE = ITEMS.register("topaze",
             () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+    public static final DeferredItem<Item> RUBIS = ITEMS.register("rubis",
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+    public static final DeferredItem<Item> SAPHIR = ITEMS.register("saphir",
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
