@@ -36,7 +36,7 @@ public class TournevisItem extends Item {
 
             Vec3 startPos = player.getEyePosition();
             Vec3 lookVec = player.getLookAngle();
-            double maxDistance = 50.0D;
+            double maxDistance = 75.0D;
             Vec3 endPos = startPos.add(lookVec.scale(maxDistance));
 
             BlockHitResult blockHit = level.clip(new ClipContext(

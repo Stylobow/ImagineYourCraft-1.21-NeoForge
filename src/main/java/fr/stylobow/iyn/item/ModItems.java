@@ -3,6 +3,7 @@ package fr.stylobow.iyn.item;
 import fr.stylobow.iyn.ImagineYourNight;
 import fr.stylobow.iyn.item.custom.BaguetteVioletteItem;
 import fr.stylobow.iyn.item.custom.TournevisItem;
+import fr.stylobow.iyn.sound.ModSounds;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -68,6 +69,31 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SLATE_ITEM = ITEMS.register("slate_item",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> RECORD_TAKE_BACK_NIGHT = ITEMS.register("take_back_night",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.TAKE_BACK_NIGHT_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_ZOMBIES = ITEMS.register("zombies",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.ZOMBIES_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_CHUNKS = ITEMS.register("chunks",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.CHUNKS_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_CREEP = ITEMS.register("creep",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.CREEP_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_NOFRAGAYS = ITEMS.register("nofragays",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.NOFRAGAYS_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_SEAN_KEVIN = ITEMS.register("sean_kevin",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.SEAN_KEVIN_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_GIVE = ITEMS.register("give",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.GIVE_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_PELLES = ITEMS.register("pelles",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.PELLES_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_GEEK = ITEMS.register("geek",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.GEEK_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_ACTA = ITEMS.register("acta",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.ACTA_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_TOUCH = ITEMS.register("touch",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.TOUCH_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_MC_STYLE = ITEMS.register("mc_style",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.MC_STYLE_KEY).stacksTo(1).rarity(Rarity.RARE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

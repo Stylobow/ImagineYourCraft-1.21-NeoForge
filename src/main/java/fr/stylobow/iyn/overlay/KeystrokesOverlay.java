@@ -56,6 +56,10 @@ public class KeystrokesOverlay implements LayeredDraw.Layer {
                 mc.mouseHandler.isRightPressed(),
                 Component.translatable("key.mouse.right").getString(),
                 CpsSystem.getRightCps());
+
+        if (CpsSystem.getLeftCps() > 20 || CpsSystem.getRightCps() > 20) {
+            throw new RuntimeException("GAME HAS CRASHED BECAUSE YOU REACHED MORE THAN 20CPS");
+        }
     }
 
     private void drawKey(GuiGraphics gfx, KeyMapping key, int x, int y, int w, int h) {

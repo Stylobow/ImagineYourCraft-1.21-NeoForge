@@ -18,7 +18,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ImagineYourNight.MOD_ID);
 
     public static final Supplier<CreativeModeTab>  IYN_BLOCKS_TAB = CREATIVE_MODE_TAB.register("iyn_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TOPAZE_BLOCK.asItem()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.RUBIS_BLOCK.asItem()))
                     .title(Component.translatable("creative.iyn.blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.RUBIS_BLOCK);
@@ -53,6 +53,18 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.CANETTE);
                         output.accept(ModItems.TAURINE);
                         output.accept(ModItems.EMPTY_GLASS);
+                        output.accept(ModItems.RECORD_TAKE_BACK_NIGHT);
+                        output.accept(ModItems.RECORD_ZOMBIES);
+                        output.accept(ModItems.RECORD_CHUNKS);
+                        output.accept(ModItems.RECORD_CREEP);
+                        output.accept(ModItems.RECORD_NOFRAGAYS);
+                        output.accept(ModItems.RECORD_SEAN_KEVIN);
+                        output.accept(ModItems.RECORD_GIVE);
+                        output.accept(ModItems.RECORD_PELLES);
+                        output.accept(ModItems.RECORD_GEEK);
+                        output.accept(ModItems.RECORD_ACTA);
+                        output.accept(ModItems.RECORD_TOUCH);
+                        output.accept(ModItems.RECORD_MC_STYLE);
                         output.accept(ModItems.SLATE_ITEM);
                         output.accept(ModItems.ADAMANTIUM_FRAGMENT);
                     }).build());

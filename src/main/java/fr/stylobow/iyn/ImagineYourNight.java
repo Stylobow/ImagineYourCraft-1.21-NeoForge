@@ -4,6 +4,7 @@ import fr.stylobow.iyn.block.ModBlocks;
 import fr.stylobow.iyn.config.ClientConfig;
 import fr.stylobow.iyn.item.ModCreativeModeTabs;
 import fr.stylobow.iyn.item.ModItems;
+import fr.stylobow.iyn.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -37,6 +38,7 @@ public class ImagineYourNight {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
