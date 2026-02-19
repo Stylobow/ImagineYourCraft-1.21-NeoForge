@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "iyn:block/saphir_block",
-    "particle": "iyn:block/saphir_block"
-  },
-  "render_type": "solid"
-}

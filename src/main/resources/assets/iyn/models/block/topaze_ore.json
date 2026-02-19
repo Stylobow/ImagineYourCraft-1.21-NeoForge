@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "iyn:block/topaze_ore",
-    "particle": "iyn:block/topaze_ore"
-  },
-  "render_type": "solid"
-}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "iyc:block/deepslate_topaze_ore",
+    "particle": "iyc:block/deepslate_topaze_ore"
+  },
+  "render_type": "solid"
+}

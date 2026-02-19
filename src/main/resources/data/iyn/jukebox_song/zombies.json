@@ -1,8 +1,0 @@
-{
-  "comparator_output": 15,
-  "description": {
-    "translate": "item.iyn.zombies.desc"
-  },
-  "length_in_seconds": 204.0,
-  "sound_event": "iyn:zombies"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "iyn:block/rubis_ore",
-    "particle": "iyn:block/rubis_ore"
-  },
-  "render_type": "solid"
-}

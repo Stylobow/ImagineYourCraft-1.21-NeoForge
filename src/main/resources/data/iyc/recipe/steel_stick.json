@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "steel",
+  "category": "misc",
+  "ingredients": [
+    "iyc:steelingot",
+    "iyc:steelingot"
+  ],
+  "result": {
+    "id": "iyc:steel_stick",
+    "count": 4
+  }
+}

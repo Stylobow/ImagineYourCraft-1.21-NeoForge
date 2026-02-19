@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.iyc.take_back_night.desc"
+  },
+  "length_in_seconds": 390.0,
+  "sound_event": "iyc:take_back_night"
+}

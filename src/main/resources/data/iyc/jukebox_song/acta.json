@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.iyc.acta.desc"
+  },
+  "length_in_seconds": 203.0,
+  "sound_event": "iyc:acta"
+}

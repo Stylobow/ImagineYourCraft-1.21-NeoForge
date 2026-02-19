@@ -1,0 +1,122 @@
+{
+  "take_back_night": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.take_back_night",
+    "sounds": [
+      {
+        "name": "iyc:take_back_night",
+        "stream": true
+      }
+    ]
+  },
+  "zombies": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.zombies",
+    "sounds": [
+      {
+        "name": "iyc:zombies",
+        "stream": true
+      }
+    ]
+  },
+  "chunks": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.chunks",
+    "sounds": [
+      {
+        "name": "iyc:chunks",
+        "stream": true
+      }
+    ]
+  },
+  "creep": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.creep",
+    "sounds": [
+      {
+        "name": "iyc:creep",
+        "stream": true
+      }
+    ]
+  },
+  "nofragays": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.nofragays",
+    "sounds": [
+      {
+        "name": "iyc:nofragays",
+        "stream": true
+      }
+    ]
+  },
+  "sean_kevin": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.sean_kevin",
+    "sounds": [
+      {
+        "name": "iyc:sean_kevin",
+        "stream": true
+      }
+    ]
+  },
+  "give": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.give",
+    "sounds": [
+      {
+        "name": "iyc:give",
+        "stream": true
+      }
+    ]
+  },
+  "pelles": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.pelles",
+    "sounds": [
+      {
+        "name": "iyc:pelles",
+        "stream": true
+      }
+    ]
+  },
+  "geek": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.geek",
+    "sounds": [
+      {
+        "name": "iyc:geek",
+        "stream": true
+      }
+    ]
+  },
+  "acta": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.acta",
+    "sounds": [
+      {
+        "name": "iyc:acta",
+        "stream": true
+      }
+    ]
+  },
+  "touch": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.touch",
+    "sounds": [
+      {
+        "name": "iyc:touch",
+        "stream": true
+      }
+    ]
+  },
+  "mc_style": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.mc_style",
+    "sounds": [
+      {
+        "name": "iyc:mc_style",
+        "stream": true
+      }
+    ]
+  }
+}

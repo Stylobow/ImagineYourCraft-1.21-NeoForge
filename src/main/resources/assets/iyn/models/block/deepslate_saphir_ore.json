@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "iyn:block/deepslate_saphir_ore",
-    "particle": "iyn:block/deepslate_saphir_ore"
-  },
-  "render_type": "solid"
-}

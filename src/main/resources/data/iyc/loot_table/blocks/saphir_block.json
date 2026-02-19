@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "iyc:blocks/saphir_block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "iyc:saphir_block"
+        }
+      ]
+    }
+  ]
+}
