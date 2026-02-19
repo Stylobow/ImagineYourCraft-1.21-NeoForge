@@ -1,8 +1,12 @@
 package fr.stylobow.iyc.event;
 
+import fr.stylobow.iyc.client.renderer.FloatingItemLayer;
 import fr.stylobow.iyc.client.renderer.TechnobladePigLayer;
 import net.minecraft.client.model.PigModel;
+import net.minecraft.client.model.PlayerModel;
+import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
+import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Pig;
 import net.neoforged.api.distmarker.Dist;
@@ -16,9 +20,17 @@ public class RenderEvents {
     @SubscribeEvent
     public static void onAddLayers(EntityRenderersEvent.AddLayers event) {
         LivingEntityRenderer<Pig, PigModel<Pig>> pigRenderer = event.getRenderer(EntityType.PIG);
-
         if (pigRenderer != null) {
             pigRenderer.addLayer(new TechnobladePigLayer(pigRenderer));
+        }
+
+        for (PlayerSkin.Model skinModel : event.getSkins()) {
+
+            LivingEntityRenderer<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> playerRenderer = event.getSkin(skinModel);
+
+            if (playerRenderer != null) {
+                playerRenderer.addLayer(new FloatingItemLayer(playerRenderer));
+            }
         }
     }
 }

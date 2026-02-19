@@ -56,7 +56,7 @@ public class CustomScreen extends Screen {
                 .bounds(centerX - btnW / 2, startY + 50, btnW, btnH)
                 .build());
 
-        this.addRenderableWidget(Button.builder(Component.translatable("c.menu.back"), (btn) -> this.onClose())
+        this.addRenderableWidget(Button.builder(Component.translatable("iyc.menu.back"), (btn) -> this.onClose())
                 .bounds(centerX - 100, this.height - 29, 200, 20)
                 .build());
     }
