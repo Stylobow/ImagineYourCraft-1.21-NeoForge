@@ -49,12 +49,12 @@ public class KeystrokesOverlay implements LayeredDraw.Layer {
 
         drawMouseBox(guiGraphics, x, yRow3, mouseWidth, mouseHeight,
                 mc.mouseHandler.isLeftPressed(),
-                Component.translatable("key.mouse.left").getString(),
+                Component.translatable("iyc.key.mouse.left").getString(),
                 CpsSystem.getLeftCps());
 
         drawMouseBox(guiGraphics, x + mouseWidth + gap, yRow3, mouseWidth, mouseHeight,
                 mc.mouseHandler.isRightPressed(),
-                Component.translatable("key.mouse.right").getString(),
+                Component.translatable("iyc.key.mouse.right").getString(),
                 CpsSystem.getRightCps());
 
         if (CpsSystem.getLeftCps() > 20 || CpsSystem.getRightCps() > 20) {

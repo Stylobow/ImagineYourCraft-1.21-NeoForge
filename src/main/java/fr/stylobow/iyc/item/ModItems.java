@@ -1,9 +1,13 @@
 package fr.stylobow.iyc.item;
 
 import fr.stylobow.iyc.ImagineYourCraft;
+import fr.stylobow.iyc.block.ModBlocks;
 import fr.stylobow.iyc.item.custom.BaguetteVioletteItem;
+import fr.stylobow.iyc.item.custom.ItemFoil;
 import fr.stylobow.iyc.item.custom.TournevisItem;
 import fr.stylobow.iyc.sound.ModSounds;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
@@ -32,13 +36,13 @@ public class ModItems {
     public static final DeferredItem<Item> OBSIDIAN_INGOT = ITEMS.register("obsidian_ingot",
             () -> new Item(new Item.Properties().fireResistant()));
     public static final DeferredItem<Item> TOPAZE = ITEMS.register("topaze",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new ItemFoil(new Item.Properties().rarity(Rarity.EPIC)));
     public static final DeferredItem<Item> RUBIS = ITEMS.register("rubis",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new ItemFoil(new Item.Properties().rarity(Rarity.EPIC)));
     public static final DeferredItem<Item> SAPHIR = ITEMS.register("saphir",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new ItemFoil(new Item.Properties().rarity(Rarity.EPIC)));
     public static final DeferredItem<Item> ADAMANTIUM_FRAGMENT = ITEMS.register("adamantium_fragment",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new ItemFoil(new Item.Properties().rarity(Rarity.EPIC)));
     public static final DeferredItem<Item> STEEL_STICK = ITEMS.register("steel_stick",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> STEEL_INGOT = ITEMS.register("steel_ingot",

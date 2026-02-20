@@ -34,7 +34,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
 
     public static final Supplier<CreativeModeTab>  IYC_MATERIALS_TAB = CREATIVE_MODE_TAB.register("iyc_materials_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OBSIDIAN_INGOT.get()))
-                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_blocks_tab"))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_color_blocks_tab"))
                     .title(Component.translatable("creative.iyc.materials"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.OBSIDIAN_INGOT);
@@ -67,6 +67,29 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.RECORD_MC_STYLE);
                         output.accept(ModItems.SLATE_ITEM);
                         output.accept(ModItems.ADAMANTIUM_FRAGMENT);
+                    }).build());
+
+    public static final Supplier<CreativeModeTab>  IYC_COLOR_BLOCKS_TAB = CREATIVE_MODE_TAB.register("iyc_color_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.LIGHT_BLUE_IRON_BLOCK.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_blocks_tab"))
+                    .title(Component.translatable("creative.iyc.color_blocks"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.RED_LIGHT);
+                        output.accept(ModBlocks.ORANGE_IRON_BLOCK);
+                        output.accept(ModBlocks.MAGENTA_IRON_BLOCK);
+                        output.accept(ModBlocks.LIGHT_BLUE_IRON_BLOCK);
+                        output.accept(ModBlocks.YELLOW_IRON_BLOCK);
+                        output.accept(ModBlocks.LIME_IRON_BLOCK);
+                        output.accept(ModBlocks.PINK_IRON_BLOCK);
+                        output.accept(ModBlocks.GRAY_IRON_BLOCK);
+                        output.accept(ModBlocks.LIGHT_GRAY_IRON_BLOCK);
+                        output.accept(ModBlocks.CYAN_IRON_BLOCK);
+                        output.accept(ModBlocks.PURPLE_IRON_BLOCK);
+                        output.accept(ModBlocks.BLUE_IRON_BLOCK);
+                        output.accept(ModBlocks.BROWN_IRON_BLOCK);
+                        output.accept(ModBlocks.GREEN_IRON_BLOCK);
+                        output.accept(ModBlocks.RED_IRON_BLOCK);
+                        output.accept(ModBlocks.BLACK_IRON_BLOCK);
                     }).build());
 
     public static void register(IEventBus eventBus) {
