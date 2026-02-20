@@ -91,6 +91,21 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.RED_IRON_BLOCK);
                         output.accept(ModBlocks.BLACK_IRON_BLOCK);
                         output.accept(ModBlocks.RAINBOW_IRON_BLOCK);
+                        output.accept(ModBlocks.ORANGE_REDSTONE_LAMP);
+                        output.accept(ModBlocks.MAGENTA_REDSTONE_LAMP);
+                        output.accept(ModBlocks.LIGHT_BLUE_REDSTONE_LAMP);
+                        output.accept(ModBlocks.YELLOW_REDSTONE_LAMP);
+                        output.accept(ModBlocks.LIME_REDSTONE_LAMP);
+                        output.accept(ModBlocks.PINK_REDSTONE_LAMP);
+                        output.accept(ModBlocks.GRAY_REDSTONE_LAMP);
+                        output.accept(ModBlocks.LIGHT_GRAY_REDSTONE_LAMP);
+                        output.accept(ModBlocks.CYAN_REDSTONE_LAMP);
+                        output.accept(ModBlocks.PURPLE_REDSTONE_LAMP);
+                        output.accept(ModBlocks.BLUE_REDSTONE_LAMP);
+                        output.accept(ModBlocks.BROWN_REDSTONE_LAMP);
+                        output.accept(ModBlocks.GREEN_REDSTONE_LAMP);
+                        output.accept(ModBlocks.RED_REDSTONE_LAMP);
+                        output.accept(ModBlocks.BLACK_REDSTONE_LAMP);
                     }).build());
 
     public static void register(IEventBus eventBus) {
