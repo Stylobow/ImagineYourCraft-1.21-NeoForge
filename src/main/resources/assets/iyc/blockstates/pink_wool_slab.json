@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "iyc:block/pink_wool_slab" },
+    "type=top": { "model": "iyc:block/pink_wool_slab_top" },
+    "type=double": { "model": "iyc:block/pink_wool_cube" }
+  }
+}

@@ -158,6 +158,7 @@ public class ModBlocks {
                 .requiresCorrectToolForDrops();
     }
 
+    public static final DeferredBlock<Block> WHITE_LIGHT = registerBlock("white_light", () -> new RedstoneLampBlock(getColorLightProperties()));
     public static final DeferredBlock<Block> ORANGE_LIGHT = registerBlock("orange_light", () -> new RedstoneLampBlock(getColorLightProperties()));
     public static final DeferredBlock<Block> MAGENTA_LIGHT = registerBlock("magenta_light", () -> new RedstoneLampBlock(getColorLightProperties()));
     public static final DeferredBlock<Block> LIGHT_BLUE_LIGHT = registerBlock("light_blue_light", () -> new RedstoneLampBlock(getColorLightProperties()));
@@ -181,6 +182,7 @@ public class ModBlocks {
                 .lightLevel(state -> state.getValue(RedstoneLampBlock.LIT) ? 15 : 0);
     }
 
+    public static final DeferredBlock<Block> WHITE_REDSTONE_LAMP = registerBlock("white_redstone_lamp", () -> new RedstoneLampBlock(getRedstoneLampProperties()));
     public static final DeferredBlock<Block> ORANGE_REDSTONE_LAMP = registerBlock("orange_redstone_lamp", () -> new RedstoneLampBlock(getRedstoneLampProperties()));
     public static final DeferredBlock<Block> MAGENTA_REDSTONE_LAMP = registerBlock("magenta_redstone_lamp", () -> new RedstoneLampBlock(getRedstoneLampProperties()));
     public static final DeferredBlock<Block> LIGHT_BLUE_REDSTONE_LAMP = registerBlock("light_blue_redstone_lamp", () -> new RedstoneLampBlock(getRedstoneLampProperties()));
@@ -204,6 +206,7 @@ public class ModBlocks {
                 .sound(SoundType.SAND);
     }
 
+    public static final DeferredBlock<Block> WHITE_SAND = registerBlock("white_sand", () -> new ColoredSandBlock(ColorEvents.C_ORANGE, getSandProperties()));
     public static final DeferredBlock<Block> ORANGE_SAND = registerBlock("orange_sand", () -> new ColoredSandBlock(ColorEvents.C_ORANGE, getSandProperties()));
     public static final DeferredBlock<Block> MAGENTA_SAND = registerBlock("magenta_sand", () -> new ColoredSandBlock(ColorEvents.C_MAGENTA, getSandProperties()));
     public static final DeferredBlock<Block> LIGHT_BLUE_SAND = registerBlock("light_blue_sand", () -> new ColoredSandBlock(ColorEvents.C_LIGHT_BLUE, getSandProperties()));
@@ -219,6 +222,31 @@ public class ModBlocks {
     public static final DeferredBlock<Block> GREEN_SAND = registerBlock("green_sand", () -> new ColoredSandBlock(ColorEvents.C_GREEN, getSandProperties()));
     public static final DeferredBlock<Block> RED_SAND = registerBlock("red_sand", () -> new ColoredSandBlock(ColorEvents.C_RED, getSandProperties()));
     public static final DeferredBlock<Block> BLACK_SAND = registerBlock("black_sand", () -> new ColoredSandBlock(ColorEvents.C_BLACK, getSandProperties()));
+
+    public static final DeferredBlock<Block> WHITE_WOOL_SLAB = registerBlock("white_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> ORANGE_WOOL_SLAB = registerBlock("orange_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> MAGENTA_WOOL_SLAB = registerBlock("magenta_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> LIGHT_BLUE_WOOL_SLAB = registerBlock("light_blue_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> YELLOW_WOOL_SLAB = registerBlock("yellow_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> LIME_WOOL_SLAB = registerBlock("lime_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> PINK_WOOL_SLAB = registerBlock("pink_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> GRAY_WOOL_SLAB = registerBlock("gray_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> LIGHT_GRAY_WOOL_SLAB = registerBlock("light_gray_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> CYAN_WOOL_SLAB = registerBlock("cyan_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> PURPLE_WOOL_SLAB = registerBlock("purple_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> BLUE_WOOL_SLAB = registerBlock("blue_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> BROWN_WOOL_SLAB = registerBlock("brown_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> GREEN_WOOL_SLAB = registerBlock("green_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> RED_WOOL_SLAB = registerBlock("red_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+    public static final DeferredBlock<Block> BLACK_WOOL_SLAB = registerBlock("black_wool_slab", () -> new SlabBlock(getWoolSlabProperties()));
+
+    private static BlockBehaviour.Properties getWoolSlabProperties() {
+        return BlockBehaviour.Properties.of()
+                .strength(0.8F)
+                .sound(SoundType.WOOL);
+    }
+
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

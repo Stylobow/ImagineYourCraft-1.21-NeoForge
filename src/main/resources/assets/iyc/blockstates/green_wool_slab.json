@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "iyc:block/green_wool_slab" },
+    "type=top": { "model": "iyc:block/green_wool_slab_top" },
+    "type=double": { "model": "iyc:block/green_wool_cube" }
+  }
+}

@@ -11,12 +11,13 @@ import java.awt.Color;
 @EventBusSubscriber(modid = "iyc", bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ColorEvents {
 
+    public static final int C_WHITE      = 0xFFFFFF;
     public static final int C_ORANGE     = 0xFF8130;
     public static final int C_MAGENTA    = 0xFF44FF;
     public static final int C_LIGHT_BLUE = 0x30B0FF;
     public static final int C_YELLOW     = 0xFFE730;
     public static final int C_LIME       = 0x2CFF2C;
-    public static final int C_PINK       = 0xFE3BFF;
+    public static final int C_PINK       = 0xFF69B4;
     public static final int C_GRAY       = 0x555555;
     public static final int C_LIGHT_GRAY = 0xAAAAAA;
     public static final int C_CYAN       = 0x00AAAA;
@@ -45,6 +46,7 @@ public class ColorEvents {
         event.register((state, level, pos, tintIndex) -> C_RED, ModBlocks.RED_IRON_BLOCK.get());
         event.register((state, level, pos, tintIndex) -> C_BLACK, ModBlocks.BLACK_IRON_BLOCK.get());
 
+        event.register((state, level, pos, tintIndex) -> C_WHITE, ModBlocks.WHITE_LIGHT.get());
         event.register((state, level, pos, tintIndex) -> C_ORANGE, ModBlocks.ORANGE_LIGHT.get());
         event.register((state, level, pos, tintIndex) -> C_MAGENTA, ModBlocks.MAGENTA_LIGHT.get());
         event.register((state, level, pos, tintIndex) -> C_LIGHT_BLUE, ModBlocks.LIGHT_BLUE_LIGHT.get());
@@ -61,6 +63,7 @@ public class ColorEvents {
         event.register((state, level, pos, tintIndex) -> C_RED, ModBlocks.RED_LIGHT.get());
         event.register((state, level, pos, tintIndex) -> C_BLACK, ModBlocks.BLACK_LIGHT.get());
 
+        event.register((state, level, pos, tintIndex) -> C_WHITE, ModBlocks.WHITE_REDSTONE_LAMP.get());
         event.register((state, level, pos, tintIndex) -> C_ORANGE, ModBlocks.ORANGE_REDSTONE_LAMP.get());
         event.register((state, level, pos, tintIndex) -> C_MAGENTA, ModBlocks.MAGENTA_REDSTONE_LAMP.get());
         event.register((state, level, pos, tintIndex) -> C_LIGHT_BLUE, ModBlocks.LIGHT_BLUE_REDSTONE_LAMP.get());
@@ -77,6 +80,7 @@ public class ColorEvents {
         event.register((state, level, pos, tintIndex) -> C_RED, ModBlocks.RED_REDSTONE_LAMP.get());
         event.register((state, level, pos, tintIndex) -> C_BLACK, ModBlocks.BLACK_REDSTONE_LAMP.get());
 
+        event.register((state, level, pos, tintIndex) -> C_WHITE, ModBlocks.WHITE_SAND.get());
         event.register((state, level, pos, tintIndex) -> C_ORANGE, ModBlocks.ORANGE_SAND.get());
         event.register((state, level, pos, tintIndex) -> C_MAGENTA, ModBlocks.MAGENTA_SAND.get());
         event.register((state, level, pos, tintIndex) -> C_LIGHT_BLUE, ModBlocks.LIGHT_BLUE_SAND.get());
@@ -112,6 +116,7 @@ public class ColorEvents {
         event.register((stack, tintIndex) -> C_RED, ModBlocks.RED_IRON_BLOCK.get());
         event.register((stack, tintIndex) -> C_BLACK, ModBlocks.BLACK_IRON_BLOCK.get());
 
+        event.register((stack, tintIndex) -> C_WHITE, ModBlocks.WHITE_LIGHT.get());
         event.register((stack, tintIndex) -> C_ORANGE, ModBlocks.ORANGE_LIGHT.get());
         event.register((stack, tintIndex) -> C_MAGENTA, ModBlocks.MAGENTA_LIGHT.get());
         event.register((stack, tintIndex) -> C_LIGHT_BLUE, ModBlocks.LIGHT_BLUE_LIGHT.get());
@@ -128,6 +133,7 @@ public class ColorEvents {
         event.register((stack, tintIndex) -> C_RED, ModBlocks.RED_LIGHT.get());
         event.register((stack, tintIndex) -> C_BLACK, ModBlocks.BLACK_LIGHT.get());
 
+        event.register((stack, tintIndex) -> C_WHITE, ModBlocks.WHITE_REDSTONE_LAMP.get());
         event.register((stack, tintIndex) -> C_ORANGE, ModBlocks.ORANGE_REDSTONE_LAMP.get());
         event.register((stack, tintIndex) -> C_MAGENTA, ModBlocks.MAGENTA_REDSTONE_LAMP.get());
         event.register((stack, tintIndex) -> C_LIGHT_BLUE, ModBlocks.LIGHT_BLUE_REDSTONE_LAMP.get());
@@ -144,6 +150,7 @@ public class ColorEvents {
         event.register((stack, tintIndex) -> C_RED, ModBlocks.RED_REDSTONE_LAMP.get());
         event.register((stack, tintIndex) -> C_BLACK, ModBlocks.BLACK_REDSTONE_LAMP.get());
 
+        event.register((stack, tintIndex) -> C_WHITE, ModBlocks.WHITE_SAND.get());
         event.register((stack, tintIndex) -> C_ORANGE, ModBlocks.ORANGE_SAND.get());
         event.register((stack, tintIndex) -> C_MAGENTA, ModBlocks.MAGENTA_SAND.get());
         event.register((stack, tintIndex) -> C_LIGHT_BLUE, ModBlocks.LIGHT_BLUE_SAND.get());

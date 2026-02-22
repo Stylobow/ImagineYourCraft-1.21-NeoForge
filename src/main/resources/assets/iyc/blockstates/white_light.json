@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "iyc:block/color_light_off" },
+    "lit=true": { "model": "iyc:block/color_light_on" }
+  }
+}
