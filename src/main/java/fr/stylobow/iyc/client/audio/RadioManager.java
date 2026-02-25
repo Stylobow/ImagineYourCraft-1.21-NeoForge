@@ -1,5 +1,6 @@
 package fr.stylobow.iyc.client.audio;
 
+import fr.stylobow.iyc.client.config.IYCConfig;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.JavaSoundAudioDevice;
 import javazoom.jl.player.Player;
@@ -18,7 +19,6 @@ public class RadioManager {
     private static Thread playerThread;
     private static String currentRadio = "";
     private static CustomAudioDevice customDevice;
-    private static float currentVolume = 0.5f;
 
     public static void play(String urlStr, String radioName) {
         stop();
@@ -39,7 +39,7 @@ public class RadioManager {
                 }
 
                 customDevice = new CustomAudioDevice();
-                customDevice.setCustomVolume(currentVolume);
+                customDevice.setCustomVolume(IYCConfig.data.musicVolume);
 
                 player = new Player(is, customDevice);
 
@@ -75,14 +75,15 @@ public class RadioManager {
     }
 
     public static void setVolume(float volume) {
-        currentVolume = volume;
+        IYCConfig.data.musicVolume = volume;
+        IYCConfig.save();
         if (customDevice != null) {
             customDevice.setCustomVolume(volume);
         }
     }
 
     public static float getVolume() {
-        return currentVolume;
+        return IYCConfig.data.musicVolume;
     }
 
     public static String getCurrentRadio() {

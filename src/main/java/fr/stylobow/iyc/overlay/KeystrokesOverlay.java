@@ -1,6 +1,6 @@
 package fr.stylobow.iyc.overlay;
 
-import fr.stylobow.iyc.config.ClientConfig;
+import fr.stylobow.iyc.client.config.IYCConfig;
 import fr.stylobow.iyc.util.CpsSystem;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
@@ -15,7 +15,7 @@ public class KeystrokesOverlay implements LayeredDraw.Layer {
 
     @Override
     public void render(GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
-        if (!ClientConfig.CLIENT.showKeystrokes.get()) return;
+        if (!IYCConfig.data.showKeystrokes) return;
 
         Minecraft mc = Minecraft.getInstance();
         if (mc.options.hideGui) return;
@@ -29,7 +29,7 @@ public class KeystrokesOverlay implements LayeredDraw.Layer {
         int screenHeight = guiGraphics.guiHeight();
         int x = 10, y = 10;
 
-        switch (ClientConfig.CLIENT.position.get()) {
+        switch (IYCConfig.data.keystrokesPosition) {
             case TOP_LEFT -> { x = 10; y = 10; }
             case TOP_RIGHT -> { x = screenWidth - totalWidth - 10; y = 10; }
             case BOTTOM_LEFT -> { x = 10; y = screenHeight - totalHeight - 10; }
@@ -79,7 +79,7 @@ public class KeystrokesOverlay implements LayeredDraw.Layer {
 
         Minecraft mc = Minecraft.getInstance();
 
-        boolean showCps = ClientConfig.CLIENT.showCps.get();
+        boolean showCps = IYCConfig.data.showCps;
 
         int labelY = showCps ? y + 3 : y + (h - 8) / 2;
         gfx.drawCenteredString(mc.font, label, x + w / 2, labelY, color);
@@ -104,10 +104,10 @@ public class KeystrokesOverlay implements LayeredDraw.Layer {
     }
 
     private int getTextColor() {
-        if (ClientConfig.CLIENT.textColor.get() == ClientConfig.HudColor.CHROMA) {
+        if (IYCConfig.data.keystrokesColor == IYCConfig.HudColor.CHROMA) {
             return getRainbowColor();
         }
-        return ClientConfig.CLIENT.textColor.get().hex;
+        return IYCConfig.data.keystrokesColor.hex;
     }
 
     private int getRainbowColor() {

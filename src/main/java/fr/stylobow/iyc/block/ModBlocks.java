@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import fr.stylobow.iyc.ImagineYourCraft;
+import fr.stylobow.iyc.block.custom.IronLadderBlock;
 import fr.stylobow.iyc.block.custom.RainbowBlock;
 import fr.stylobow.iyc.event.ColorEvents;
 import fr.stylobow.iyc.item.ModItems;
@@ -126,6 +127,8 @@ public class ModBlocks {
                 .explosionResistance(6.0F)
                 .sound(SoundType.METAL);
     }
+
+    public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion()));
 
     public static final DeferredBlock<Block> ORANGE_IRON_BLOCK = registerBlock("orange_iron_block", () -> new Block(getIronBlockProperties()));
     public static final DeferredBlock<Block> MAGENTA_IRON_BLOCK = registerBlock("magenta_iron_block", () -> new Block(getIronBlockProperties()));

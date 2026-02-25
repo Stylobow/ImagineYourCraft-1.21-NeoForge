@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east": { "model": "iyc:block/iron_ladder", "y": 90 },
+    "facing=north": { "model": "iyc:block/iron_ladder" },
+    "facing=south": { "model": "iyc:block/iron_ladder", "y": 180 },
+    "facing=west": { "model": "iyc:block/iron_ladder", "y": 270 }
+  }
+}

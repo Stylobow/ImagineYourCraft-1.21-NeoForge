@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/ladder",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "iyc:block/iron_ladder",
+    "particle": "iyc:block/iron_ladder"
+  }
+}

@@ -64,7 +64,7 @@ public class ImagineYourCraft {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            fr.stylobow.iyc.client.config.IYCConfig.load();
         }
     }
 }

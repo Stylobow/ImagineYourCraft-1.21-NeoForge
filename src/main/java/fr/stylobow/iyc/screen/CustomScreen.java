@@ -1,6 +1,6 @@
 package fr.stylobow.iyc.screen;
 
-import fr.stylobow.iyc.config.ClientConfig;
+import fr.stylobow.iyc.client.config.IYCConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -25,8 +25,8 @@ public class CustomScreen extends Screen {
         this.addRenderableWidget(Button.builder(
                         getKeystrokesText(),
                         (btn) -> {
-                            boolean current = ClientConfig.CLIENT.showKeystrokes.get();
-                            ClientConfig.CLIENT.showKeystrokes.set(!current);
+                            IYCConfig.data.showKeystrokes = !IYCConfig.data.showKeystrokes;
+                            IYCConfig.save();
                             btn.setMessage(getKeystrokesText());
                         })
                 .bounds(centerX - btnW / 2, startY, btnW, btnH)
@@ -35,10 +35,10 @@ public class CustomScreen extends Screen {
         this.addRenderableWidget(Button.builder(
                         getPositionText(),
                         (btn) -> {
-                            ClientConfig.HudPosition current = ClientConfig.CLIENT.position.get();
-                            int nextOrdinal = (current.ordinal() + 1) % ClientConfig.HudPosition.values().length;
-
-                            ClientConfig.CLIENT.position.set(ClientConfig.HudPosition.values()[nextOrdinal]);
+                            IYCConfig.HudPosition current = IYCConfig.data.keystrokesPosition;
+                            int nextOrdinal = (current.ordinal() + 1) % IYCConfig.HudPosition.values().length;
+                            IYCConfig.data.keystrokesPosition = IYCConfig.HudPosition.values()[nextOrdinal];
+                            IYCConfig.save();
                             btn.setMessage(getPositionText());
                         })
                 .bounds(centerX - btnW / 2, startY + 25, btnW, btnH)
@@ -47,10 +47,10 @@ public class CustomScreen extends Screen {
         this.addRenderableWidget(Button.builder(
                         getColorText(),
                         (btn) -> {
-                            ClientConfig.HudColor current = ClientConfig.CLIENT.textColor.get();
-                            int nextOrdinal = (current.ordinal() + 1) % ClientConfig.HudColor.values().length;
-
-                            ClientConfig.CLIENT.textColor.set(ClientConfig.HudColor.values()[nextOrdinal]);
+                            IYCConfig.HudColor current = IYCConfig.data.keystrokesColor;
+                            int nextOrdinal = (current.ordinal() + 1) % IYCConfig.HudColor.values().length;
+                            IYCConfig.data.keystrokesColor = IYCConfig.HudColor.values()[nextOrdinal];
+                            IYCConfig.save();
                             btn.setMessage(getColorText());
                         })
                 .bounds(centerX - btnW / 2, startY + 50, btnW, btnH)
@@ -62,19 +62,19 @@ public class CustomScreen extends Screen {
     }
 
     private Component getKeystrokesText() {
-        boolean isOn = ClientConfig.CLIENT.showKeystrokes.get();
+        boolean isOn = IYCConfig.data.showKeystrokes;
         Component state = Component.literal(isOn ? "ON" : "OFF")
                 .withStyle(isOn ? ChatFormatting.GREEN : ChatFormatting.RED);
         return Component.translatable("iyc.hud.keystrokes", state);
     }
 
     private Component getPositionText() {
-        String key = "iyc.position." + ClientConfig.CLIENT.position.get().name().toLowerCase();
+        String key = "iyc.position." + IYCConfig.data.keystrokesPosition.name().toLowerCase();
         return Component.translatable("iyc.hud.position", Component.translatable(key));
     }
 
     private Component getColorText() {
-        String colorKey = "iyc.color." + ClientConfig.CLIENT.textColor.get().name().toLowerCase();
+        String colorKey = "iyc.color." + IYCConfig.data.keystrokesColor.name().toLowerCase();
         return Component.translatable("iyc.hud.color", Component.translatable(colorKey));
     }
 
