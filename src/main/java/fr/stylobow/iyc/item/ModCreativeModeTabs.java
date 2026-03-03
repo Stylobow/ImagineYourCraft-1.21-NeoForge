@@ -21,22 +21,27 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.RUBIS_BLOCK.asItem()))
                     .title(Component.translatable("creative.iyc.blocks"))
                     .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.IRON_LADDER);
                         output.accept(ModBlocks.RUBIS_BLOCK);
                         output.accept(ModBlocks.TOPAZE_BLOCK);
                         output.accept(ModBlocks.SAPHIR_BLOCK);
-                        output.accept(ModBlocks.RUBIS_ORE);
-                        output.accept(ModBlocks.TOPAZE_ORE);
-                        output.accept(ModBlocks.SAPHIR_ORE);
-                        output.accept(ModBlocks.DEEPSLATE_RUBIS_ORE);
-                        output.accept(ModBlocks.DEEPSLATE_TOPAZE_ORE);
-                        output.accept(ModBlocks.DEEPSLATE_SAPHIR_ORE);
-                        output.accept(ModBlocks.IRON_LADDER);
                         output.accept(ModBlocks.LIGNITE_BLOCK);
-                        output.accept(ModBlocks.LIGNITE_ORE);
                         output.accept(ModBlocks.STEEL_BLOCK);
                         output.accept(ModBlocks.MASSIVE_OBSIDIAN_BLOCK);
                         output.accept(ModBlocks.SLATE_BLOCK);
                         output.accept(ModBlocks.ADAMANTIUM_BLOCK);
+                        output.accept(ModBlocks.RUBIS_ORE);
+                        output.accept(ModBlocks.TOPAZE_ORE);
+                        output.accept(ModBlocks.SAPHIR_ORE);
+                        output.accept(ModBlocks.LIGNITE_ORE);
+                        output.accept(ModBlocks.STEEL_ORE);
+                        output.accept(ModBlocks.SLATE_ORE);
+                        output.accept(ModBlocks.ADAMANTIUM_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_RUBIS_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_TOPAZE_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_SAPHIR_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_SLATE_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_ADAMANTIUM_ORE);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_MATERIALS_TAB = CREATIVE_MODE_TAB.register("iyc_materials_tab",

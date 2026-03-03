@@ -150,6 +150,17 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_GRAY)
                     .instrument(NoteBlockInstrument.IRON_XYLOPHONE))
     );
+    public static final DeferredBlock<Block> STEEL_ORE = registerBlock("steel_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.0F, 3.0F)
+            )
+    );
+
     public static final DeferredBlock<Block> MASSIVE_OBSIDIAN_BLOCK = registerBlock("massive_obsidian_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5f)
@@ -169,6 +180,27 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_GRAY)
                     .instrument(NoteBlockInstrument.IRON_XYLOPHONE))
     );
+    public static final DeferredBlock<Block> SLATE_ORE = registerBlock("slate_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.0F, 3.0F)
+            )
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_SLATE_ORE = registerBlock("deepslate_slate_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DEEPSLATE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(4.5F, 3.0F)
+                            .sound(SoundType.DEEPSLATE)
+            )
+    );
 
     public static final DeferredBlock<Block> ADAMANTIUM_BLOCK = registerBlock("adamantium_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -178,6 +210,27 @@ public class ModBlocks {
                     .sound(SoundType.METAL)
                     .mapColor(MapColor.COLOR_GRAY)
                     .instrument(NoteBlockInstrument.IRON_XYLOPHONE))
+    );
+    public static final DeferredBlock<Block> ADAMANTIUM_ORE = registerBlock("adamantium_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.0F, 3.0F)
+            )
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ADAMANTIUM_ORE = registerBlock("deepslate_adamantium_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DEEPSLATE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(4.5F, 3.0F)
+                            .sound(SoundType.DEEPSLATE)
+            )
     );
 
     public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion()));
