@@ -10,6 +10,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SnowballItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -17,8 +18,22 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ImagineYourCraft.MOD_ID);
 
+    public static final DeferredItem<Item> HNS_ITEM = ITEMS.register("hns_item",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final DeferredItem<Item> KEY = ITEMS.register("key",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> PIECE = ITEMS.register("piece",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final DeferredItem<Item> POKEBALL = ITEMS.register("pokeball",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final DeferredItem<Item> ROCK = ITEMS.register("rock",
+            () -> new SnowballItem(new Item.Properties().stacksTo(64)));
     public static final DeferredItem<Item> TOURNEVIS = ITEMS.register("tournevis",
             () -> new TournevisItem(new Item.Properties().stacksTo(1).durability(2000)));
+    public static final DeferredItem<Item> L118A = ITEMS.register("l118a",
+            () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
+    public static final DeferredItem<Item> SW1911 = ITEMS.register("sw1911",
+            () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
 
     public static final DeferredItem<Item> BAGUETTE_BLEUE = ITEMS.register("baguette_bleue",
             () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));

@@ -233,6 +233,18 @@ public class ModBlocks {
             )
     );
 
+    public static final DeferredBlock<Block> IRON_LANTERN = registerBlock("iron_lantern",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .explosionResistance(3f)
+                    .ignitedByLava()
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.WOOD)
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .lightLevel(p_152686_ -> 15)
+                    .instrument(NoteBlockInstrument.BASS))
+    );
+
     public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion()));
 
     private static BlockBehaviour.Properties getIronBlockProperties() {

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "iyc:item/baguette_bleue"
+    "layer0": "iyc:item/l118a"
   }
 }

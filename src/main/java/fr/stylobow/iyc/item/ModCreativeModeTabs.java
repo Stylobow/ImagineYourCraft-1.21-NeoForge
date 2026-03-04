@@ -22,6 +22,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                     .title(Component.translatable("creative.iyc.blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.IRON_LADDER);
+                        output.accept(ModBlocks.IRON_LANTERN);
                         output.accept(ModBlocks.RUBIS_BLOCK);
                         output.accept(ModBlocks.TOPAZE_BLOCK);
                         output.accept(ModBlocks.SAPHIR_BLOCK);
@@ -79,6 +80,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.RECORD_MC_STYLE);
                         output.accept(ModItems.SLATE_ITEM);
                         output.accept(ModItems.ADAMANTIUM_FRAGMENT);
+                        output.accept(ModItems.ROCK);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_COLOR_BLOCKS_TAB = CREATIVE_MODE_TAB.register("iyc_color_blocks_tab",

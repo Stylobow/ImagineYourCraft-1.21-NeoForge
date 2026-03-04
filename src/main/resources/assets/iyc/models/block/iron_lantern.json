@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "iyc:block/iron_lantern_top",
+    "up": "iyc:block/iron_lantern_top",
+    "north": "iyc:block/iron_lantern_side",
+    "east": "iyc:block/iron_lantern_side",
+    "south": "iyc:block/iron_lantern_side",
+    "west": "iyc:block/iron_lantern_side",
+    "particle": "iyc:block/iron_lantern_top"
+  },
+  "render_type": "solid"
+}
