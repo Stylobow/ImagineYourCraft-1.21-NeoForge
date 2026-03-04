@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/jungle_log_top",
+    "up": "minecraft:block/jungle_log_top",
+    "north": "iyc:block/jungle_lantern",
+    "east": "iyc:block/jungle_lantern",
+    "south": "iyc:block/jungle_lantern",
+    "west": "iyc:block/jungle_lantern",
+    "particle": "iyc:block/jungle_lantern"
+  },
+  "render_type": "solid"
+}

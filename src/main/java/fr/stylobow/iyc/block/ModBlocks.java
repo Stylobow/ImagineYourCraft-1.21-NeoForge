@@ -5,6 +5,7 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import fr.stylobow.iyc.ImagineYourCraft;
 import fr.stylobow.iyc.block.custom.IronLadderBlock;
+import fr.stylobow.iyc.block.custom.JumpBoxBlock;
 import fr.stylobow.iyc.block.custom.RainbowBlock;
 import fr.stylobow.iyc.event.ColorEvents;
 import fr.stylobow.iyc.item.ModItems;
@@ -233,19 +234,42 @@ public class ModBlocks {
             )
     );
 
-    public static final DeferredBlock<Block> IRON_LANTERN = registerBlock("iron_lantern",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2f)
-                    .explosionResistance(3f)
-                    .ignitedByLava()
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.WOOD)
-                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
-                    .lightLevel(p_152686_ -> 15)
-                    .instrument(NoteBlockInstrument.BASS))
-    );
+    private static BlockBehaviour.Properties getLanternProperties() {
+        return BlockBehaviour.Properties.of()
+                .strength(2f)
+                .explosionResistance(3f)
+                .ignitedByLava()
+                .sound(SoundType.WOOD)
+                .mapColor(MapColor.WOOD)
+                .lightLevel(p_152686_ -> 15)
+                .instrument(NoteBlockInstrument.BASS);
+    }
+
+    public static  final DeferredBlock<Block> OAK_LANTERN = registerBlock("oak_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> SPRUCE_LANTERN = registerBlock("spruce_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> BIRCH_LANTERN = registerBlock("birch_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> JUNGLE_LANTERN = registerBlock("jungle_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> IRON_LANTERN = registerBlock("iron_lantern", ()-> new Block(getLanternProperties().mapColor(MapColor.COLOR_LIGHT_GRAY)));
 
     public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion()));
+
+    public static final DeferredBlock<Block> GLOWSTONE_FENCE = registerBlock("glowstone_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
+
+    public static final DeferredBlock<Block> LOG_FENCE = registerBlock("log_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+
+    public static final DeferredBlock<Block> STONE_FENCE = registerBlock("stone_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+
+    public static final DeferredBlock<Block> JUMPBOX = registerBlock("jumpbox",
+            () -> new JumpBoxBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava())
+    );
 
     private static BlockBehaviour.Properties getIronBlockProperties() {
         return BlockBehaviour.Properties.of()

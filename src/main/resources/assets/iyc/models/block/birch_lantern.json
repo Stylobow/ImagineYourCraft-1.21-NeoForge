@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/birch_log_top",
+    "up": "minecraft:block/birch_log_top",
+    "north": "iyc:block/birch_lantern",
+    "east": "iyc:block/birch_lantern",
+    "south": "iyc:block/birch_lantern",
+    "west": "iyc:block/birch_lantern",
+    "particle": "iyc:block/birch_lantern"
+  },
+  "render_type": "solid"
+}

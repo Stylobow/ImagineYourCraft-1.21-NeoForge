@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/spruce_log_top",
+    "up": "minecraft:block/spruce_log_top",
+    "north": "iyc:block/spruce_lantern",
+    "east": "iyc:block/spruce_lantern",
+    "south": "iyc:block/spruce_lantern",
+    "west": "iyc:block/spruce_lantern",
+    "particle": "iyc:block/spruce_lantern"
+  },
+  "render_type": "solid"
+}
