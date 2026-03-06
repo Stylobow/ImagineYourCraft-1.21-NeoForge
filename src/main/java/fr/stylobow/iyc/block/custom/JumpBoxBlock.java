@@ -33,7 +33,7 @@ public class JumpBoxBlock extends Block {
                     }
                 }
 
-                double power = 1.5D + (jumpBlocksCount * 0.5D);
+                double power = 3 + (jumpBlocksCount * 0.5D);
 
                 Vec3 currentMovement = entity.getDeltaMovement();
                 entity.setDeltaMovement(currentMovement.x, power, currentMovement.z);
