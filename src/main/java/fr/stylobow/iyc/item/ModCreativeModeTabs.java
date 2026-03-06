@@ -56,6 +56,14 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.DEEPSLATE_ADAMANTIUM_ORE);
                     }).build());
 
+    public static final Supplier<CreativeModeTab>  IYC_DECORATIVE_TAB = CREATIVE_MODE_TAB.register("iyc_decorative_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.OAK_SHELF.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_blocks_tab"))
+                    .title(Component.translatable("creative.iyc.decorative"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.OAK_SHELF);
+                    }).build());
+
     public static final Supplier<CreativeModeTab>  IYC_MATERIALS_TAB = CREATIVE_MODE_TAB.register("iyc_materials_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OBSIDIAN_INGOT.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_color_blocks_tab"))
@@ -96,7 +104,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
 
     public static final Supplier<CreativeModeTab>  IYC_COLOR_BLOCKS_TAB = CREATIVE_MODE_TAB.register("iyc_color_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.LIME_REDSTONE_LAMP.get()))
-                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_blocks_tab"))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_decorative_tab"))
                     .title(Component.translatable("creative.iyc.color_blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.ORANGE_IRON_BLOCK);

@@ -33,9 +33,9 @@
   "iyc.music.stop": "Stop",
   "iyc.music.volume": "Volume: %s%%",
   "iyc.music.done": "Done",
-  "iyc.music.hotmix": "Non-Stop Hits",
 
   "creative.iyc.blocks": "Blocks of IYC",
+  "creative.iyc.decorative": "Decoration blocks of IYC",
   "creative.iyc.materials": "Materials of IYC",
   "creative.iyc.color_blocks": "Colored blocks of IYC",
   "creative.iyc.combat": "Combat of IYC",
@@ -227,6 +227,7 @@
   "block.iyc.adamantium_block": "Adamantium block",
   "block.iyc.adamantium_ore": "Adamantium ore",
   "block.iyc.deepslate_adamantium_ore": "Deepslate adamantium ore",
+  "block.iyc.oak_shelf": "Shelf",
 
   "subtitles.iyc.take_back_night": "CaptainSparklez - Take Back The Night",
   "item.iyc.take_back_night.desc": "CaptainSparklez - Take Back The Night",

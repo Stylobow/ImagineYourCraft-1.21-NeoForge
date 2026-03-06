@@ -6,6 +6,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import fr.stylobow.iyc.ImagineYourCraft;
 import fr.stylobow.iyc.block.custom.IronLadderBlock;
 import fr.stylobow.iyc.block.custom.JumpBoxBlock;
+import fr.stylobow.iyc.block.custom.OakShelfBlock;
 import fr.stylobow.iyc.block.custom.RainbowBlock;
 import fr.stylobow.iyc.event.ColorEvents;
 import fr.stylobow.iyc.item.ModItems;
@@ -286,6 +287,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CHERRY_LEAVES = registerBlock("cherry_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+
+    public static final DeferredBlock<Block> OAK_SHELF = registerBlock("oak_shelf",
+            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
 
     private static BlockBehaviour.Properties getIronBlockProperties() {
         return BlockBehaviour.Properties.of()
