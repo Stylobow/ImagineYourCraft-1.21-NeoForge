@@ -38,6 +38,8 @@
   "creative.iyc.blocks": "Blocks of IYC",
   "creative.iyc.materials": "Materials of IYC",
   "creative.iyc.color_blocks": "Colored blocks of IYC",
+  "creative.iyc.combat": "Combat of IYC",
+  "creative.iyc.tools": "Tools of IYC",
 
   "item.iyc.key": "Key",
   "item.iyc.piece": "Money",
@@ -71,6 +73,18 @@
   "item.iyc.topaze": "Topaze",
   "item.iyc.rubis": "Rubis",
   "item.iyc.saphir": "Saphir",
+
+  "item.iyc.saphir_sword": "Saphir sword",
+  "item.iyc.saphir_shovel": "Saphir shovel",
+  "item.iyc.saphir_pickaxe": "Saphir pickaxe",
+  "item.iyc.saphir_hoe": "Saphir hoe",
+  "item.iyc.saphir_axe": "Saphir axe",
+
+  "item.iyc.rubis_sword": "Rubis sword",
+  "item.iyc.rubis_shovel": "Rubis shovel",
+  "item.iyc.rubis_pickaxe": "Rubis pickaxe",
+  "item.iyc.rubis_hoe": "Rubis hoe",
+  "item.iyc.rubis_axe": "Rubis axe",
 
   "block.iyc.orange_iron_block": "Orange iron block",
   "block.iyc.magenta_iron_block": "Magenta iron block",

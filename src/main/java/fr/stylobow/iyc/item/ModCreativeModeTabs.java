@@ -180,6 +180,30 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.BLACK_REDSTONE_LAMP);
                     }).build());
 
+    public static final Supplier<CreativeModeTab>  IYC_COMBAT_TAB = CREATIVE_MODE_TAB.register("iyc_combat_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RUBIS_SWORD.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_tools_tab"))
+                    .title(Component.translatable("creative.iyc.combat"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.RUBIS_SWORD);
+                        output.accept(ModItems.SAPHIR_SWORD);
+                    }).build());
+
+    public static final Supplier<CreativeModeTab>  IYC_TOOLS_TAB = CREATIVE_MODE_TAB.register("iyc_tools_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPHIR_PICKAXE.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_materials_tab"))
+                    .title(Component.translatable("creative.iyc.tools"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.RUBIS_SHOVEL);
+                        output.accept(ModItems.RUBIS_PICKAXE);
+                        output.accept(ModItems.RUBIS_HOE);
+                        output.accept(ModItems.RUBIS_AXE);
+                        output.accept(ModItems.SAPHIR_SHOVEL);
+                        output.accept(ModItems.SAPHIR_PICKAXE);
+                        output.accept(ModItems.SAPHIR_HOE);
+                        output.accept(ModItems.SAPHIR_AXE);
+                    }).build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
     }

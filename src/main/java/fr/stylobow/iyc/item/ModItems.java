@@ -7,10 +7,7 @@ import fr.stylobow.iyc.item.custom.ItemFoil;
 import fr.stylobow.iyc.item.custom.TournevisItem;
 import fr.stylobow.iyc.sound.ModSounds;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.SnowballItem;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -109,6 +106,28 @@ public class ModItems {
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.TOUCH_KEY).stacksTo(1).rarity(Rarity.RARE)));
     public static final DeferredItem<Item> RECORD_MC_STYLE = ITEMS.register("mc_style",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.MC_STYLE_KEY).stacksTo(1).rarity(Rarity.RARE)));
+
+    public static final DeferredItem<Item> SAPHIR_SWORD = ITEMS.register("saphir_sword",
+            () -> new SwordItem(ModTiers.SAPHIR, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.SAPHIR, 3, -2.4F))));
+    public static final DeferredItem<Item> SAPHIR_PICKAXE = ITEMS.register("saphir_pickaxe",
+            () -> new PickaxeItem(ModTiers.SAPHIR, new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.SAPHIR, 1, -2.8F))));
+    public static final DeferredItem<Item> SAPHIR_AXE = ITEMS.register("saphir_axe",
+            () -> new AxeItem(ModTiers.SAPHIR, new Item.Properties().attributes(AxeItem.createAttributes(ModTiers.SAPHIR, 6, -3.0F))));
+    public static final DeferredItem<Item> SAPHIR_SHOVEL = ITEMS.register("saphir_shovel",
+            () -> new ShovelItem(ModTiers.SAPHIR, new Item.Properties().attributes(ShovelItem.createAttributes(ModTiers.SAPHIR, 1.5F, -3.0F))));
+    public static final DeferredItem<Item> SAPHIR_HOE = ITEMS.register("saphir_hoe",
+            () -> new HoeItem(ModTiers.SAPHIR, new Item.Properties().attributes(HoeItem.createAttributes(ModTiers.SAPHIR, -2, -1.0F))));
+
+    public static final DeferredItem<Item> RUBIS_SWORD = ITEMS.register("rubis_sword",
+            () -> new SwordItem(ModTiers.RUBIS, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.RUBIS, 3, -2.4F))));
+    public static final DeferredItem<Item> RUBIS_PICKAXE = ITEMS.register("rubis_pickaxe",
+            () -> new PickaxeItem(ModTiers.RUBIS, new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.RUBIS, 1, -2.8F))));
+    public static final DeferredItem<Item> RUBIS_AXE = ITEMS.register("rubis_axe",
+            () -> new AxeItem(ModTiers.RUBIS, new Item.Properties().attributes(AxeItem.createAttributes(ModTiers.RUBIS, 6, -3.0F))));
+    public static final DeferredItem<Item> RUBIS_SHOVEL = ITEMS.register("rubis_shovel",
+            () -> new ShovelItem(ModTiers.RUBIS, new Item.Properties().attributes(ShovelItem.createAttributes(ModTiers.RUBIS, 1.5F, -3.0F))));
+    public static final DeferredItem<Item> RUBIS_HOE = ITEMS.register("rubis_hoe",
+            () -> new HoeItem(ModTiers.RUBIS, new Item.Properties().attributes(HoeItem.createAttributes(ModTiers.RUBIS, -2, -1.0F))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

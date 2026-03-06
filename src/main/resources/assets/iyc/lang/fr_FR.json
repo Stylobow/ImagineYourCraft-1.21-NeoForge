@@ -38,6 +38,8 @@
   "creative.iyc.blocks": "Blocs d'IYC",
   "creative.iyc.materials": "Matières premières d'IYC",
   "creative.iyc.color_blocks": "Blocs colorés d'IYC",
+  "creative.iyc.combat": "Combat d'IYC",
+  "creative.iyc.tools": "Outils d'IYC",
 
   "item.iyc.key": "Clé",
   "item.iyc.piece": "Monnaie",
@@ -71,6 +73,18 @@
   "item.iyc.topaze": "Topaze",
   "item.iyc.rubis": "Rubis",
   "item.iyc.saphir": "Saphir",
+
+  "item.iyc.saphir_sword": "Épée en saphir",
+  "item.iyc.saphir_shovel": "Pelle en saphir",
+  "item.iyc.saphir_pickaxe": "Pioche en saphir",
+  "item.iyc.saphir_hoe": "Houe en saphir",
+  "item.iyc.saphir_axe": "Hache en saphir",
+
+  "item.iyc.rubis_sword": "Épée en rubis",
+  "item.iyc.rubis_shovel": "Pelle en rubis",
+  "item.iyc.rubis_pickaxe": "Pioche en rubis",
+  "item.iyc.rubis_hoe": "Houe en rubis",
+  "item.iyc.rubis_axe": "Hache en rubis",
 
   "block.iyc.orange_iron_block": "Bloc de fer orange",
   "block.iyc.magenta_iron_block": "Bloc de fer magenta",
