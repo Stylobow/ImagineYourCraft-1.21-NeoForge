@@ -62,6 +62,21 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                     .title(Component.translatable("creative.iyc.decorative"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.OAK_SHELF);
+                        output.accept(ModBlocks.OAK_CHAIR);
+                        output.accept(ModBlocks.SPRUCE_CHAIR);
+                        output.accept(ModBlocks.BIRCH_CHAIR);
+                        output.accept(ModBlocks.JUNGLE_CHAIR);
+                        output.accept(ModBlocks.ACACIA_CHAIR);
+                        output.accept(ModBlocks.DARK_OAK_CHAIR);
+                        output.accept(ModBlocks.MANGROVE_CHAIR);
+                        output.accept(ModBlocks.CHERRY_CHAIR);
+                        output.accept(ModBlocks.BAMBOO_CHAIR);
+                        output.accept(ModBlocks.CRIMSON_CHAIR);
+                        output.accept(ModBlocks.WARPED_CHAIR);
+                        output.accept(ModBlocks.STONE_CHAIR);
+                        output.accept(ModBlocks.COBBLESTONE_CHAIR);
+                        output.accept(ModBlocks.STONE_BRICK_CHAIR);
+                        output.accept(ModBlocks.DEEPSLATE_BRICK_CHAIR);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_MATERIALS_TAB = CREATIVE_MODE_TAB.register("iyc_materials_tab",

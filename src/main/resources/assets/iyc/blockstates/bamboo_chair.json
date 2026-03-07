@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iyc:block/bamboo_chair"
+    },
+    "facing=east": {
+      "model": "iyc:block/bamboo_chair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iyc:block/bamboo_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iyc:block/bamboo_chair",
+      "y": 270
+    }
+  }
+}

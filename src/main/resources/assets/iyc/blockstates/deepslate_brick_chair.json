@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iyc:block/deepslate_brick_chair"
+    },
+    "facing=east": {
+      "model": "iyc:block/deepslate_brick_chair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iyc:block/deepslate_brick_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iyc:block/deepslate_brick_chair",
+      "y": 270
+    }
+  }
+}

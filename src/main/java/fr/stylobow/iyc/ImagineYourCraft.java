@@ -1,16 +1,17 @@
 package fr.stylobow.iyc;
 
 import fr.stylobow.iyc.block.ModBlocks;
+import fr.stylobow.iyc.block.entity.ChairRenderer;
 import fr.stylobow.iyc.block.entity.ModBlockEntities;
+import fr.stylobow.iyc.block.entity.ModEntities;
 import fr.stylobow.iyc.config.ClientConfig;
 import fr.stylobow.iyc.item.ModArmorMaterials;
 import fr.stylobow.iyc.item.ModCreativeModeTabs;
 import fr.stylobow.iyc.item.ModItems;
 import fr.stylobow.iyc.sound.ModSounds;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
-
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -42,31 +43,32 @@ public class ImagineYourCraft {
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         ModBlockEntities.register(modEventBus);
 
+        ModEntities.ENTITY_TYPES.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         modContainer.registerConfig(ModConfig.Type.CLIENT, ClientConfig.SPEC);
     }
 
-    private void commonSetup(FMLCommonSetupEvent event) {
+    private void commonSetup(FMLCommonSetupEvent event) {}
 
-    }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
-    }
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {}
 
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-
-    }
+    public void onServerStarting(ServerStartingEvent event) {}
 
     @EventBusSubscriber(modid = ImagineYourCraft.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     static class ClientModEvents {
+
         @SubscribeEvent
-        static void onClientSetup(FMLClientSetupEvent event)
-        {
+        static void onClientSetup(FMLClientSetupEvent event) {
             fr.stylobow.iyc.client.config.IYCConfig.load();
+        }
+
+        @SubscribeEvent
+        static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerEntityRenderer(ModEntities.CHAIR_ENTITY.get(), ChairRenderer::new);
         }
     }
 }

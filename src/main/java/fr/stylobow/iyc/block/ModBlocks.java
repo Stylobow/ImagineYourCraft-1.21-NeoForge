@@ -305,6 +305,38 @@ public class ModBlocks {
     public static final DeferredBlock<Block> RED_CLOUD = registerBlock("red_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL).noCollission().noOcclusion(), 0.69F, 0.18F, 0.18F));
     public static final DeferredBlock<Block> BLACK_CLOUD = registerBlock("black_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL).noCollission().noOcclusion(), 0.11F, 0.11F, 0.12F));
 
+    public static final DeferredBlock<Block> OAK_CHAIR = registerBlock("oak_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_CHAIR = registerBlock("spruce_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_CHAIR = registerBlock("birch_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_CHAIR = registerBlock("jungle_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_CHAIR = registerBlock("acacia_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_CHAIR = registerBlock("dark_oak_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_CHAIR = registerBlock("mangrove_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_CHAIR = registerBlock("cherry_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_CHAIR = registerBlock("bamboo_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_CHAIR = registerBlock("crimson_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_CHAIR = registerBlock("warped_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> STONE_CHAIR = registerBlock("stone_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> COBBLESTONE_CHAIR = registerBlock("cobblestone_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+    public static final DeferredBlock<Block> STONE_BRICK_CHAIR = registerBlock("stone_brick_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+    public static final DeferredBlock<Block> DEEPSLATE_BRICK_CHAIR = registerBlock("deepslate_brick_chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
+
+
     private static BlockBehaviour.Properties getIronBlockProperties() {
         return BlockBehaviour.Properties.of()
                 .strength(5.0F)
