@@ -7,6 +7,11 @@ import fr.stylobow.iyc.item.custom.ItemFoil;
 import fr.stylobow.iyc.item.custom.TournevisItem;
 import fr.stylobow.iyc.sound.ModSounds;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -167,6 +172,154 @@ public class ModItems {
     public static final DeferredItem<Item> ADAMANTIUM_LEGGINGS = ITEMS.register("adamantium_leggings", () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
     public static final DeferredItem<Item> ADAMANTIUM_BOOTS = ITEMS.register("adamantium_boots", () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
 
+    public static final DeferredItem<Item> REDBULL = ITEMS.register("redbull",
+            () -> new Item(new Item.Properties().stacksTo(1).food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationModifier(0.1f)
+                    .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 600, 0), 1.0f)
+                    .usingConvertsTo(ModItems.CANETTE)
+                    .alwaysEdible()
+                    .build())) {
+
+                @Override
+                public UseAnim getUseAnimation(ItemStack stack) {
+                    return UseAnim.DRINK;
+                }
+
+                @Override
+                public SoundEvent getDrinkingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+
+                @Override
+                public SoundEvent getEatingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+            });
+
+    public static final DeferredItem<Item> COCA = ITEMS.register("coca",
+            () -> new Item(new Item.Properties().stacksTo(1).food(new FoodProperties.Builder()
+                    .nutrition(6)
+                    .saturationModifier(0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 600, 0), 1.0f)
+                    .usingConvertsTo(ModItems.CANETTE)
+                    .alwaysEdible()
+                    .build())) {
+
+                @Override
+                public UseAnim getUseAnimation(ItemStack stack) {
+                    return UseAnim.DRINK;
+                }
+
+                @Override
+                public SoundEvent getDrinkingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+
+                @Override
+                public SoundEvent getEatingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+            });
+
+    public static final DeferredItem<Item> CHOCOLAT_CHAUD = ITEMS.register("chocolat_chaud",
+            () -> new Item(new Item.Properties().stacksTo(1).food(new FoodProperties.Builder()
+                    .nutrition(6)
+                    .saturationModifier(0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1.0f)
+                    .usingConvertsTo(ModItems.CANETTE)
+                    .alwaysEdible()
+                    .build())) {
+
+                @Override
+                public UseAnim getUseAnimation(ItemStack stack) {
+                    return UseAnim.DRINK;
+                }
+
+                @Override
+                public SoundEvent getDrinkingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+
+                @Override
+                public SoundEvent getEatingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+            });
+
+    public static final DeferredItem<Item> BIERE = ITEMS.register("biere",
+            () -> new Item(new Item.Properties().stacksTo(1).food(new FoodProperties.Builder()
+                    .nutrition(6)
+                    .saturationModifier(0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 600, 0), 1.0f)
+                    .usingConvertsTo(ModItems.CHOPPE)
+                    .alwaysEdible()
+                    .build())) {
+
+                @Override
+                public UseAnim getUseAnimation(ItemStack stack) {
+                    return UseAnim.DRINK;
+                }
+
+                @Override
+                public SoundEvent getDrinkingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+
+                @Override
+                public SoundEvent getEatingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+            });
+
+    public static final DeferredItem<Item> TARTINE = ITEMS.register("tartine",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationModifier(0.1f)
+                    .build())));
+
+    public static final DeferredItem<Item> TARTINE_NUTELLA = ITEMS.register("tartine_nutella",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(14)
+                    .saturationModifier(0f)
+                    .build())));
+
+    public static final DeferredItem<Item> NUTELLA = ITEMS.register("nutella",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(10)
+                    .saturationModifier(0f)
+                    .build())));
+
+    public static final DeferredItem<Item> APPLE_JUICE = ITEMS.register("apple_juice",
+            () -> new Item(new Item.Properties().stacksTo(1).food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationModifier(0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.JUMP, 600, 0), 1.0f)
+                    .usingConvertsTo(ModItems.EMPTY_GLASS)
+                    .alwaysEdible()
+                    .build())) {
+
+                @Override
+                public UseAnim getUseAnimation(ItemStack stack) {
+                    return UseAnim.DRINK;
+                }
+
+                @Override
+                public SoundEvent getDrinkingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+
+                @Override
+                public SoundEvent getEatingSound() {
+                    return SoundEvents.GENERIC_DRINK;
+                }
+            });
+
+    public static final DeferredItem<Item> CHERRY = ITEMS.register("cherry",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationModifier(0f)
+                    .build())));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

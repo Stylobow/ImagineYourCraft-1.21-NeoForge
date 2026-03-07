@@ -283,6 +283,22 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.ADAMANTIUM_AXE);
                     }).build());
 
+    public static final Supplier<CreativeModeTab>  IYC_FOOD_TAB = CREATIVE_MODE_TAB.register("iyc_food_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.REDBULL.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_combat_tab"))
+                    .title(Component.translatable("creative.iyc.food"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.BIERE);
+                        output.accept(ModItems.CHOCOLAT_CHAUD);
+                        output.accept(ModItems.COCA);
+                        output.accept(ModItems.REDBULL);
+                        output.accept(ModItems.TARTINE);
+                        output.accept(ModItems.TARTINE_NUTELLA);
+                        output.accept(ModItems.NUTELLA);
+                        output.accept(ModItems.APPLE_JUICE);
+                        output.accept(ModItems.CHERRY);
+                    }).build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
     }

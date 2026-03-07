@@ -40,6 +40,7 @@
   "creative.iyc.color_blocks": "Blocs colorés d'IYC",
   "creative.iyc.combat": "Combat d'IYC",
   "creative.iyc.tools": "Outils d'IYC",
+  "creative.iyc.food": "Nourriture d'IYC",
 
   "item.iyc.key": "Clé",
   "item.iyc.piece": "Monnaie",
@@ -113,6 +114,16 @@
   "item.iyc.adamantium_chestplate": "Plastron en adamantium",
   "item.iyc.adamantium_leggings": "Jambières en adamantium",
   "item.iyc.adamantium_boots": "Bottes en adamantium",
+
+  "item.iyc.biere": "Bière",
+  "item.iyc.chocolat_chaud": "Chocolat chaud",
+  "item.iyc.coca": "Coca",
+  "item.iyc.redbull": "RedBull",
+  "item.iyc.tartine": "Tartine",
+  "item.iyc.tartine_nutella": "Tartine de nutella",
+  "item.iyc.nutella": "Nutella",
+  "item.iyc.apple_juice": "Jus de pomme",
+  "item.iyc.cherry": "Cerise",
 
   "block.iyc.orange_iron_block": "Bloc de fer orange",
   "block.iyc.magenta_iron_block": "Bloc de fer magenta",

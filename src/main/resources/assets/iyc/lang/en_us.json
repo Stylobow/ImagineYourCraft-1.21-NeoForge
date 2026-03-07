@@ -40,6 +40,7 @@
   "creative.iyc.color_blocks": "Colored blocks of IYC",
   "creative.iyc.combat": "Combat of IYC",
   "creative.iyc.tools": "Tools of IYC",
+  "creative.iyc.food": "Food of IYC",
 
   "item.iyc.key": "Key",
   "item.iyc.piece": "Money",
@@ -113,6 +114,16 @@
   "item.iyc.adamantium_chestplate": "Adamantium chestplate",
   "item.iyc.adamantium_leggings": "Adamantium leggings",
   "item.iyc.adamantium_boots": "Adamantium boots",
+
+  "item.iyc.biere": "Beer",
+  "item.iyc.chocolat_chaud": "Hot chocolate",
+  "item.iyc.coca": "Cola",
+  "item.iyc.redbull": "RedBull",
+  "item.iyc.tartine": "Slice",
+  "item.iyc.tartine_nutella": "Nutella slice",
+  "item.iyc.nutella": "Nutella",
+  "item.iyc.apple_juice": "Apple juice",
+  "item.iyc.cherry": "Cherry",
 
   "block.iyc.orange_iron_block": "Orange iron block",
   "block.iyc.magenta_iron_block": "Magenta iron block",
