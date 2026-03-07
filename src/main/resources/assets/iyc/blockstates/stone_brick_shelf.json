@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iyc:block/stone_brick_shelf"
+    },
+    "facing=east": {
+      "model": "iyc:block/stone_brick_shelf",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iyc:block/stone_brick_shelf",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iyc:block/stone_brick_shelf",
+      "y": 270
+    }
+  }
+}

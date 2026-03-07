@@ -62,6 +62,20 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                     .title(Component.translatable("creative.iyc.decorative"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.OAK_SHELF);
+                        output.accept(ModBlocks.SPRUCE_SHELF);
+                        output.accept(ModBlocks.BIRCH_SHELF);
+                        output.accept(ModBlocks.JUNGLE_SHELF);
+                        output.accept(ModBlocks.ACACIA_SHELF);
+                        output.accept(ModBlocks.DARK_OAK_SHELF);
+                        output.accept(ModBlocks.CHERRY_SHELF);
+                        output.accept(ModBlocks.MANGROVE_SHELF);
+                        output.accept(ModBlocks.BAMBOO_SHELF);
+                        output.accept(ModBlocks.CRIMSON_SHELF);
+                        output.accept(ModBlocks.WARPED_SHELF);
+                        output.accept(ModBlocks.STONE_SHELF);
+                        output.accept(ModBlocks.COBBLESTONE_SHELF);
+                        output.accept(ModBlocks.STONE_BRICK_SHELF);
+                        output.accept(ModBlocks.DEEPSLATE_BRICK_SHELF);
                         output.accept(ModBlocks.OAK_CHAIR);
                         output.accept(ModBlocks.SPRUCE_CHAIR);
                         output.accept(ModBlocks.BIRCH_CHAIR);

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iyc:block/acacia_shelf"
+    },
+    "facing=east": {
+      "model": "iyc:block/acacia_shelf",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iyc:block/acacia_shelf",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iyc:block/acacia_shelf",
+      "y": 270
+    }
+  }
+}
