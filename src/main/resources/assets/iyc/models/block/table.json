@@ -34,10 +34,10 @@
         "to": [ 15.25, 14.5, 2.375 ],
         "faces": {
             "down":  { "uv": [ 13.75, 0.875, 15.25, 2.375 ], "texture": "#texture", "cullface": "down" },
-            "north": { "uv": [ 13.75, 1.5, 15.25, 16.125 ], "texture": "#texture" },
-            "south": { "uv": [ 13.75, 1.5, 15.25, 16.125 ], "texture": "#texture" },
-            "west":  { "uv": [ 0.875, 1.5, 2.375, 16.125 ], "texture": "#texture" },
-            "east":  { "uv": [ 0.875, 1.5, 2.375, 16.125 ], "texture": "#texture" }
+            "north": { "uv": [ 13.75, 1.5, 15.25, 16 ], "texture": "#texture" },
+            "south": { "uv": [ 13.75, 1.5, 15.25, 16 ], "texture": "#texture" },
+            "west":  { "uv": [ 0.875, 1.5, 2.375, 16 ], "texture": "#texture" },
+            "east":  { "uv": [ 0.875, 1.5, 2.375, 16 ], "texture": "#texture" }
         }
     },
 {

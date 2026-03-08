@@ -1,0 +1,6 @@
+{
+    "parent": "iyc:block/little_table_e",
+    "textures": {
+        "texture": "minecraft:block/mangrove_planks"
+    }
+}

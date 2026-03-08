@@ -1,0 +1,6 @@
+{
+    "parent": "iyc:block/little_table_es",
+    "textures": {
+        "texture": "minecraft:block/birch_planks"
+    }
+}

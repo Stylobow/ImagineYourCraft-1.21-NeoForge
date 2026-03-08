@@ -395,6 +395,36 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_TABLE = registerBlock("deepslate_brick_table",
             () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
 
+    public static final DeferredBlock<Block> OAK_LITTLE_TABLE = registerBlock("oak_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_LITTLE_TABLE = registerBlock("spruce_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_LITTLE_TABLE = registerBlock("birch_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_LITTLE_TABLE = registerBlock("jungle_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_LITTLE_TABLE = registerBlock("acacia_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_LITTLE_TABLE = registerBlock("dark_oak_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_LITTLE_TABLE = registerBlock("mangrove_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_LITTLE_TABLE = registerBlock("cherry_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_LITTLE_TABLE = registerBlock("bamboo_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_LITTLE_TABLE = registerBlock("crimson_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_LITTLE_TABLE = registerBlock("warped_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> STONE_LITTLE_TABLE = registerBlock("stone_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> COBBLESTONE_LITTLE_TABLE = registerBlock("cobblestone_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+    public static final DeferredBlock<Block> STONE_BRICK_LITTLE_TABLE = registerBlock("stone_brick_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+    public static final DeferredBlock<Block> DEEPSLATE_BRICK_LITTLE_TABLE = registerBlock("deepslate_brick_little_table",
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
 
     private static BlockBehaviour.Properties getIronBlockProperties() {
         return BlockBehaviour.Properties.of()

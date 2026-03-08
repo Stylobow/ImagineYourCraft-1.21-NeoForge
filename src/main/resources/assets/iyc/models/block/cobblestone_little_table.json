@@ -1,0 +1,6 @@
+{
+    "parent": "iyc:block/little_table",
+    "textures": {
+        "texture": "minecraft:block/cobblestone"
+    }
+}
