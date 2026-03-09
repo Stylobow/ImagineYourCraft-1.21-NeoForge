@@ -426,6 +426,39 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_LITTLE_TABLE = registerBlock("deepslate_brick_little_table",
             () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
 
+    public static final DeferredBlock<Block> WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
+            () -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> ORANGE_WOOL_STAIRS = registerBlock("orange_wool_stairs",
+            () -> new StairBlock(Blocks.ORANGE_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL)));
+    public static final DeferredBlock<Block> MAGENTA_WOOL_STAIRS = registerBlock("magenta_wool_stairs",
+            () -> new StairBlock(Blocks.MAGENTA_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL)));
+    public static final DeferredBlock<Block> LIGHT_BLUE_WOOL_STAIRS = registerBlock("light_blue_wool_stairs",
+            () -> new StairBlock(Blocks.LIGHT_BLUE_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL)));
+    public static final DeferredBlock<Block> YELLOW_WOOL_STAIRS = registerBlock("yellow_wool_stairs",
+            () -> new StairBlock(Blocks.YELLOW_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL)));
+    public static final DeferredBlock<Block> LIME_WOOL_STAIRS = registerBlock("lime_wool_stairs",
+            () -> new StairBlock(Blocks.LIME_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL)));
+    public static final DeferredBlock<Block> PINK_WOOL_STAIRS = registerBlock("pink_wool_stairs",
+            () -> new StairBlock(Blocks.PINK_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_WOOL)));
+    public static final DeferredBlock<Block> GRAY_WOOL_STAIRS = registerBlock("gray_wool_stairs",
+            () -> new StairBlock(Blocks.GRAY_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_WOOL)));
+    public static final DeferredBlock<Block> LIGHT_GRAY_WOOL_STAIRS = registerBlock("light_gray_wool_stairs",
+            () -> new StairBlock(Blocks.LIGHT_GRAY_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_WOOL)));
+    public static final DeferredBlock<Block> CYAN_WOOL_STAIRS = registerBlock("cyan_wool_stairs",
+            () -> new StairBlock(Blocks.CYAN_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_WOOL)));
+    public static final DeferredBlock<Block> PURPLE_WOOL_STAIRS = registerBlock("purple_wool_stairs",
+            () -> new StairBlock(Blocks.PURPLE_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL)));
+    public static final DeferredBlock<Block> BLUE_WOOL_STAIRS = registerBlock("blue_wool_stairs",
+            () -> new StairBlock(Blocks.BLUE_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_WOOL)));
+    public static final DeferredBlock<Block> BROWN_WOOL_STAIRS = registerBlock("brown_wool_stairs",
+            () -> new StairBlock(Blocks.BROWN_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL)));
+    public static final DeferredBlock<Block> GREEN_WOOL_STAIRS = registerBlock("green_wool_stairs",
+            () -> new StairBlock(Blocks.GREEN_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_WOOL)));
+    public static final DeferredBlock<Block> RED_WOOL_STAIRS = registerBlock("red_wool_stairs",
+            () -> new StairBlock(Blocks.RED_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
+    public static final DeferredBlock<Block> BLACK_WOOL_STAIRS = registerBlock("black_wool_stairs",
+            () -> new StairBlock(Blocks.BLACK_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL)));
+
     private static BlockBehaviour.Properties getIronBlockProperties() {
         return BlockBehaviour.Properties.of()
                 .strength(5.0F)
