@@ -32,6 +32,11 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.SPRUCE_LANTERN);
                         output.accept(ModBlocks.BIRCH_LANTERN);
                         output.accept(ModBlocks.JUNGLE_LANTERN);
+                        output.accept(ModBlocks.ACACIA_LANTERN);
+                        output.accept(ModBlocks.DARK_OAK_LANTERN);
+                        output.accept(ModBlocks.MANGROVE_LANTERN);
+                        output.accept(ModBlocks.CHERRY_LANTERN);
+                        output.accept(ModBlocks.BAMBOO_LANTERN);
                         output.accept(ModBlocks.IRON_LANTERN);
                         output.accept(ModBlocks.JUMPBOX);
                         output.accept(ModBlocks.RUBIS_BLOCK);

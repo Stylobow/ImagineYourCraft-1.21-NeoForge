@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/bamboo_block_top",
+    "up": "minecraft:block/bamboo_block_top",
+    "north": "iyc:block/bamboo_lantern",
+    "east": "iyc:block/bamboo_lantern",
+    "south": "iyc:block/bamboo_lantern",
+    "west": "iyc:block/bamboo_lantern",
+    "particle": "iyc:block/bamboo_lantern"
+  },
+  "render_type": "solid"
+}

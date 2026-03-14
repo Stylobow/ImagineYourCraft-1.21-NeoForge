@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/cherry_log_top",
+    "up": "minecraft:block/cherry_log_top",
+    "north": "iyc:block/cherry_lantern",
+    "east": "iyc:block/cherry_lantern",
+    "south": "iyc:block/cherry_lantern",
+    "west": "iyc:block/cherry_lantern",
+    "particle": "iyc:block/cherry_lantern"
+  },
+  "render_type": "solid"
+}

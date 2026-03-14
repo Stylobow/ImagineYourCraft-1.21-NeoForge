@@ -249,6 +249,12 @@ public class ModBlocks {
     public static  final DeferredBlock<Block> SPRUCE_LANTERN = registerBlock("spruce_lantern", ()-> new Block(getLanternProperties()));
     public static  final DeferredBlock<Block> BIRCH_LANTERN = registerBlock("birch_lantern", ()-> new Block(getLanternProperties()));
     public static  final DeferredBlock<Block> JUNGLE_LANTERN = registerBlock("jungle_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> ACACIA_LANTERN = registerBlock("acacia_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> DARK_OAK_LANTERN = registerBlock("dark_oak_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> MANGROVE_LANTERN = registerBlock("mangrove_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> CHERRY_LANTERN = registerBlock("cherry_lantern", ()-> new Block(getLanternProperties()));
+    public static  final DeferredBlock<Block> BAMBOO_LANTERN = registerBlock("bamboo_lantern",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).lightLevel(p_152686_ -> 15)));
     public static  final DeferredBlock<Block> IRON_LANTERN = registerBlock("iron_lantern", ()-> new Block(getLanternProperties().mapColor(MapColor.COLOR_LIGHT_GRAY)));
 
     public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion()));

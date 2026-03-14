@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/acacia_log_top",
+    "up": "minecraft:block/acacia_log_top",
+    "north": "iyc:block/acacia_lantern",
+    "east": "iyc:block/acacia_lantern",
+    "south": "iyc:block/acacia_lantern",
+    "west": "iyc:block/acacia_lantern",
+    "particle": "iyc:block/acacia_lantern"
+  },
+  "render_type": "solid"
+}

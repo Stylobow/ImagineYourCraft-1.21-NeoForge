@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/dark_oak_log_top",
+    "up": "minecraft:block/dark_oak_log_top",
+    "north": "iyc:block/dark_oak_lantern",
+    "east": "iyc:block/dark_oak_lantern",
+    "south": "iyc:block/dark_oak_lantern",
+    "west": "iyc:block/dark_oak_lantern",
+    "particle": "iyc:block/dark_oak_lantern"
+  },
+  "render_type": "solid"
+}

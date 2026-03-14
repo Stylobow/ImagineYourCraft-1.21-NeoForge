@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/mangrove_log_top",
+    "up": "minecraft:block/mangrove_log_top",
+    "north": "iyc:block/mangrove_lantern",
+    "east": "iyc:block/mangrove_lantern",
+    "south": "iyc:block/mangrove_lantern",
+    "west": "iyc:block/mangrove_lantern",
+    "particle": "iyc:block/mangrove_lantern"
+  },
+  "render_type": "solid"
+}
