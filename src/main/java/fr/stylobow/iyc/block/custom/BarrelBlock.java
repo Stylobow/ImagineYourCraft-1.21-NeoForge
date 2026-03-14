@@ -19,7 +19,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class BarrelBlock extends BaseEntityBlock {
     public static final MapCodec<BarrelBlock> CODEC = simpleCodec(BarrelBlock::new);
-    protected static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 15, 15);
 
     public BarrelBlock(Properties properties) {
         super(properties);
@@ -28,11 +27,6 @@ public class BarrelBlock extends BaseEntityBlock {
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
-    }
-
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPE;
     }
 
     @Override
