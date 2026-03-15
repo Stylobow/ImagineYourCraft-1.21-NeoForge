@@ -1,0 +1,8 @@
+{
+    "parent": "iyc:block/slopes",
+    "textures": {
+        "side": "minecraft:block/cobblestone_log",
+        "bottom": "minecraft:block/cobblestone_log_top",
+        "top": "minecraft:block/cobblestone_log_top"
+    }
+}

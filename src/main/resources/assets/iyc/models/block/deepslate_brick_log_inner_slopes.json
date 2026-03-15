@@ -1,0 +1,8 @@
+{
+    "parent": "iyc:block/inner_slopes",
+    "textures": {
+        "side": "minecraft:block/deepslate_brick_log",
+        "bottom": "minecraft:block/deepslate_brick_log_top",
+        "top": "minecraft:block/deepslate_brick_log_top"
+    }
+}

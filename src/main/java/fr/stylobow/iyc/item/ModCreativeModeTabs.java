@@ -76,6 +76,33 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.DEEPSLATE_SAPHIR_ORE);
                         output.accept(ModBlocks.DEEPSLATE_SLATE_ORE);
                         output.accept(ModBlocks.DEEPSLATE_ADAMANTIUM_ORE);
+                        output.accept(ModBlocks.STONE_SLOPES);
+                        output.accept(ModBlocks.SLATE_SLOPES);
+                        output.accept(ModBlocks.SANDSTONE_SLOPES);
+                        output.accept(ModBlocks.GLOWSTONE_SLOPES);
+                        output.accept(ModBlocks.GLASS_SLOPES);
+                        output.accept(ModBlocks.OAK_PLANKS_SLOPES);
+                        output.accept(ModBlocks.SPRUCE_PLANKS_SLOPES);
+                        output.accept(ModBlocks.BIRCH_PLANKS_SLOPES);
+                        output.accept(ModBlocks.JUNGLE_PLANKS_SLOPES);
+                        output.accept(ModBlocks.ACACIA_PLANKS_SLOPES);
+                        output.accept(ModBlocks.DARK_OAK_PLANKS_SLOPES);
+                        output.accept(ModBlocks.CHERRY_PLANKS_SLOPES);
+                        output.accept(ModBlocks.MANGROVE_PLANKS_SLOPES);
+                        output.accept(ModBlocks.BAMBOO_PLANKS_SLOPES);
+                        output.accept(ModBlocks.CRIMSON_PLANKS_SLOPES);
+                        output.accept(ModBlocks.WARPED_PLANKS_SLOPES);
+                        output.accept(ModBlocks.OAK_LOG_SLOPES);
+                        output.accept(ModBlocks.SPRUCE_LOG_SLOPES);
+                        output.accept(ModBlocks.BIRCH_LOG_SLOPES);
+                        output.accept(ModBlocks.JUNGLE_LOG_SLOPES);
+                        output.accept(ModBlocks.ACACIA_LOG_SLOPES);
+                        output.accept(ModBlocks.DARK_OAK_LOG_SLOPES);
+                        output.accept(ModBlocks.CHERRY_LOG_SLOPES);
+                        output.accept(ModBlocks.MANGROVE_LOG_SLOPES);
+                        output.accept(ModBlocks.BAMBOO_LOG_SLOPES);
+                        output.accept(ModBlocks.CRIMSON_LOG_SLOPES);
+                        output.accept(ModBlocks.WARPED_LOG_SLOPES);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_DECORATIVE_TAB = CREATIVE_MODE_TAB.register("iyc_decorative_tab",

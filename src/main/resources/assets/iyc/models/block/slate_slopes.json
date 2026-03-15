@@ -1,0 +1,6 @@
+{
+    "parent": "iyc:block/slopes",
+    "textures": {
+        "side": "iyc:block/slate_block"
+    }
+}

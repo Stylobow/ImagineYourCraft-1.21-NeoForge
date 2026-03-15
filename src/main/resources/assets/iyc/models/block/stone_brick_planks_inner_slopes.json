@@ -1,0 +1,6 @@
+{
+    "parent": "iyc:block/inner_slopes",
+    "textures": {
+        "side": "minecraft:block/stone_brick_planks"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "iyc:block/outer_slopes",
+    "textures": {
+        "side": "minecraft:block/cobblestone_planks"
+    }
+}
