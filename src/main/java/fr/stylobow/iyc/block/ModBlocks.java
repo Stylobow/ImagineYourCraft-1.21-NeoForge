@@ -328,6 +328,17 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_REVERSED_PLANKS = registerBlock("warped_reversed_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
 
+    public static final DeferredBlock<Block> COBBLESTONE_FIRE_CAMP = registerBlock("cobblestone_fire_camp",
+            () -> new FireCampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> SMOOTH_STONE_FIRE_CAMP = registerBlock("smooth_stone_fire_camp",
+            () -> new FireCampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> BRICKS_FIRE_CAMP = registerBlock("bricks_fire_camp",
+            () -> new FireCampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> STONE_BRICK_FIRE_CAMP = registerBlock("stone_brick_fire_camp",
+            () -> new FireCampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> SANDSTONE_FIRE_CAMP = registerBlock("sandstone_fire_camp",
+            () -> new FireCampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE).lightLevel(state -> 15)));
+
     public static final DeferredBlock<Block> STONE_SLOPES = registerBlock("stone_slopes",
             () -> new StairBlock(Blocks.STONE.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> SLATE_SLOPES = registerBlock("slate_slopes",

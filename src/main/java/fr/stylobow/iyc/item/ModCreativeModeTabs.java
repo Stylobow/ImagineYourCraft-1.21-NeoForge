@@ -64,6 +64,11 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.MASSIVE_OBSIDIAN_BLOCK);
                         output.accept(ModBlocks.SLATE_BLOCK);
                         output.accept(ModBlocks.ADAMANTIUM_BLOCK);
+                        output.accept(ModBlocks.COBBLESTONE_FIRE_CAMP);
+                        output.accept(ModBlocks.SMOOTH_STONE_FIRE_CAMP);
+                        output.accept(ModBlocks.BRICKS_FIRE_CAMP);
+                        output.accept(ModBlocks.STONE_BRICK_FIRE_CAMP);
+                        output.accept(ModBlocks.SANDSTONE_FIRE_CAMP);
                         output.accept(ModBlocks.RUBIS_ORE);
                         output.accept(ModBlocks.TOPAZE_ORE);
                         output.accept(ModBlocks.SAPHIR_ORE);

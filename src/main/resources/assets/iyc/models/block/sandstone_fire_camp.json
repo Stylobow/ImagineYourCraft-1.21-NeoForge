@@ -1,0 +1,8 @@
+{
+    "parent": "iyc:block/fire_camp",
+    "textures": {
+        "bottom": "minecraft:block/sandstone",
+        "top": "iyc:block/sandstone_fire_camp_top",
+        "side": "minecraft:block/sandstone"
+    }
+}
