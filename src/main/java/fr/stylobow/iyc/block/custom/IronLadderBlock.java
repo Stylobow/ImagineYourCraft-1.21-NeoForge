@@ -19,7 +19,7 @@ public class IronLadderBlock extends LadderBlock {
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         super.entityInside(state, level, pos, entity);
 
-        if (entity instanceof LivingEntity livingEntity && livingEntity.onClimbable()) {
+        if (entity instanceof LivingEntity livingEntity && livingEntity.onClimbable() && !livingEntity.isCrouching()) {
             Vec3 motion = livingEntity.getDeltaMovement();
 
             if (motion.y > 0.05D) {
