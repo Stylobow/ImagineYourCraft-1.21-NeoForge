@@ -9,6 +9,7 @@ import fr.stylobow.iyc.block.custom.BarrelBlock;
 import fr.stylobow.iyc.event.ColorEvents;
 import fr.stylobow.iyc.item.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.ColorRGBA;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -429,6 +430,23 @@ public class ModBlocks {
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
     public static final DeferredBlock<Block> BLACK_IRON_FENCE = registerBlock("black_iron_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+
+    public static final DeferredBlock<Block> HEART_EFFECT_GENERATOR = registerBlock("heart_effect_generator",
+            () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.HEART, 5));
+    public static final DeferredBlock<Block> SMOKE_EFFECT_GENERATOR = registerBlock("smoke_effect_generator",
+            () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.SMOKE, 15));
+    public static final DeferredBlock<Block> PORTAL_EFFECT_GENERATOR = registerBlock("portal_effect_generator",
+            () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.PORTAL, 15));
+    public static final DeferredBlock<Block> EXPLOSION_EFFECT_GENERATOR = registerBlock("explosion_effect_generator",
+            () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.EXPLOSION, 1));
+    public static final DeferredBlock<Block> CLOUD_EFFECT_GENERATOR = registerBlock("cloud_effect_generator",
+            () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.CLOUD, 15));
+    public static final DeferredBlock<Block> LAVA_EFFECT_GENERATOR = registerBlock("lava_effect_generator",
+            () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.LAVA, 1));
+    public static final DeferredBlock<Block> WATER_EFFECT_GENERATOR = registerBlock("water_effect_generator",
+            () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.SPLASH, 5));
+    public static final DeferredBlock<Block> LARGE_SMOKE_EFFECT_GENERATOR = registerBlock("large_smoke_effect_generator",
+            () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.LARGE_SMOKE, 10));
 
     public static final DeferredBlock<Block> WHITE_CLOUD = registerBlock("white_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).noCollission().noOcclusion(), 1.0F, 1.0F, 1.0F));
     public static final DeferredBlock<Block> ORANGE_CLOUD = registerBlock("orange_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL).noCollission().noOcclusion(), 0.95F, 0.45F, 0.0F));

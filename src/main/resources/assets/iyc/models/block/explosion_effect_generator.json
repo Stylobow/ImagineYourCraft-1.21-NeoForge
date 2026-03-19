@@ -1,0 +1,7 @@
+{
+  "parent": "iyc:block/effect_generator",
+  "textures": {
+    "all": "iyc:block/effect_generator"
+  },
+  "render_type": "solid"
+}

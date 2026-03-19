@@ -221,6 +221,14 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.COBBLESTONE_LITTLE_TABLE);
                         output.accept(ModBlocks.STONE_BRICK_LITTLE_TABLE);
                         output.accept(ModBlocks.DEEPSLATE_BRICK_LITTLE_TABLE);
+                        output.accept(ModBlocks.SMOKE_EFFECT_GENERATOR);
+                        output.accept(ModBlocks.PORTAL_EFFECT_GENERATOR);
+                        output.accept(ModBlocks.EXPLOSION_EFFECT_GENERATOR);
+                        output.accept(ModBlocks.CLOUD_EFFECT_GENERATOR);
+                        output.accept(ModBlocks.LAVA_EFFECT_GENERATOR);
+                        output.accept(ModBlocks.WATER_EFFECT_GENERATOR);
+                        output.accept(ModBlocks.LARGE_SMOKE_EFFECT_GENERATOR);
+                        output.accept(ModBlocks.HEART_EFFECT_GENERATOR);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_MATERIALS_TAB = CREATIVE_MODE_TAB.register("iyc_materials_tab",
