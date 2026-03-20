@@ -448,6 +448,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LARGE_SMOKE_EFFECT_GENERATOR = registerBlock("large_smoke_effect_generator",
             () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.LARGE_SMOKE, 10));
 
+    public static final DeferredBlock<Block> LOG_WALL = registerBlock("log_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final DeferredBlock<Block> STONE_WALL = registerBlock("stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+
     public static final DeferredBlock<Block> WHITE_CLOUD = registerBlock("white_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).noCollission().noOcclusion(), 1.0F, 1.0F, 1.0F));
     public static final DeferredBlock<Block> ORANGE_CLOUD = registerBlock("orange_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL).noCollission().noOcclusion(), 0.95F, 0.45F, 0.0F));
     public static final DeferredBlock<Block> MAGENTA_CLOUD = registerBlock("magenta_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL).noCollission().noOcclusion(), 0.75F, 0.17F, 0.58F));

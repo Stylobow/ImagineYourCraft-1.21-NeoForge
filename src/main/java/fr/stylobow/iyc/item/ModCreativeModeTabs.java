@@ -81,6 +81,8 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.DEEPSLATE_SAPHIR_ORE);
                         output.accept(ModBlocks.DEEPSLATE_SLATE_ORE);
                         output.accept(ModBlocks.DEEPSLATE_ADAMANTIUM_ORE);
+                        output.accept(ModBlocks.LOG_WALL);
+                        output.accept(ModBlocks.STONE_WALL);
                         output.accept(ModBlocks.STONE_SLOPES);
                         output.accept(ModBlocks.SLATE_SLOPES);
                         output.accept(ModBlocks.SANDSTONE_SLOPES);
