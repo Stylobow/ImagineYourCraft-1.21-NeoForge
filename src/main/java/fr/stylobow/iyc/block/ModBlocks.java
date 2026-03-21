@@ -448,10 +448,56 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LARGE_SMOKE_EFFECT_GENERATOR = registerBlock("large_smoke_effect_generator",
             () -> new EffectGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE), ParticleTypes.LARGE_SMOKE, 10));
 
-    public static final DeferredBlock<Block> LOG_WALL = registerBlock("log_wall",
+    public static final DeferredBlock<Block> OAK_LOG_WALL = registerBlock("oak_log_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final DeferredBlock<Block> SPRUCE_LOG_WALL = registerBlock("spruce_log_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
+    public static final DeferredBlock<Block> BIRCH_LOG_WALL = registerBlock("birch_log_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
+    public static final DeferredBlock<Block> JUNGLE_LOG_WALL = registerBlock("jungle_log_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS)));
+    public static final DeferredBlock<Block> ACACIA_LOG_WALL = registerBlock("acacia_log_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
+    public static final DeferredBlock<Block> DARK_OAK_LOG_WALL = registerBlock("dark_oak_log_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS)));
+    public static final DeferredBlock<Block> MANGROVE_LOG_WALL = registerBlock("mangrove_log_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
+    public static final DeferredBlock<Block> CHERRY_LOG_WALL = registerBlock("cherry_log_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
+    public static final DeferredBlock<Block> BAMBOO_BLOCK_WALL = registerBlock("bamboo_block_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)));
+    public static final DeferredBlock<Block> CRIMSON_STEM_WALL = registerBlock("crimson_stem_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
+    public static final DeferredBlock<Block> WARPED_STEM_WALL = registerBlock("warped_stem_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
+    public static final DeferredBlock<Block> OAK_PLANKS_WALL = registerBlock("oak_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final DeferredBlock<Block> SPRUCE_PLANKS_WALL = registerBlock("spruce_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
+    public static final DeferredBlock<Block> BIRCH_PLANKS_WALL = registerBlock("birch_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
+    public static final DeferredBlock<Block> JUNGLE_PLANKS_WALL = registerBlock("jungle_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS)));
+    public static final DeferredBlock<Block> ACACIA_PLANKS_WALL = registerBlock("acacia_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
+    public static final DeferredBlock<Block> DARK_OAK_PLANKS_WALL = registerBlock("dark_oak_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS)));
+    public static final DeferredBlock<Block> MANGROVE_PLANKS_WALL = registerBlock("mangrove_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
+    public static final DeferredBlock<Block> CHERRY_PLANKS_WALL = registerBlock("cherry_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
+    public static final DeferredBlock<Block> BAMBOO_PLANKS_WALL = registerBlock("bamboo_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)));
+    public static final DeferredBlock<Block> CRIMSON_PLANKS_WALL = registerBlock("crimson_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
+    public static final DeferredBlock<Block> WARPED_PLANKS_WALL = registerBlock("warped_planks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
     public static final DeferredBlock<Block> STONE_WALL = registerBlock("stone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> GLOWSTONE_WALL = registerBlock("glowstone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
+    public static final DeferredBlock<Block> SLATE_WALL = registerBlock("slate_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SLATE_BLOCK.get())));
 
     public static final DeferredBlock<Block> WHITE_CLOUD = registerBlock("white_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).noCollission().noOcclusion(), 1.0F, 1.0F, 1.0F));
     public static final DeferredBlock<Block> ORANGE_CLOUD = registerBlock("orange_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL).noCollission().noOcclusion(), 0.95F, 0.45F, 0.0F));

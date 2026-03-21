@@ -1,7 +1,30 @@
 {
   "replace": false,
   "values": [
-    "iyc:log_wall",
-    "iyc:stone_wall"
+    "iyc:oak_log_wall",
+    "iyc:spruce_log_wall",
+    "iyc:birch_log_wall",
+    "iyc:jungle_log_wall",
+    "iyc:acacia_log_wall",
+    "iyc:dark_oak_log_wall",
+    "iyc:mangrove_log_wall",
+    "iyc:cherry_log_wall",
+    "iyc:bamboo_block_wall",
+    "iyc:crimson_stem_wall",
+    "iyc:warped_stem_wall",
+    "iyc:oak_planks_wall",
+    "iyc:spruce_planks_wall",
+    "iyc:birch_planks_wall",
+    "iyc:jungle_planks_wall",
+    "iyc:acacia_planks_wall",
+    "iyc:dark_oak_planks_wall",
+    "iyc:mangrove_planks_wall",
+    "iyc:cherry_planks_wall",
+    "iyc:bamboo_planks_wall",
+    "iyc:crimson_planks_wall",
+    "iyc:warped_planks_wall",
+    "iyc:stone_wall",
+    "iyc:glowstone_wall",
+    "iyc:slate_wall"
   ]
 }
