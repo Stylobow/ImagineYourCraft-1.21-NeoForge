@@ -6,6 +6,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import fr.stylobow.iyc.ImagineYourCraft;
 import fr.stylobow.iyc.block.custom.*;
 import fr.stylobow.iyc.block.custom.BarrelBlock;
+import fr.stylobow.iyc.block.custom.RodBlock;
 import fr.stylobow.iyc.event.ColorEvents;
 import fr.stylobow.iyc.item.ModItems;
 import net.minecraft.core.BlockPos;
@@ -498,6 +499,39 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
     public static final DeferredBlock<Block> SLATE_WALL = registerBlock("slate_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SLATE_BLOCK.get())));
+
+    public static final DeferredBlock<Block> WHITE_ROD = registerBlock("white_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> ORANGE_ROD = registerBlock("orange_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> MAGENTA_ROD = registerBlock("magenta_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> LIGHT_BLUE_ROD = registerBlock("light_blue_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> YELLOW_ROD = registerBlock("yellow_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> LIME_ROD = registerBlock("lime_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> PINK_ROD = registerBlock("pink_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> GRAY_ROD = registerBlock("gray_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> LIGHT_GRAY_ROD = registerBlock("light_gray_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> CYAN_ROD = registerBlock("cyan_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> PURPLE_ROD = registerBlock("purple_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> BLUE_ROD = registerBlock("blue_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> BROWN_ROD = registerBlock("brown_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> GREEN_ROD = registerBlock("green_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> RED_ROD = registerBlock("red_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> BLACK_ROD = registerBlock("black_rod",
+            () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
 
     public static final DeferredBlock<Block> WHITE_CLOUD = registerBlock("white_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).noCollission().noOcclusion(), 1.0F, 1.0F, 1.0F));
     public static final DeferredBlock<Block> ORANGE_CLOUD = registerBlock("orange_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL).noCollission().noOcclusion(), 0.95F, 0.45F, 0.0F));

@@ -129,6 +129,22 @@ public class ColorEvents {
         event.register((state, level, pos, tintIndex) -> C_GREEN, ModBlocks.GREEN_IRON_FENCE.get());
         event.register((state, level, pos, tintIndex) -> C_RED, ModBlocks.RED_IRON_FENCE.get());
         event.register((state, level, pos, tintIndex) -> C_BLACK, ModBlocks.BLACK_IRON_FENCE.get());
+
+        event.register((state, level, pos, tintIndex) -> C_ORANGE, ModBlocks.ORANGE_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_MAGENTA, ModBlocks.MAGENTA_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_LIGHT_BLUE, ModBlocks.LIGHT_BLUE_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_YELLOW, ModBlocks.YELLOW_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_LIME, ModBlocks.LIME_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_PINK, ModBlocks.PINK_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_GRAY, ModBlocks.GRAY_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_LIGHT_GRAY, ModBlocks.LIGHT_GRAY_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_CYAN, ModBlocks.CYAN_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_PURPLE, ModBlocks.PURPLE_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_BLUE, ModBlocks.BLUE_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_BROWN, ModBlocks.BROWN_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_GREEN, ModBlocks.GREEN_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_RED, ModBlocks.RED_ROD.get());
+        event.register((state, level, pos, tintIndex) -> C_BLACK, ModBlocks.BLACK_ROD.get());
     }
 
     @SubscribeEvent
@@ -232,6 +248,22 @@ public class ColorEvents {
         event.register((stack, tintIndex) -> C_GREEN, ModBlocks.GREEN_IRON_FENCE.get());
         event.register((stack, tintIndex) -> C_RED, ModBlocks.RED_IRON_FENCE.get());
         event.register((stack, tintIndex) -> C_BLACK, ModBlocks.BLACK_IRON_FENCE.get());
+
+        event.register((stack, tintIndex) -> C_ORANGE, ModBlocks.ORANGE_ROD.get());
+        event.register((stack, tintIndex) -> C_MAGENTA, ModBlocks.MAGENTA_ROD.get());
+        event.register((stack, tintIndex) -> C_LIGHT_BLUE, ModBlocks.LIGHT_BLUE_ROD.get());
+        event.register((stack, tintIndex) -> C_YELLOW, ModBlocks.YELLOW_ROD.get());
+        event.register((stack, tintIndex) -> C_LIME, ModBlocks.LIME_ROD.get());
+        event.register((stack, tintIndex) -> C_PINK, ModBlocks.PINK_ROD.get());
+        event.register((stack, tintIndex) -> C_GRAY, ModBlocks.GRAY_ROD.get());
+        event.register((stack, tintIndex) -> C_LIGHT_GRAY, ModBlocks.LIGHT_GRAY_ROD.get());
+        event.register((stack, tintIndex) -> C_CYAN, ModBlocks.CYAN_ROD.get());
+        event.register((stack, tintIndex) -> C_PURPLE, ModBlocks.PURPLE_ROD.get());
+        event.register((stack, tintIndex) -> C_BLUE, ModBlocks.BLUE_ROD.get());
+        event.register((stack, tintIndex) -> C_BROWN, ModBlocks.BROWN_ROD.get());
+        event.register((stack, tintIndex) -> C_GREEN, ModBlocks.GREEN_ROD.get());
+        event.register((stack, tintIndex) -> C_RED, ModBlocks.RED_ROD.get());
+        event.register((stack, tintIndex) -> C_BLACK, ModBlocks.BLACK_ROD.get());
 
         event.register((stack, tintIndex) -> {
             float hue = (System.currentTimeMillis() % 5000L) / 5000.0f;
