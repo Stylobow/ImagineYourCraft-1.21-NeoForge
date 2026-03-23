@@ -54,7 +54,7 @@ public class RodBlock extends Block {
     }
 
     private boolean canConnect(BlockState state) {
-        return state.getBlock() instanceof RodBlock || state.isSolidRender(null, null);
+        return state.getBlock() instanceof RodBlock || state.getBlock() instanceof LampBlock || state.isSolidRender(null, null);
     }
 
     @Override

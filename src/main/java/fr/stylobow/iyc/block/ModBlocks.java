@@ -500,7 +500,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SLATE_WALL = registerBlock("slate_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SLATE_BLOCK.get())));
 
-    public static final DeferredBlock<Block> WHITE_ROD = registerBlock("white_rod",
+    public static final DeferredBlock<Block> ROD = registerBlock("rod",
             () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> ORANGE_ROD = registerBlock("orange_rod",
             () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
@@ -532,6 +532,70 @@ public class ModBlocks {
             () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> BLACK_ROD = registerBlock("black_rod",
             () -> new RodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+
+    public static final DeferredBlock<Block> WHITE_LAMP = registerBlock("white_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> ORANGE_LAMP = registerBlock("orange_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> MAGENTA_LAMP = registerBlock("magenta_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> LIGHT_BLUE_LAMP = registerBlock("light_blue_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> YELLOW_LAMP = registerBlock("yellow_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> LIME_LAMP = registerBlock("lime_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> PINK_LAMP = registerBlock("pink_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> GRAY_LAMP = registerBlock("gray_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> LIGHT_GRAY_LAMP = registerBlock("light_gray_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> CYAN_LAMP = registerBlock("cyan_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> PURPLE_LAMP = registerBlock("purple_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> BLUE_LAMP = registerBlock("blue_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> BROWN_LAMP = registerBlock("brown_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> GREEN_LAMP = registerBlock("green_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> RED_LAMP = registerBlock("red_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> BLACK_LAMP = registerBlock("black_lamp",
+            () -> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .noOcclusion().lightLevel(state -> state.getValue(LampBlock.LIT) ? 15 : 0)));
 
     public static final DeferredBlock<Block> WHITE_CLOUD = registerBlock("white_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).noCollission().noOcclusion(), 1.0F, 1.0F, 1.0F));
     public static final DeferredBlock<Block> ORANGE_CLOUD = registerBlock("orange_cloud", () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL).noCollission().noOcclusion(), 0.95F, 0.45F, 0.0F));

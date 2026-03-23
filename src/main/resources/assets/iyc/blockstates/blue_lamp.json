@@ -1,0 +1,588 @@
+{
+    "variants": {
+        "lit=false,down=false,east=false,north=false,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern"
+        },
+        "lit=true,down=false,east=false,north=false,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern"
+        },
+        "lit=false,down=true,east=false,north=false,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_b"
+        },
+        "lit=true,down=true,east=false,north=false,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_b"
+        },
+        "lit=false,down=true,east=false,north=false,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_bt"
+        },
+        "lit=true,down=true,east=false,north=false,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_bt"
+        },
+        "lit=false,down=false,east=false,north=false,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_t"
+        },
+        "lit=true,down=false,east=false,north=false,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_t"
+        },
+        "lit=false,down=false,east=false,north=true,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=true,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=false,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=false,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=false,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=false,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=false,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_tn",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=false,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_tn",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=true,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_tne",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=true,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_tne",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=false,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_tne",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=false,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_tne",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=false,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_tne",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=false,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_tne",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=true,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_tne",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=true,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_tne",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=true,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_tns",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=true,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_tns",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=false,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_tns",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=false,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_tns",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=true,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_tnse",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=true,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_tnse",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=false,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=false,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=true,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=true,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=true,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=true,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=true,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_tnsew",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=true,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_tnsew",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=true,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=true,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=false,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=false,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=false,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=false,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=false,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_btn",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=false,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_btn",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=true,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_btne",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=true,south=false,up=true,west=false": {
+            "model": "iyc:block/lantern_btne",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=false,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_btne",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=false,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_btne",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=false,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_btne",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=false,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_btne",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=true,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_btne",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=true,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_btne",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=true,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_btns",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=true,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_btns",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=false,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_btns",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=false,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_btns",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=true,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_btnse",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=true,south=true,up=true,west=false": {
+            "model": "iyc:block/lantern_btnse",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=false,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=false,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=true,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=true,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=true,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=true,south=false,up=true,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=true,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_btnsew",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=true,south=true,up=true,west=true": {
+            "model": "iyc:block/lantern_btnsew",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=true,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=true,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=false,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=false,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=false,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=false,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_tn",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=false,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_tn",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=false,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_tn",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=true,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_tne",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=true,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_tne",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=false,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_tne",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=false,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_tne",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=false,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_tne",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=false,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_tne",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=true,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_tne",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=true,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_tne",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=true,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_tns",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=true,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_tns",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=false,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_tns",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=false,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_tns",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=true,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_tnse",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=true,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_tnse",
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=false,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=false,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=false,north=true,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=false,north=true,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=true,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=true,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_tnse",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=false,east=true,north=true,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_tnsew",
+            "uvlock": true
+        },
+        "lit=true,down=false,east=true,north=true,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_tnsew",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=true,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=true,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=false,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=false,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=false,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=false,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_btn",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=false,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_btn",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=false,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_btn",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=true,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_btne",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=true,south=false,up=false,west=false": {
+            "model": "iyc:block/lantern_btne",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=false,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_btne",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=false,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_btne",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=false,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_btne",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=false,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_btne",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=true,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_btne",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=true,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_btne",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=true,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_btns",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=true,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_btns",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=false,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_btns",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=false,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_btns",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=true,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_btnse",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=true,south=true,up=false,west=false": {
+            "model": "iyc:block/lantern_btnse",
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=false,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=false,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 90,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=false,north=true,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=false,north=true,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 180,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=true,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=true,south=false,up=false,west=true": {
+            "model": "iyc:block/lantern_btnse",
+            "y": 270,
+            "uvlock": true
+        },
+        "lit=false,down=true,east=true,north=true,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_btnsew",
+            "uvlock": true
+        },
+        "lit=true,down=true,east=true,north=true,south=true,up=false,west=true": {
+            "model": "iyc:block/lantern_btnsew",
+            "uvlock": true
+        }
+    }
+}
