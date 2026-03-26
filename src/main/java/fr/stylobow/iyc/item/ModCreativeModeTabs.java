@@ -254,6 +254,8 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.WATER_EFFECT_GENERATOR);
                         output.accept(ModBlocks.LARGE_SMOKE_EFFECT_GENERATOR);
                         output.accept(ModBlocks.HEART_EFFECT_GENERATOR);
+                        output.accept(ModBlocks.RED_BLOCK_CTF);
+                        output.accept(ModBlocks.BLUE_BLOCK_CTF);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_MATERIALS_TAB = CREATIVE_MODE_TAB.register("iyc_materials_tab",

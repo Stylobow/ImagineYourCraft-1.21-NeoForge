@@ -1008,7 +1008,23 @@ public class ModBlocks {
                 .sound(SoundType.WOOL);
     }
 
+    public static final DeferredBlock<Block> RED_BLOCK_CTF = registerBlock("red_block_ctf",
+            () -> new CtfRedBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK)
+                    .noOcclusion()
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)
+                    .strength(-1.0F, 3600000.0F)
+                    .noLootTable()
+                    .isValidSpawn((state, level, pos, type) -> false)));
 
+    public static final DeferredBlock<Block> BLUE_BLOCK_CTF = registerBlock("blue_block_ctf",
+            () -> new CtfBlueBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK)
+                    .noOcclusion()
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)
+                    .strength(-1.0F, 3600000.0F)
+                    .noLootTable()
+                    .isValidSpawn((state, level, pos, type) -> false)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

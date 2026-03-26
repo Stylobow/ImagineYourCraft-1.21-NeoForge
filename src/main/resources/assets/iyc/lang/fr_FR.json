@@ -262,6 +262,8 @@
   "block.iyc.water_effect_generator": "Bloc à particules d'eau",
   "block.iyc.large_smoke_effect_generator": "Bloc à particules de fumée épaisse",
   "block.iyc.heart_effect_generator": "Bloc à particules de cœur",
+  "block.iyc.red_block_ctf": "Bloc de CTF rouge",
+  "block.iyc.blue_block_ctf": "Bloc de CTF bleu",
   "block.iyc.rod": "Tige",
   "block.iyc.orange_rod": "Tige orange",
   "block.iyc.magenta_rod": "Tige magenta",
