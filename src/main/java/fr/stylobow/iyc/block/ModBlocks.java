@@ -292,6 +292,9 @@ public class ModBlocks {
                     .ignitedByLava())
     );
 
+    public static final DeferredBlock<Block> LOG_STAIRS = registerBlock("log_stairs",
+            () -> new StairBlock(Blocks.OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+
     public static final DeferredBlock<Block> CHERRY_PLANKS = registerBlock("cherry_planks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD)
