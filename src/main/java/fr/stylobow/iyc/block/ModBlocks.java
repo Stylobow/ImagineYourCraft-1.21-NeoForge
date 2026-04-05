@@ -236,6 +236,9 @@ public class ModBlocks {
             )
     );
 
+    public static final DeferredBlock<Block> HOPS_CROP = BLOCKS.register("hops_crop",
+            () -> new HopsCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
+
     private static BlockBehaviour.Properties getLanternProperties() {
         return BlockBehaviour.Properties.of()
                 .strength(2f)

@@ -73,6 +73,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> LIGNITE = ITEMS.register("lignite",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> HOPS_SEEDS = ITEMS.register("hops_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.HOPS_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> HOPS = ITEMS.register("hops",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> STONE_STICK = ITEMS.register("stone_stick",

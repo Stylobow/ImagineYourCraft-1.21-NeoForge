@@ -281,6 +281,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.CHOPPE);
                         output.accept(ModItems.MAILLE);
                         output.accept(ModItems.LIGNITE);
+                        output.accept(ModItems.HOPS_SEEDS);
                         output.accept(ModItems.HOPS);
                         output.accept(ModItems.STONE_STICK);
                         output.accept(ModItems.CAFEINE);
