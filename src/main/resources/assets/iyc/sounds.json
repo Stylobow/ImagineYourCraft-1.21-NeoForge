@@ -198,5 +198,25 @@
         "stream": true
       }
     ]
+  },
+  "record_mauvaise": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.record_mauvaise",
+    "sounds": [
+      {
+        "name": "iyc:record_mauvaise",
+        "stream": true
+      }
+    ]
+  },
+  "record_girl_crafty": {
+    "category": "record",
+    "subtitle": "subtitles.iyc.record_girl_crafty",
+    "sounds": [
+      {
+        "name": "iyc:record_girl_crafty",
+        "stream": true
+      }
+    ]
   }
 }

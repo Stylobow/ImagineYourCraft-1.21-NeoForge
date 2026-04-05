@@ -301,6 +301,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.RECORD_TOUCH);
                         output.accept(ModItems.RECORD_MC_STYLE);
                         output.accept(ModItems.RECORD_BOUGE);
+                        output.accept(ModItems.RECORD_MAUVAISE);
                         output.accept(ModItems.RECORD_SFR);
                         output.accept(ModItems.RECORD_REVENGE);
                         output.accept(ModItems.RECORD_FALLEN_KINGDOM);
@@ -308,6 +309,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.RECORD_GAGAOUTAI);
                         output.accept(ModItems.RECORD_THE_MINER);
                         output.accept(ModItems.RECORD_DONT_MINE_AT_NIGHT);
+                        output.accept(ModItems.RECORD_GIRL_CRAFTY);
                         output.accept(ModItems.SLATE_ITEM);
                         output.accept(ModItems.ADAMANTIUM_FRAGMENT);
                         output.accept(ModItems.ROCK);

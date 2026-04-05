@@ -130,6 +130,11 @@ public class ModItems {
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.THE_MINER_KEY).stacksTo(1).rarity(Rarity.RARE)));
     public static final DeferredItem<Item> RECORD_DONT_MINE_AT_NIGHT = ITEMS.register("record_dont_mine_at_night",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.DONT_MINE_AT_NIGHT_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_MAUVAISE = ITEMS.register("record_mauvaise",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.MAUVAISE_KEY).stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> RECORD_GIRL_CRAFTY = ITEMS.register("record_girl_crafty",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.GIRL_CRAFTY_KEY).stacksTo(1).rarity(Rarity.RARE)));
+
 
     public static final DeferredItem<Item> SAPHIR_SWORD = ITEMS.register("saphir_sword",
             () -> new SwordItem(ModTiers.SAPHIR, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.SAPHIR, 3, -2.4F))));

@@ -56,6 +56,10 @@ public class ModSounds {
     public static final ResourceKey<JukeboxSong> THE_MINER_KEY = createSong("record_the_miner");
     public static final Supplier<SoundEvent> DONT_MINE_AT_NIGHT = registerSoundEvent("record_dont_mine_at_night");
     public static final ResourceKey<JukeboxSong> DONT_MINE_AT_NIGHT_KEY = createSong("record_dont_mine_at_night");
+    public static final Supplier<SoundEvent> MAUVAISE = registerSoundEvent("record_mauvaise");
+    public static final ResourceKey<JukeboxSong> MAUVAISE_KEY = createSong("record_mauvaise");
+    public static final Supplier<SoundEvent> GIRL_CRAFTY = registerSoundEvent("record_girl_crafty");
+    public static final ResourceKey<JukeboxSong> GIRL_CRAFTY_KEY = createSong("record_girl_crafty");
 
     private static ResourceKey<JukeboxSong> createSong(String name) {
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, name));
