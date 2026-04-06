@@ -2,6 +2,8 @@
   "iyc.menu.title": "Paramètres IYC",
   "iyc.menu.open": "Paramètres IYC",
   "iyc.menu.back": "Terminé",
+  "iyc.menu.section.hud": "Interface (HUD)",
+  "iyc.menu.section.cosmetics": "Cosmétiques",
   "iyc.hud.keystrokes": "Afficher les Touches : %s",
   "iyc.hud.position": "Position : %s",
   "iyc.hud.color": "Couleur : %s",
@@ -25,6 +27,8 @@
   "iyc.button.reset_skin": "Réinitialiser le skin",
   "iyc.button.change_cape": "Changer de cape",
   "iyc.button.reset_cape": "Réinitialiser la cape",
+  "iyc.button.change_hat": "Changer de chapeau",
+  "iyc.button.reset_hat": "Réinitialiser le chapeau",
   "iyc.error.format": "Format invalide (%s) !",
   "iyc.error.corrupt": "Fichier image corrompu !",
 

@@ -2,6 +2,8 @@
   "iyc.menu.title": "IYC Settings",
   "iyc.menu.open": "IYC Settings",
   "iyc.menu.back": "Back",
+  "iyc.menu.section.hud": "Interface (HUD)",
+  "iyc.menu.section.cosmetics": "Cosmetics",
   "iyc.hud.keystrokes": "Show Keystrokes: %s",
   "iyc.hud.position": "Position: %s",
   "iyc.hud.color": "Color: %s",
@@ -25,6 +27,8 @@
   "iyc.button.reset_skin": "Reset Skin",
   "iyc.button.change_cape": "Change Cape",
   "iyc.button.reset_cape": "Reset Cape",
+  "iyc.button.change_hat": "Change Hat",
+  "iyc.button.reset_hat": "Reset Hat",
   "iyc.error.format": "Invalid Format (%s)!",
   "iyc.error.corrupt": "Corrupted image file!",
 

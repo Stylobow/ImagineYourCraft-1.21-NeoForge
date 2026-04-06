@@ -9,13 +9,14 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.UUID;
 
-public record SkinSyncPayload(UUID playerId, boolean isCape, byte[] imageData) implements CustomPacketPayload {
+// cosmeticType : 0 = Skin, 1 = Cape, 2 = Hat
+public record SkinSyncPayload(UUID playerId, int cosmeticType, byte[] imageData) implements CustomPacketPayload {
 
     public static final Type<SkinSyncPayload> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath("iyc", "skin_sync"));
 
     public static final StreamCodec<FriendlyByteBuf, SkinSyncPayload> CODEC = StreamCodec.composite(
             UUIDUtil.STREAM_CODEC, SkinSyncPayload::playerId,
-            ByteBufCodecs.BOOL, SkinSyncPayload::isCape,
+            ByteBufCodecs.INT, SkinSyncPayload::cosmeticType,
             ByteBufCodecs.BYTE_ARRAY, SkinSyncPayload::imageData,
             SkinSyncPayload::new
     );

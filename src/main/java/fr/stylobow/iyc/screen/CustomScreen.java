@@ -29,76 +29,60 @@ public class CustomScreen extends Screen {
         this.errorMessage = "";
 
         int centerX = this.width / 2;
-        int startY = 40;
         int btnW = 150;
         int btnH = 20;
 
-        this.addRenderableWidget(Button.builder(
-                        getKeystrokesText(),
-                        (btn) -> {
-                            IYCConfig.data.showKeystrokes = !IYCConfig.data.showKeystrokes;
-                            IYCConfig.save();
-                            btn.setMessage(getKeystrokesText());
-                        })
-                .bounds(centerX - btnW / 2, startY, btnW, btnH)
-                .build());
+        this.addRenderableWidget(Button.builder(getKeystrokesText(), (btn) -> {
+            IYCConfig.data.showKeystrokes = !IYCConfig.data.showKeystrokes;
+            IYCConfig.save();
+            btn.setMessage(getKeystrokesText());
+        }).bounds(centerX - 100, 45, 200, btnH).build());
 
-        this.addRenderableWidget(Button.builder(
-                        getPositionText(),
-                        (btn) -> {
-                            IYCConfig.HudPosition current = IYCConfig.data.keystrokesPosition;
-                            int nextOrdinal = (current.ordinal() + 1) % IYCConfig.HudPosition.values().length;
-                            IYCConfig.data.keystrokesPosition = IYCConfig.HudPosition.values()[nextOrdinal];
-                            IYCConfig.save();
-                            btn.setMessage(getPositionText());
-                        })
-                .bounds(centerX - btnW / 2, startY + 25, btnW, btnH)
-                .build());
+        this.addRenderableWidget(Button.builder(getPositionText(), (btn) -> {
+            IYCConfig.HudPosition current = IYCConfig.data.keystrokesPosition;
+            IYCConfig.data.keystrokesPosition = IYCConfig.HudPosition.values()[(current.ordinal() + 1) % IYCConfig.HudPosition.values().length];
+            IYCConfig.save();
+            btn.setMessage(getPositionText());
+        }).bounds(centerX - 155, 70, btnW, btnH).build());
 
-        this.addRenderableWidget(Button.builder(
-                        getColorText(),
-                        (btn) -> {
-                            IYCConfig.HudColor current = IYCConfig.data.keystrokesColor;
-                            int nextOrdinal = (current.ordinal() + 1) % IYCConfig.HudColor.values().length;
-                            IYCConfig.data.keystrokesColor = IYCConfig.HudColor.values()[nextOrdinal];
-                            IYCConfig.save();
-                            btn.setMessage(getColorText());
-                        })
-                .bounds(centerX - btnW / 2, startY + 50, btnW, btnH)
-                .build());
+        this.addRenderableWidget(Button.builder(getColorText(), (btn) -> {
+            IYCConfig.HudColor current = IYCConfig.data.keystrokesColor;
+            IYCConfig.data.keystrokesColor = IYCConfig.HudColor.values()[(current.ordinal() + 1) % IYCConfig.HudColor.values().length];
+            IYCConfig.save();
+            btn.setMessage(getColorText());
+        }).bounds(centerX + 5, 70, btnW, btnH).build());
 
-        this.addRenderableWidget(Button.builder(Component.translatable("iyc.button.change_skin"), (btn) -> openFileChooser(false))
-                .bounds(centerX - btnW / 2, startY + 75, btnW, btnH).build());
+        this.addRenderableWidget(Button.builder(Component.translatable("iyc.button.change_skin"), (btn) -> openFileChooser(0))
+                .bounds(centerX - 155, 115, btnW, btnH).build());
 
         this.addRenderableWidget(Button.builder(Component.translatable("iyc.button.reset_skin"), (btn) -> fr.stylobow.iyc.client.skin.CustomSkinManager.resetSkin())
-                .bounds(centerX - btnW / 2, startY + 100, btnW, btnH).build());
+                .bounds(centerX + 5, 115, btnW, btnH).build());
 
-        this.addRenderableWidget(Button.builder(Component.translatable("iyc.button.change_cape"), (btn) -> {openFileChooser(true);})
-                .bounds(centerX - btnW / 2, startY + 125, btnW, btnH).build());
+        this.addRenderableWidget(Button.builder(Component.translatable("iyc.button.change_cape"), (btn) -> openFileChooser(1))
+                .bounds(centerX - 155, 140, btnW, btnH).build());
 
         this.addRenderableWidget(Button.builder(Component.translatable("iyc.button.reset_cape"), (btn) -> fr.stylobow.iyc.client.skin.CustomSkinManager.resetCape())
-                .bounds(centerX - btnW / 2, startY + 150, btnW, btnH).build());
+                .bounds(centerX + 5, 140, btnW, btnH).build());
+
+        this.addRenderableWidget(Button.builder(Component.translatable("iyc.button.change_hat"), (btn) -> openFileChooser(2))
+                .bounds(centerX - 155, 165, btnW, btnH).build());
+
+        this.addRenderableWidget(Button.builder(Component.translatable("iyc.button.reset_hat"), (btn) -> fr.stylobow.iyc.client.skin.CustomSkinManager.resetHat())
+                .bounds(centerX + 5, 165, btnW, btnH).build());
 
         this.addRenderableWidget(Button.builder(Component.translatable("iyc.menu.back"), (btn) -> this.onClose())
                 .bounds(centerX - 100, this.height - 29, 200, 20).build());
     }
 
-    private void openFileChooser(boolean isCape) {
+    private void openFileChooser(int cosmeticType) {
         new Thread(() -> {
             try (MemoryStack stack = MemoryStack.stackPush()) {
                 PointerBuffer filters = stack.mallocPointer(1);
                 filters.put(stack.UTF8("*.png"));
                 filters.flip();
 
-                String title = isCape ? "Choose a Cape (.png)" : "Choose a skin (.png)";
-
-                String result = TinyFileDialogs.tinyfd_openFileDialog(
-                        title,
-                        "",
-                        filters,
-                        "Images PNG",
-                        false
-                );
+                String title = cosmeticType == 1 ? "Choose a Cape" : (cosmeticType == 2 ? "Choose a Hat" : "Choose a Skin");
+                String result = TinyFileDialogs.tinyfd_openFileDialog(title, "", filters, "Images PNG", false);
 
                 if (result != null) {
                     try {
@@ -110,94 +94,79 @@ public class CustomScreen extends Screen {
                         int h = bimg.getHeight();
 
                         boolean isValidWidth = (w > 0 && w % 64 == 0);
-                        boolean isValidHeight = isCape ? (h == w / 2) : (h == w || h == w / 2);
+                        boolean isValidHeight = cosmeticType == 1 ? (h == w / 2) : (cosmeticType == 2 || (h == w || h == w / 2));
 
                         if (!isValidWidth || !isValidHeight) {
                             if (this.minecraft != null) {
-                                this.minecraft.execute(() -> this.errorMessage = "Invalid Format (" + w + "x" + h + ") !");
+                                this.minecraft.execute(() -> this.errorMessage = "Format Invalide (" + w + "x" + h + ") !");
                             }
                             return;
                         }
                     } catch (Exception e) {
                         if (this.minecraft != null) {
-                            this.minecraft.execute(() -> this.errorMessage = "Corrupted image file!");
+                            this.minecraft.execute(() -> this.errorMessage = "Fichier image corrompu !");
                         }
                         return;
                     }
 
-                    if (isCape) {
-                        IYCConfig.data.customCapePath = result;
-                    } else {
-                        IYCConfig.data.customSkinPath = result;
-                    }
+                    if (cosmeticType == 1) IYCConfig.data.customCapePath = result;
+                    else if (cosmeticType == 2) IYCConfig.data.customHatPath = result;
+                    else IYCConfig.data.customSkinPath = result;
                     IYCConfig.save();
 
                     if (this.minecraft != null) {
                         this.minecraft.execute(() -> {
                             this.errorMessage = "";
-                            if (isCape) {
-                                fr.stylobow.iyc.client.skin.CustomSkinManager.applyCape();
-                            } else {
-                                fr.stylobow.iyc.client.skin.CustomSkinManager.applySkin();
-                            }
+                            if (cosmeticType == 1) fr.stylobow.iyc.client.skin.CustomSkinManager.applyCape();
+                            else if (cosmeticType == 2) fr.stylobow.iyc.client.skin.CustomSkinManager.applyHat();
+                            else fr.stylobow.iyc.client.skin.CustomSkinManager.applySkin();
                         });
                     }
                 }
-            } catch (Exception ignored) {
-            }
+            } catch (Exception ignored) {}
         }).start();
     }
 
     private Component getKeystrokesText() {
         boolean isOn = IYCConfig.data.showKeystrokes;
-        Component state = Component.literal(isOn ? "ON" : "OFF")
-                .withStyle(isOn ? ChatFormatting.GREEN : ChatFormatting.RED);
+        Component state = Component.literal(isOn ? "ON" : "OFF").withStyle(isOn ? ChatFormatting.GREEN : ChatFormatting.RED);
         return Component.translatable("iyc.hud.keystrokes", state);
     }
 
     private Component getPositionText() {
-        String key = "iyc.position." + IYCConfig.data.keystrokesPosition.name().toLowerCase();
-        return Component.translatable("iyc.hud.position", Component.translatable(key));
+        return Component.translatable("iyc.hud.position", Component.translatable("iyc.position." + IYCConfig.data.keystrokesPosition.name().toLowerCase()));
     }
 
     private Component getColorText() {
-        String colorKey = "iyc.color." + IYCConfig.data.keystrokesColor.name().toLowerCase();
-        return Component.translatable("iyc.hud.color", Component.translatable(colorKey));
+        return Component.translatable("iyc.hud.color", Component.translatable("iyc.color." + IYCConfig.data.keystrokesColor.name().toLowerCase()));
     }
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         this.renderBackground(guiGraphics, mouseX, mouseY, partialTick);
         super.render(guiGraphics, mouseX, mouseY, partialTick);
-        guiGraphics.drawCenteredString(this.font, this.title, this.width / 2, 20, 0xFFFFFF);
 
-        int posX = this.width / 2 + 160;
-        int posY = 150;
+        int centerX = this.width / 2;
+
+        guiGraphics.drawCenteredString(this.font, this.title, centerX, 10, 0xFFFFFF);
+
+        guiGraphics.drawCenteredString(this.font,
+                Component.translatable("iyc.menu.section.hud").withStyle(ChatFormatting.YELLOW),
+                centerX, 30, 0xFFFFFF);
+
+        guiGraphics.drawCenteredString(this.font,
+                Component.translatable("iyc.menu.section.cosmetics").withStyle(ChatFormatting.YELLOW),
+                centerX, 100, 0xFFFFFF);
 
         if (!this.errorMessage.isEmpty()) {
-            guiGraphics.drawCenteredString(this.font, Component.literal(this.errorMessage).withStyle(ChatFormatting.RED), posX, posY - 125, 0xFFFFFF);
+            guiGraphics.drawCenteredString(this.font, Component.literal(this.errorMessage).withStyle(ChatFormatting.RED), centerX, 195, 0xFFFFFF);
         }
 
-        if (this.minecraft != null && this.minecraft.player != null) {
-            int scale = 50;
-            int boxLeft = posX - 50;
-            int boxTop = posY - 110;
-            int boxRight = posX + 50;
-            int boxBottom = posY + 20;
-            float yOffset = 0.0625f;
+        int posX = centerX + 210;
+        int posY = 150;
 
-            InventoryScreen.renderEntityInInventoryFollowsMouse(
-                    guiGraphics,
-                    boxLeft,
-                    boxTop,
-                    boxRight,
-                    boxBottom,
-                    scale,
-                    yOffset,
-                    (float) mouseX,
-                    (float) mouseY,
-                    this.minecraft.player
-            );
+        if (this.minecraft != null && this.minecraft.player != null) {
+            InventoryScreen.renderEntityInInventoryFollowsMouse(guiGraphics, posX - 50, posY - 110, posX + 50, posY + 20, 50, 0.0625f, (float) mouseX, (float) mouseY, this.minecraft.player);
         }
     }
 }

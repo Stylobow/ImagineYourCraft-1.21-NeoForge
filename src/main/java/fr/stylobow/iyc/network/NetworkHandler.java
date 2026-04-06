@@ -21,12 +21,12 @@ public class NetworkHandler {
                     if (context.flow().isServerbound()) {
                         context.enqueueWork(() -> {
                             ServerPlayer sender = (ServerPlayer) context.player();
-                            PacketDistributor.sendToAllPlayers(new SkinSyncPayload(sender.getUUID(), payload.isCape(), payload.imageData()));
+                            PacketDistributor.sendToAllPlayers(new SkinSyncPayload(sender.getUUID(), payload.cosmeticType(), payload.imageData()));
                         });
                     }
                     else {
                         context.enqueueWork(() -> {
-                            fr.stylobow.iyc.client.skin.CustomSkinManager.receiveSkinPacket(payload.playerId(), payload.isCape(), payload.imageData());
+                            fr.stylobow.iyc.client.skin.CustomSkinManager.receiveSkinPacket(payload.playerId(), payload.cosmeticType(), payload.imageData());
                         });
                     }
                 }
