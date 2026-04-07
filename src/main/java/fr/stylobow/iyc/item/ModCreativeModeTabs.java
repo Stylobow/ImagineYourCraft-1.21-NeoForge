@@ -22,9 +22,6 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                     .title(Component.translatable("creative.iyc.blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.IRON_LADDER);
-                        output.accept(ModBlocks.CHERRY_PLANKS);
-                        output.accept(ModBlocks.CHERRY_LOG);
-                        output.accept(ModBlocks.CHERRY_LEAVES);
                         output.accept(ModBlocks.GLOWSTONE_FENCE);
                         output.accept(ModBlocks.LOG_FENCE);
                         output.accept(ModBlocks.STONE_FENCE);
@@ -34,6 +31,9 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.OAK_LOG_SLAB);
                         output.accept(ModBlocks.GLOWSTONE_SLAB);
                         output.accept(ModBlocks.SLATE_SLAB);
+                        output.accept(ModBlocks.CHERRY_PLANKS);
+                        output.accept(ModBlocks.CHERRY_LOG);
+                        output.accept(ModBlocks.CHERRY_LEAVES);
                         output.accept(ModBlocks.OAK_LANTERN);
                         output.accept(ModBlocks.SPRUCE_LANTERN);
                         output.accept(ModBlocks.BIRCH_LANTERN);
@@ -75,6 +75,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.STONE_BRICK_FIRE_CAMP);
                         output.accept(ModBlocks.SANDSTONE_FIRE_CAMP);
                         output.accept(ModBlocks.OAK_REVERSED_PLANKS_STAIRS);
+                        output.accept(ModBlocks.GLASS_SLAB);
                         output.accept(ModBlocks.RUBIS_ORE);
                         output.accept(ModBlocks.TOPAZE_ORE);
                         output.accept(ModBlocks.SAPHIR_ORE);

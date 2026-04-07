@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "iyc:block/glass_slab"
+    },
+    "type=top": {
+      "model": "iyc:block/glass_slab_top"
+    },
+    "type=double": {
+      "model": "iyc:block/glass_slab_double"
+    }
+  }
+}

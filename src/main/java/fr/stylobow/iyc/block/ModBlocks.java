@@ -297,6 +297,8 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
     public static final DeferredBlock<Block> SLATE_SLAB = registerBlock("slate_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SLATE_BLOCK.get())));
+    public static final DeferredBlock<Block> GLASS_SLAB = registerBlock("glass_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
 
     public static final DeferredBlock<Block> LIGNITE_TORCH = BLOCKS.register("lignite_torch",
             () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(ModBlocks.LIGNITE_BLOCK.get()).noCollission().instabreak().lightLevel((state) -> 14)));
