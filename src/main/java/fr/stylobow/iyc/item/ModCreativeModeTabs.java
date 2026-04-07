@@ -153,6 +153,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.WARPED_STEM_SLOPES);
                         output.accept(ModBlocks.GLOWSTONE_PRESSURE_PLATE);
                         output.accept(ModBlocks.CLEAR_GLASS);
+                        output.accept(ModBlocks.IRON_FURNACE);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_DECORATIVE_TAB = CREATIVE_MODE_TAB.register("iyc_decorative_tab",
@@ -161,6 +162,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                     .title(Component.translatable("creative.iyc.decorative"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.BARREL);
+                        output.accept(ModBlocks.FLATWARE);
                         output.accept(ModBlocks.OAK_SHELF);
                         output.accept(ModBlocks.SPRUCE_SHELF);
                         output.accept(ModBlocks.BIRCH_SHELF);

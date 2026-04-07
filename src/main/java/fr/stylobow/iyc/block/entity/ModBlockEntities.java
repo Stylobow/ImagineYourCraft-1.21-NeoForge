@@ -3,6 +3,7 @@ package fr.stylobow.iyc.block.entity;
 import fr.stylobow.iyc.ImagineYourCraft;
 import fr.stylobow.iyc.block.ModBlocks;
 import fr.stylobow.iyc.block.entity.custom.BarrelBlockEntity;
+import fr.stylobow.iyc.client.renderer.IronFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -24,6 +25,9 @@ public class ModBlockEntities {
                     BarrelBlockEntity::new,
                     ModBlocks.BARREL.get()
             ).build(null));
+
+    public static final Supplier<BlockEntityType<IronFurnaceBlockEntity>> IRON_FURNACE_BE = BLOCK_ENTITIES.register("iron_furnace",
+            () -> BlockEntityType.Builder.of(IronFurnaceBlockEntity::new, ModBlocks.IRON_FURNACE.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

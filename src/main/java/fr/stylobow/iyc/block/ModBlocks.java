@@ -515,8 +515,19 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CLEAR_GLASS = registerBlock("clear_glass",
             () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
 
+    public static final DeferredBlock<Block> IRON_FURNACE = registerBlock("iron_furnace",
+            () -> new IronFurnaceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE).strength(4.0F).requiresCorrectToolForDrops()));
+
     public static final DeferredBlock<Block> BARREL = registerBlock("barrel",
             () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL).noOcclusion()));
+
+    public static final DeferredBlock<Block> FLATWARE = registerBlock("flatware",
+            () -> new FlatwareBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CARPET)
+                            .sound(SoundType.GLASS)
+                            .noOcclusion()
+                            .noCollission()
+            ));
 
     public static final DeferredBlock<Block> WHITE_IRON_FENCE = registerBlock("white_iron_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));

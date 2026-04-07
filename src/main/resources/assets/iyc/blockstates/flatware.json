@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "iyc:block/flatware" },
+    "facing=east":  { "model": "iyc:block/flatware", "y": 90 },
+    "facing=south": { "model": "iyc:block/flatware", "y": 180 },
+    "facing=west":  { "model": "iyc:block/flatware", "y": 270 }
+  }
+}
