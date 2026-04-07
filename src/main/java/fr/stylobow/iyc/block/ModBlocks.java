@@ -10,11 +10,13 @@ import fr.stylobow.iyc.block.custom.RodBlock;
 import fr.stylobow.iyc.event.ColorEvents;
 import fr.stylobow.iyc.item.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.ColorRGBA;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -24,9 +26,12 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
+
+import static fr.stylobow.iyc.item.ModItems.ITEMS;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ImagineYourCraft.MOD_ID);
@@ -285,6 +290,15 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
     public static final DeferredBlock<Block> SLATE_SLAB = registerBlock("slate_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SLATE_BLOCK.get())));
+
+    public static final DeferredBlock<Block> LIGNITE_TORCH = BLOCKS.register("lignite_torch",
+            () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(ModBlocks.LIGNITE_BLOCK.get()).noCollission().instabreak().lightLevel((state) -> 14)));
+
+    public static final DeferredBlock<Block> LIGNITE_WALL_TORCH = BLOCKS.register("lignite_torch_wall",
+            () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(ModBlocks.LIGNITE_BLOCK.get()).noCollission().instabreak().lightLevel((state) -> 14).lootFrom(LIGNITE_TORCH)));
+
+    public static final DeferredItem<Item> LIGNITE_TORCH_ITEM = ITEMS.register("lignite_torch",
+            () -> new StandingAndWallBlockItem(LIGNITE_TORCH.get(), LIGNITE_WALL_TORCH.get(), new Item.Properties(), Direction.DOWN));
 
     public static final DeferredBlock<Block> JUMPBOX = registerBlock("jumpbox",
             () -> new JumpBoxBlock(BlockBehaviour.Properties.of()
@@ -1065,7 +1079,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

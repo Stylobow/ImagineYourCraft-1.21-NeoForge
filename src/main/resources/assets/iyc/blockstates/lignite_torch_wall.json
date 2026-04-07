@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "iyc:block/lignite_torch_wall", "y": 270 },
+    "facing=south": { "model": "iyc:block/lignite_torch_wall", "y": 90 },
+    "facing=east":  { "model": "iyc:block/lignite_torch_wall", "y": 0 },
+    "facing=west":  { "model": "iyc:block/lignite_torch_wall", "y": 180 }
+  }
+}
