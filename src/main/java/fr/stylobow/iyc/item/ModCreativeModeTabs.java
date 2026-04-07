@@ -70,6 +70,7 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.BRICKS_FIRE_CAMP);
                         output.accept(ModBlocks.STONE_BRICK_FIRE_CAMP);
                         output.accept(ModBlocks.SANDSTONE_FIRE_CAMP);
+                        output.accept(ModBlocks.OAK_REVERSED_PLANKS_STAIRS);
                         output.accept(ModBlocks.RUBIS_ORE);
                         output.accept(ModBlocks.TOPAZE_ORE);
                         output.accept(ModBlocks.SAPHIR_ORE);

@@ -294,7 +294,8 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)
                     .ignitedByLava())
     );
-
+    public static final DeferredBlock<Block> OAK_REVERSED_PLANKS_STAIRS = registerBlock("oak_reversed_planks_stairs",
+            () -> new StairBlock(Blocks.OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> LOG_STAIRS = registerBlock("log_stairs",
             () -> new StairBlock(Blocks.OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> GLOWSTONE_STAIRS = registerBlock("glowstone_stairs",

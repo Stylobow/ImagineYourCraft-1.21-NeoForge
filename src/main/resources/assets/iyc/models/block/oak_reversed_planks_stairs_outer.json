@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "iyc:block/oak_reversed_planks",
+    "top": "iyc:block/oak_reversed_planks",
+    "side": "iyc:block/oak_reversed_planks"
+  }
+}
