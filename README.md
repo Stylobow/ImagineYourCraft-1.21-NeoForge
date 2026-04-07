@@ -36,4 +36,4 @@ At this time, **no playable version (`.jar`) is available for download.** The mo
 - [ ] Integrating all crafting recipes.
 - [ ] Complete survival compatibility testing.
 
- ![Progress](https://img.shields.io/badge/Estimated_Progress-65%25-brightgreen)
+ ![Progress](https://img.shields.io/badge/Estimated_Progress-70%25-brightgreen)
