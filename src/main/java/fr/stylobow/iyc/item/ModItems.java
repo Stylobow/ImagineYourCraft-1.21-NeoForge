@@ -3,6 +3,7 @@ package fr.stylobow.iyc.item;
 import fr.stylobow.iyc.ImagineYourCraft;
 import fr.stylobow.iyc.block.ModBlocks;
 import fr.stylobow.iyc.item.custom.BaguetteVioletteItem;
+import fr.stylobow.iyc.item.custom.IYCCrossbowItem;
 import fr.stylobow.iyc.item.custom.ItemFoil;
 import fr.stylobow.iyc.item.custom.TournevisItem;
 import fr.stylobow.iyc.sound.ModSounds;
@@ -197,6 +198,11 @@ public class ModItems {
     public static final DeferredItem<Item> ADAMANTIUM_CHESTPLATE = ITEMS.register("adamantium_chestplate", () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40))));
     public static final DeferredItem<Item> ADAMANTIUM_LEGGINGS = ITEMS.register("adamantium_leggings", () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
     public static final DeferredItem<Item> ADAMANTIUM_BOOTS = ITEMS.register("adamantium_boots", () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
+
+    public static final DeferredItem<Item> CROSSBOW = ITEMS.register("crossbow",
+            () -> new IYCCrossbowItem(new Item.Properties().stacksTo(1).durability(500)));
+    public static final DeferredItem<Item> BOLT = ITEMS.register("bolt",
+            () -> new ArrowItem(new Item.Properties()));
 
     public static final DeferredItem<Item> REDBULL = ITEMS.register("redbull",
             () -> new Item(new Item.Properties().stacksTo(1).food(new FoodProperties.Builder()

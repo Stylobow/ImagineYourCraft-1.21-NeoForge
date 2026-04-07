@@ -48,6 +48,7 @@ public class ImagineYourCraft {
 
         ModMenuTypes.MENUS.register(modEventBus);
 
+        ModEntities.ENTITIES.register(modEventBus);
         ModEntities.ENTITY_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);

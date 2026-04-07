@@ -1,14 +1,21 @@
 package fr.stylobow.iyc.event;
 
+import fr.stylobow.iyc.block.entity.ModEntities;
 import fr.stylobow.iyc.client.model.HatModel;
 import fr.stylobow.iyc.client.renderer.layer.HatLayer;
+import fr.stylobow.iyc.entity.BoltEntity;
+import fr.stylobow.iyc.item.ModItems;
 import fr.stylobow.iyc.overlay.KeystrokesOverlay;
+import net.minecraft.client.renderer.entity.ArrowRenderer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CrossbowItem;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 
@@ -36,5 +43,33 @@ public class ModClientEvents {
                 renderer.addLayer(new HatLayer(renderer, event.getEntityModels()));
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onClientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            ItemProperties.register(ModItems.CROSSBOW.get(), ResourceLocation.withDefaultNamespace("pull"), (stack, level, entity, seed) -> {
+                if (entity == null) return 0.0F;
+                return CrossbowItem.isCharged(stack) ? 0.0F : (float)(stack.getUseDuration(entity) - entity.getUseItemRemainingTicks()) / (float)CrossbowItem.getChargeDuration(stack, entity);
+            });
+
+            ItemProperties.register(ModItems.CROSSBOW.get(), ResourceLocation.withDefaultNamespace("pulling"), (stack, level, entity, seed) -> {
+                return entity != null && entity.isUsingItem() && entity.getUseItem() == stack && !CrossbowItem.isCharged(stack) ? 1.0F : 0.0F;
+            });
+
+            ItemProperties.register(ModItems.CROSSBOW.get(), ResourceLocation.withDefaultNamespace("charged"), (stack, level, entity, seed) -> {
+                return entity != null && CrossbowItem.isCharged(stack) ? 1.0F : 0.0F;
+            });
+        });
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(ModEntities.BOLT.get(), context -> new ArrowRenderer<BoltEntity>(context) {
+            @Override
+            public ResourceLocation getTextureLocation(BoltEntity entity) {
+                return ResourceLocation.fromNamespaceAndPath("iyc", "textures/entity/bolt.png");
+            }
+        });
     }
 }

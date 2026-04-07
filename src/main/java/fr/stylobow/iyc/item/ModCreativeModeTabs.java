@@ -533,6 +533,8 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.TOPAZE_CHESTPLATE);
                         output.accept(ModItems.TOPAZE_LEGGINGS);
                         output.accept(ModItems.TOPAZE_BOOTS);
+                        output.accept(ModItems.CROSSBOW);
+                        output.accept(ModItems.BOLT);
                         output.accept(ModItems.ADAMANTIUM_SWORD);
                         output.accept(ModItems.ADAMANTIUM_HELMET);
                         output.accept(ModItems.ADAMANTIUM_CHESTPLATE);
