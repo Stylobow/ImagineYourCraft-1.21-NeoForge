@@ -25,6 +25,10 @@ public class HatLayer extends RenderLayer<AbstractClientPlayer, PlayerModel<Abst
 
     @Override
     public void render(PoseStack poseStack, MultiBufferSource buffer, int packedLight, AbstractClientPlayer player, float limbSwing, float limbSwingAmount, float partialTick, float ageInTicks, float netHeadYaw, float headPitch) {
+        if (!player.getItemBySlot(net.minecraft.world.entity.EquipmentSlot.HEAD).isEmpty()) {
+            return;
+        }
+
         ResourceLocation customHat = CustomSkinManager.getHatTexture(player.getUUID());
 
         if (customHat == null) {
@@ -34,6 +38,7 @@ public class HatLayer extends RenderLayer<AbstractClientPlayer, PlayerModel<Abst
         poseStack.pushPose();
 
         this.getParentModel().getHead().translateAndRotate(poseStack);
+
         poseStack.translate(0.0f, -1.99f, 0.0f);
 
         VertexConsumer vertexConsumer = buffer.getBuffer(RenderType.entityCutoutNoCull(customHat));

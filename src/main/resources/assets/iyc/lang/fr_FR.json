@@ -82,6 +82,16 @@
   "item.iyc.rubis": "Rubis",
   "item.iyc.saphir": "Saphir",
 
+  "item.iyc.obsidian_sword": "Épée en obsidienne",
+  "item.iyc.obsidian_shovel": "Pelle en obsidienne",
+  "item.iyc.obsidian_pickaxe": "Pioche en obsidienne",
+  "item.iyc.obsidian_hoe": "Houe en obsidienne",
+  "item.iyc.obsidian_axe": "Hache en obsidienne",
+  "item.iyc.obsidian_helmet": "Casque en obsidienne",
+  "item.iyc.obsidian_chestplate": "Plastron en obsidienne",
+  "item.iyc.obsidian_leggings": "Jambières en obsidienne",
+  "item.iyc.obsidian_boots": "Bottes en obsidienne",
+
   "item.iyc.saphir_sword": "Épée en saphir",
   "item.iyc.saphir_shovel": "Pelle en saphir",
   "item.iyc.saphir_pickaxe": "Pioche en saphir",
@@ -121,6 +131,16 @@
   "item.iyc.adamantium_chestplate": "Plastron en adamantium",
   "item.iyc.adamantium_leggings": "Jambières en adamantium",
   "item.iyc.adamantium_boots": "Bottes en adamantium",
+
+  "item.iyc.emerald_sword": "Épée en émeraude",
+  "item.iyc.emerald_shovel": "Pelle en émeraude",
+  "item.iyc.emerald_pickaxe": "Pioche en émeraude",
+  "item.iyc.emerald_hoe": "Houe en émeraude",
+  "item.iyc.emerald_axe": "Hache en émeraude",
+  "item.iyc.emerald_helmet": "Casque en émeraude",
+  "item.iyc.emerald_chestplate": "Plastron en émeraude",
+  "item.iyc.emerald_leggings": "Jambières en émeraude",
+  "item.iyc.emerald_boots": "Bottes en émeraude",
 
   "item.iyc.crossbow": "Arbalète",
   "item.iyc.bolt": "Carreau",

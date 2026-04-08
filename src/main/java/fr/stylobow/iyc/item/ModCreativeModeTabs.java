@@ -519,6 +519,11 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_tools_tab"))
                     .title(Component.translatable("creative.iyc.combat"))
                     .displayItems((parameters, output) -> {
+                        output.accept(ModItems.OBSIDIAN_SWORD);
+                        output.accept(ModItems.OBSIDIAN_HELMET);
+                        output.accept(ModItems.OBSIDIAN_CHESTPLATE);
+                        output.accept(ModItems.OBSIDIAN_LEGGINGS);
+                        output.accept(ModItems.OBSIDIAN_BOOTS);
                         output.accept(ModItems.RUBIS_SWORD);
                         output.accept(ModItems.RUBIS_HELMET);
                         output.accept(ModItems.RUBIS_CHESTPLATE);
@@ -541,6 +546,11 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.ADAMANTIUM_CHESTPLATE);
                         output.accept(ModItems.ADAMANTIUM_LEGGINGS);
                         output.accept(ModItems.ADAMANTIUM_BOOTS);
+                        output.accept(ModItems.EMERALD_SWORD);
+                        output.accept(ModItems.EMERALD_HELMET);
+                        output.accept(ModItems.EMERALD_CHESTPLATE);
+                        output.accept(ModItems.EMERALD_LEGGINGS);
+                        output.accept(ModItems.EMERALD_BOOTS);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_TOOLS_TAB = CREATIVE_MODE_TAB.register("iyc_tools_tab",
@@ -548,6 +558,10 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ImagineYourCraft.MOD_ID, "iyc_materials_tab"))
                     .title(Component.translatable("creative.iyc.tools"))
                     .displayItems((parameters, output) -> {
+                        output.accept(ModItems.OBSIDIAN_SHOVEL);
+                        output.accept(ModItems.OBSIDIAN_PICKAXE);
+                        output.accept(ModItems.OBSIDIAN_HOE);
+                        output.accept(ModItems.OBSIDIAN_AXE);
                         output.accept(ModItems.RUBIS_SHOVEL);
                         output.accept(ModItems.RUBIS_PICKAXE);
                         output.accept(ModItems.RUBIS_HOE);
@@ -564,6 +578,10 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModItems.ADAMANTIUM_PICKAXE);
                         output.accept(ModItems.ADAMANTIUM_HOE);
                         output.accept(ModItems.ADAMANTIUM_AXE);
+                        output.accept(ModItems.EMERALD_SHOVEL);
+                        output.accept(ModItems.EMERALD_PICKAXE);
+                        output.accept(ModItems.EMERALD_HOE);
+                        output.accept(ModItems.EMERALD_AXE);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  IYC_FOOD_TAB = CREATIVE_MODE_TAB.register("iyc_food_tab",

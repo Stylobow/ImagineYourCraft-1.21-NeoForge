@@ -27,11 +27,16 @@ public class ModArmorMaterials {
     public static final Holder<ArmorMaterial> RUBIS = register("rubis",
             buildDefense(3, 6, 8, 3), 22, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.5F, 0.0F, () -> Ingredient.of(ModItems.RUBIS.get()));
 
+    public static final Holder<ArmorMaterial> OBSIDIAN = register("obsidian",
+            buildDefense(3, 6, 8, 3), 21, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.65F, 0.02F, () -> Ingredient.of(ModItems.OBSIDIAN_INGOT.get()));
+
     public static final Holder<ArmorMaterial> TOPAZE = register("topaze",
             buildDefense(3, 6, 8, 3), 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.8F, 0.05F, () -> Ingredient.of(ModItems.TOPAZE.get()));
     public static final Holder<ArmorMaterial> ADAMANTIUM = register("adamantium",
             buildDefense(4, 6, 9, 4), 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.5F, 0.2F, () -> Ingredient.of(ModItems.ADAMANTIUM_FRAGMENT.get()));
-    
+    public static final Holder<ArmorMaterial> EMERALD = register("emerald",
+            buildDefense(2, 6, 7, 3), 18, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, () -> Ingredient.of(Items.EMERALD));
+
     private static EnumMap<ArmorItem.Type, Integer> buildDefense(int boots, int leggings, int chestplate, int helmet) {
         EnumMap<ArmorItem.Type, Integer> map = new EnumMap<>(ArmorItem.Type.class);
         map.put(ArmorItem.Type.BOOTS, boots);

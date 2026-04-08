@@ -26,6 +26,14 @@ public enum ModTiers implements Tier {
             () -> Ingredient.of(ModItems.RUBIS.get())
     ),
 
+    OBSIDIAN(
+            1825,
+            8.75F,
+            3.65F,
+            21,
+            () -> Ingredient.of(ModItems.OBSIDIAN_INGOT.get())
+    ),
+
     TOPAZE(
             1900,
             8.9F,
@@ -40,6 +48,14 @@ public enum ModTiers implements Tier {
             4.5F,
             18,
             () -> Ingredient.of(ModItems.ADAMANTIUM_FRAGMENT.get())
+    ),
+
+    EMERALD(
+            850,
+                    7.0F,
+                    2.5F,
+                    18,
+                    () -> Ingredient.of(net.minecraft.world.item.Items.EMERALD)
     );
 
     private final int uses;

@@ -169,6 +169,25 @@ public class ModItems {
     public static final DeferredItem<Item> RUBIS_LEGGINGS = ITEMS.register("rubis_leggings", () -> new ArmorItem(ModArmorMaterials.RUBIS, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(35))));
     public static final DeferredItem<Item> RUBIS_BOOTS = ITEMS.register("rubis_boots", () -> new ArmorItem(ModArmorMaterials.RUBIS, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(35))));
 
+    public static final DeferredItem<Item> OBSIDIAN_SWORD = ITEMS.register("obsidian_sword",
+            () -> new SwordItem(ModTiers.OBSIDIAN, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.OBSIDIAN, 3, -2.4F))));
+    public static final DeferredItem<Item> OBSIDIAN_PICKAXE = ITEMS.register("obsidian_pickaxe",
+            () -> new PickaxeItem(ModTiers.OBSIDIAN, new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.OBSIDIAN, 1, -2.8F))));
+    public static final DeferredItem<Item> OBSIDIAN_AXE = ITEMS.register("obsidian_axe",
+            () -> new AxeItem(ModTiers.OBSIDIAN, new Item.Properties().attributes(AxeItem.createAttributes(ModTiers.OBSIDIAN, 5, -3.0F))));
+    public static final DeferredItem<Item> OBSIDIAN_SHOVEL = ITEMS.register("obsidian_shovel",
+            () -> new ShovelItem(ModTiers.OBSIDIAN, new Item.Properties().attributes(ShovelItem.createAttributes(ModTiers.OBSIDIAN, 1.5F, -3.0F))));
+    public static final DeferredItem<Item> OBSIDIAN_HOE = ITEMS.register("obsidian_hoe",
+            () -> new HoeItem(ModTiers.OBSIDIAN, new Item.Properties().attributes(HoeItem.createAttributes(ModTiers.OBSIDIAN, -3, -1.0F))));
+    public static final DeferredItem<Item> OBSIDIAN_HELMET = ITEMS.register("obsidian_helmet",
+            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(36))));
+    public static final DeferredItem<Item> OBSIDIAN_CHESTPLATE = ITEMS.register("obsidian_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(36))));
+    public static final DeferredItem<Item> OBSIDIAN_LEGGINGS = ITEMS.register("obsidian_leggings",
+            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(36))));
+    public static final DeferredItem<Item> OBSIDIAN_BOOTS = ITEMS.register("obsidian_boots",
+            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(36))));
+
     public static final DeferredItem<Item> TOPAZE_SWORD = ITEMS.register("topaze_sword",
             () -> new SwordItem(ModTiers.TOPAZE, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.TOPAZE, 3, -2.4F))));
     public static final DeferredItem<Item> TOPAZE_PICKAXE = ITEMS.register("topaze_pickaxe",
@@ -198,6 +217,25 @@ public class ModItems {
     public static final DeferredItem<Item> ADAMANTIUM_CHESTPLATE = ITEMS.register("adamantium_chestplate", () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40))));
     public static final DeferredItem<Item> ADAMANTIUM_LEGGINGS = ITEMS.register("adamantium_leggings", () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
     public static final DeferredItem<Item> ADAMANTIUM_BOOTS = ITEMS.register("adamantium_boots", () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
+
+    public static final DeferredItem<Item> EMERALD_SWORD = ITEMS.register("emerald_sword",
+            () -> new SwordItem(ModTiers.EMERALD, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.EMERALD, 3, -2.4F))));
+    public static final DeferredItem<Item> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe",
+            () -> new PickaxeItem(ModTiers.EMERALD, new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.EMERALD, 1, -2.8F))));
+    public static final DeferredItem<Item> EMERALD_AXE = ITEMS.register("emerald_axe",
+            () -> new AxeItem(ModTiers.EMERALD, new Item.Properties().attributes(AxeItem.createAttributes(ModTiers.EMERALD, 5, -3.0F))));
+    public static final DeferredItem<Item> EMERALD_SHOVEL = ITEMS.register("emerald_shovel",
+            () -> new ShovelItem(ModTiers.EMERALD, new Item.Properties().attributes(ShovelItem.createAttributes(ModTiers.EMERALD, 1.5F, -3.0F))));
+    public static final DeferredItem<Item> EMERALD_HOE = ITEMS.register("emerald_hoe",
+            () -> new HoeItem(ModTiers.EMERALD, new Item.Properties().attributes(HoeItem.createAttributes(ModTiers.EMERALD, -3, -1.0F))));
+    public static final DeferredItem<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet",
+            () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(24))));
+    public static final DeferredItem<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(24))));
+    public static final DeferredItem<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings",
+            () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(24))));
+    public static final DeferredItem<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots",
+            () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(24))));
 
     public static final DeferredItem<Item> CROSSBOW = ITEMS.register("crossbow",
             () -> new IYCCrossbowItem(new Item.Properties().stacksTo(1).durability(500)));
