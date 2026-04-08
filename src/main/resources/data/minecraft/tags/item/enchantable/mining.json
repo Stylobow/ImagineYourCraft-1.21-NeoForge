@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "iyc:obsidian_shovel",
+    "iyc:obsidian_pickaxe",
+    "iyc:obsidian_hoe",
+    "iyc:obsidian_axe",
+    "iyc:rubis_shovel",
+    "iyc:rubis_pickaxe",
+    "iyc:rubis_hoe",
+    "iyc:rubis_axe",
+    "iyc:saphir_shovel",
+    "iyc:saphir_pickaxe",
+    "iyc:saphir_hoe",
+    "iyc:saphir_axe",
+    "iyc:topaze_shovel",
+    "iyc:topaze_pickaxe",
+    "iyc:topaze_hoe",
+    "iyc:topaze_axe",
+    "iyc:adamantium_shovel",
+    "iyc:adamantium_pickaxe",
+    "iyc:adamantium_hoe",
+    "iyc:adamantium_axe",
+    "iyc:emerald_shovel",
+    "iyc:emerald_pickaxe",
+    "iyc:emerald_hoe",
+    "iyc:emerald_axe"
+  ]
+}
