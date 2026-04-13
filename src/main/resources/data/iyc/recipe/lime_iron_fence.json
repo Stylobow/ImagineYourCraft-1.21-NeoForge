@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "iyc:iron_fence",
+  "key": {
+    "#": {
+      "item": "iyc:lime_iron_block"
+    },
+    "S": {
+      "item": "iyc:stone_stick"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "result": {
+    "count": 3,
+    "id": "iyc:lime_iron_fence"
+  }
+}

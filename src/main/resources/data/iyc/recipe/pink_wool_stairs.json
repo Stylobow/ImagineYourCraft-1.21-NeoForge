@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "iyc:wool_stairs",
+  "key": {
+    "#": {
+      "item": "minecraft:pink_wool"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "iyc:pink_wool_stairs"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "iyc:colored_lights",
+  "key": {
+    "#": {
+      "item": "minecraft:redstone"
+    },
+    "R": {
+      "item": "iyc:light_blue_redstone_lamp"
+    }
+  },
+  "pattern": [
+    "###",
+    "#R#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "iyc:light_blue_light"
+  }
+}

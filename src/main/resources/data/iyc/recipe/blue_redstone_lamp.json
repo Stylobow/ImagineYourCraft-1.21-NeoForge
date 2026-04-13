@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "iyc:colored_redstone_lamps",
+  "key": {
+    "#": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "D": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "iyc:blue_redstone_lamp"
+  }
+}

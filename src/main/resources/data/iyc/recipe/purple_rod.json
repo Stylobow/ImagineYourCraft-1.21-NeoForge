@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "iyc:rods",
+  "key": {
+    "#": {
+      "item": "iyc:rod"
+    },
+    "D": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "iyc:purple_rod"
+  }
+}

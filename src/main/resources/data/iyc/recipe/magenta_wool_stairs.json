@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "iyc:wool_stairs",
+  "key": {
+    "#": {
+      "item": "minecraft:magenta_wool"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "iyc:magenta_wool_stairs"
+  }
+}

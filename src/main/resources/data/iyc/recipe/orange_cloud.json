@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "iyc:clouds",
+  "key": {
+    "#": {
+      "item": "minecraft:orange_wool"
+    },
+    "S": {
+      "item": "minecraft:snowball"
+    }
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "iyc:orange_cloud"
+  }
+}

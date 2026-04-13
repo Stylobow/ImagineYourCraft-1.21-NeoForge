@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "iyc:colored_iron_blocks",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "D": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "iyc:blue_iron_block"
+  }
+}

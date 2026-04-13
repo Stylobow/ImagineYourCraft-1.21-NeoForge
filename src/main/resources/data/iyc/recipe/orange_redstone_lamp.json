@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "iyc:colored_redstone_lamps",
+  "key": {
+    "#": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "D": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "iyc:orange_redstone_lamp"
+  }
+}
