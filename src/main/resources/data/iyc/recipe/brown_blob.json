@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "iyc:blob",
+  "key": {
+    "X": {
+      "item": "iyc:white_blob"
+    },
+    "S": {
+      "item": "minecraft:brown_dye"
+    }
+  },
+  "pattern": [
+    " X ",
+    "XSX",
+    " X "
+  ],
+  "result": {
+    "count": 4,
+    "id": "iyc:brown_blob"
+  }
+}

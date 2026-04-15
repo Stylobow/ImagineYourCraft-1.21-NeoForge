@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:oak_slab"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    " D ",
+    " T ",
+    " D "
+  ],
+  "result": {
+    "count": 1,
+    "id": "iyc:white_lamp"
+  }
+}

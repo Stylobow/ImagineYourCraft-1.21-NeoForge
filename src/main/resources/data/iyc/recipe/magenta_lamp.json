@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "iyc:lamp",
+  "ingredients": [
+    {
+      "item": "iyc:white_lamp"
+    },
+    {
+      "item": "minecraft:magenta_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "iyc:magenta_lamp"
+  }
+}
