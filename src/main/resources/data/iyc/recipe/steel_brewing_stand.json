@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:blaze_rod"
+    },
+    "X": {
+      "item": "iyc:steel_block"
+    }
+  },
+  "pattern": [
+    " R ",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "iyc:steel_brewing_stand"
+  }
+}

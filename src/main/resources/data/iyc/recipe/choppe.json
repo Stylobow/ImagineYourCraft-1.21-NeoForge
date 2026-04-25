@@ -3,14 +3,16 @@
   "category": "misc",
   "key": {
     "X": {
-      "item": "iyc:rubis_block"
+      "item": "minecraft:glass"
     }
   },
   "pattern": [
-    "X"
+    "X X",
+    "X X",
+    "XXX"
   ],
   "result": {
-    "count": 9,
-    "id": "iyc:rubis"
+    "count": 4,
+    "id": "iyc:choppe"
   }
 }

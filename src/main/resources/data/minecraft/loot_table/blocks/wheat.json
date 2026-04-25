@@ -17,17 +17,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "iyc:hops_crop",
+                  "block": "minecraft:wheat",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "iyc:hops"
+              "name": "minecraft:wheat"
             },
             {
               "type": "minecraft:item",
-              "name": "iyc:hops_seeds"
+              "name": "minecraft:wheat_seeds"
             }
           ]
         }
@@ -49,13 +49,13 @@
               }
             }
           ],
-          "name": "iyc:hops_seeds"
+          "name": "minecraft:wheat_seeds"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "iyc:hops_crop",
+          "block": "minecraft:wheat",
           "properties": {
             "age": "7"
           }
@@ -67,17 +67,17 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "iyc:cafeine"
+          "name": "iyc:cola"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.5
+          "chance": 0.33333334
         },
         {
           "condition": "minecraft:block_state_property",
-          "block": "iyc:hops_crop",
+          "block": "minecraft:wheat",
           "properties": {
             "age": "7"
           }

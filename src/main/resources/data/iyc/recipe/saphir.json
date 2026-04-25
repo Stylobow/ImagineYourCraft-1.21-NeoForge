@@ -1,12 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "saphir",
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "ingredients": [
-    "iyc:saphir_block"
+  "key": {
+    "X": {
+      "item": "iyc:saphir_block"
+    }
+  },
+  "pattern": [
+    "X"
   ],
   "result": {
-    "id": "iyc:saphir",
-    "count": 9
+    "count": 9,
+    "id": "iyc:saphir"
   }
 }

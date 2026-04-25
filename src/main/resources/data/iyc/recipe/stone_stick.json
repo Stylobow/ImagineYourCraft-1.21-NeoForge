@@ -2,15 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "X": {
-      "item": "iyc:rubis_block"
+    "#": {
+      "item": "minecraft:stone"
     }
   },
   "pattern": [
-    "X"
+    "#",
+    "#"
   ],
   "result": {
-    "count": 9,
-    "id": "iyc:rubis"
+    "count": 4,
+    "id": "iyc:stone_stick"
   }
 }

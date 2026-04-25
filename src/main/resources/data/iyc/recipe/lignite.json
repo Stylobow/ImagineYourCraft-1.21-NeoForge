@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "X": {
-      "item": "iyc:rubis_block"
+      "item": "iyc:lignite_block"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 9,
-    "id": "iyc:rubis"
+    "id": "iyc:lignite"
   }
 }
