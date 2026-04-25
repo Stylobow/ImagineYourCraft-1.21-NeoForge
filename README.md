@@ -33,7 +33,7 @@ However, this isn't just a nostalgic copy-paste! This version has been **redesig
 At this time, **no playable version (`.jar`) is available for download.** The mod will only be officially published in its 1.0 (Release) version once all the content is finished and stable. This includes:
 - [X] Adding all planned blocks and items.
 - [ ] Configuring all loot tables.
-- [ ] Integrating all crafting recipes.
+- [X] Integrating all crafting recipes.
 - [ ] Complete survival compatibility testing.
 
- ![Progress](https://img.shields.io/badge/Estimated_Progress-70%25-brightgreen)
+ ![Progress](https://img.shields.io/badge/Estimated_Progress-75%25-brightgreen)
