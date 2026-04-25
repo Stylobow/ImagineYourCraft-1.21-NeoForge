@@ -178,12 +178,12 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> MASSIVE_OBSIDIAN_BLOCK = registerBlock("massive_obsidian_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(5f)
+                    .strength(50f)
                     .explosionResistance(6f)
-                    .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)
                     .mapColor(MapColor.COLOR_GRAY)
-                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE))
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .requiresCorrectToolForDrops())
     );
 
     public static final DeferredBlock<Block> SLATE_BLOCK = registerBlock("slate_block",
@@ -274,7 +274,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).lightLevel(p_152686_ -> 15)));
     public static  final DeferredBlock<Block> IRON_LANTERN = registerBlock("iron_lantern", ()-> new Block(getLanternProperties().mapColor(MapColor.COLOR_LIGHT_GRAY)));
 
-    public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion()));
+    public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> GLOWSTONE_FENCE = registerBlock("glowstone_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
@@ -290,7 +290,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OAK_REVERSED_PLANKS_SLAB = registerBlock("oak_reversed_planks_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> OBSIDIAN_SLAB = registerBlock("obsidian_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> OAK_LOG_SLAB = registerBlock("oak_log_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> GLOWSTONE_SLAB = registerBlock("glowstone_slab",
