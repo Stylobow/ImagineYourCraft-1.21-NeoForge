@@ -1,18 +1,18 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "iyc:blocks/massive_obsidian_block",
   "pools": [
     {
       "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "iyc:massive_obsidian_block"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }

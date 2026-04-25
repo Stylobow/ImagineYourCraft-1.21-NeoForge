@@ -183,7 +183,8 @@ public class ModBlocks {
                     .sound(SoundType.METAL)
                     .mapColor(MapColor.COLOR_GRAY)
                     .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-                    .requiresCorrectToolForDrops())
+                    .requiresCorrectToolForDrops()
+                    .pushReaction(PushReaction.BLOCK))
     );
 
     public static final DeferredBlock<Block> SLATE_BLOCK = registerBlock("slate_block",
@@ -274,7 +275,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).lightLevel(p_152686_ -> 15)));
     public static  final DeferredBlock<Block> IRON_LANTERN = registerBlock("iron_lantern", ()-> new Block(getLanternProperties().mapColor(MapColor.COLOR_LIGHT_GRAY)));
 
-    public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> IRON_LADDER = registerBlock("iron_ladder", () -> new IronLadderBlock(BlockBehaviour.Properties.of().noCollission().strength(2.0F).sound(SoundType.METAL).noOcclusion().requiresCorrectToolForDrops().pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> GLOWSTONE_FENCE = registerBlock("glowstone_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
@@ -290,7 +291,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OAK_REVERSED_PLANKS_SLAB = registerBlock("oak_reversed_planks_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> OBSIDIAN_SLAB = registerBlock("obsidian_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK)));
     public static final DeferredBlock<Block> OAK_LOG_SLAB = registerBlock("oak_log_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> GLOWSTONE_SLAB = registerBlock("glowstone_slab",
@@ -301,10 +302,10 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
 
     public static final DeferredBlock<Block> LIGNITE_TORCH = BLOCKS.register("lignite_torch",
-            () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(ModBlocks.LIGNITE_BLOCK.get()).noCollission().instabreak().lightLevel((state) -> 14)));
+            () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(ModBlocks.LIGNITE_BLOCK.get()).noCollission().instabreak().lightLevel((state) -> 14).pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<Block> LIGNITE_WALL_TORCH = BLOCKS.register("lignite_torch_wall",
-            () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(ModBlocks.LIGNITE_BLOCK.get()).noCollission().instabreak().lightLevel((state) -> 14).lootFrom(LIGNITE_TORCH)));
+            () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(ModBlocks.LIGNITE_BLOCK.get()).noCollission().instabreak().lightLevel((state) -> 14).lootFrom(LIGNITE_TORCH).pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredItem<Item> LIGNITE_TORCH_ITEM = ITEMS.register("lignite_torch",
             () -> new StandingAndWallBlockItem(LIGNITE_TORCH.get(), LIGNITE_WALL_TORCH.get(), new Item.Properties(), Direction.DOWN));
@@ -326,7 +327,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> IRON_STAIRS = registerBlock("iron_stairs",
             () -> new StairBlock(Blocks.IRON_BLOCK.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
     public static final DeferredBlock<Block> OBSIDIAN_STAIRS = registerBlock("obsidian_stairs",
-            () -> new StairBlock(Blocks.OBSIDIAN.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
+            () -> new StairBlock(Blocks.OBSIDIAN.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).pushReaction(PushReaction.BLOCK)));
     public static final DeferredBlock<Block> GLASS_STAIRS = registerBlock("glass_stairs",
             () -> new StairBlock(Blocks.GLASS.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
@@ -512,6 +513,7 @@ public class ModBlocks {
                     BlockSetType.GOLD,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)
                             .noOcclusion()
+                            .pushReaction(PushReaction.DESTROY)
             ));
 
     public static final DeferredBlock<Block> CLEAR_GLASS = registerBlock("clear_glass",
@@ -529,6 +531,7 @@ public class ModBlocks {
                             .sound(SoundType.GLASS)
                             .noOcclusion()
                             .noCollission()
+                            .pushReaction(PushReaction.DESTROY)
             ));
 
     public static final DeferredBlock<Block> WHITE_IRON_FENCE = registerBlock("white_iron_fence",
