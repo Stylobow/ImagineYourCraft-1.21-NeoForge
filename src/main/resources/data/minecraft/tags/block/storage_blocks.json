@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "iyc:saphir_block",
+    "iyc:rubis_block",
+    "iyc:topaze_block",
+    "iyc:adamantium_block",
+    "iyc:steel_block",
+    "iyc:lignite_block",
+    "iyc:massive_obsidian_block",
+    "iyc:slate_block"
+  ]
+}
