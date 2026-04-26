@@ -166,9 +166,7 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.IRON_XYLOPHONE))
     );
     public static final DeferredBlock<Block> STEEL_ORE = registerBlock("steel_ore",
-            () -> new DropExperienceBlock(
-                    UniformInt.of(3, 7),
-                    BlockBehaviour.Properties.of()
+            () -> new Block(BlockBehaviour.Properties.of()
                             .mapColor(MapColor.STONE)
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .requiresCorrectToolForDrops()
@@ -297,7 +295,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> GLOWSTONE_SLAB = registerBlock("glowstone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
     public static final DeferredBlock<Block> SLATE_SLAB = registerBlock("slate_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SLATE_BLOCK.get())));
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.SLATE_BLOCK.get()).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> GLASS_SLAB = registerBlock("glass_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
 
@@ -790,13 +788,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_SHELF = registerBlock("warped_shelf",
             () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> STONE_SHELF = registerBlock("stone_shelf",
-            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> COBBLESTONE_SHELF = registerBlock("cobblestone_shelf",
-            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STONE_BRICK_SHELF = registerBlock("stone_brick_shelf",
-            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_SHELF = registerBlock("deepslate_brick_shelf",
-            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
+            () -> new OakShelfBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> OAK_CHAIR = registerBlock("oak_chair",
             () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
@@ -821,13 +819,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_CHAIR = registerBlock("warped_chair",
             () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> STONE_CHAIR = registerBlock("stone_chair",
-            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> COBBLESTONE_CHAIR = registerBlock("cobblestone_chair",
-            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STONE_BRICK_CHAIR = registerBlock("stone_brick_chair",
-            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_CHAIR = registerBlock("deepslate_brick_chair",
-            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
+            () -> new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> OAK_STOOL = registerBlock("oak_stool",
             () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
@@ -852,13 +850,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_STOOL = registerBlock("warped_stool",
             () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> STONE_STOOL = registerBlock("stone_stool",
-            () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+            () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> COBBLESTONE_STOOL = registerBlock("cobblestone_stool",
-            () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+            () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STONE_BRICK_STOOL = registerBlock("stone_brick_stool",
-            () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+            () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_STOOL = registerBlock("deepslate_brick_stool",
-            () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
+            () -> new StoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> OAK_HIGH_STOOL = registerBlock("oak_high_stool",
             () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
@@ -883,13 +881,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_HIGH_STOOL = registerBlock("warped_high_stool",
             () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> STONE_HIGH_STOOL = registerBlock("stone_high_stool",
-            () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+            () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> COBBLESTONE_HIGH_STOOL = registerBlock("cobblestone_high_stool",
-            () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+            () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STONE_BRICK_HIGH_STOOL = registerBlock("stone_brick_high_stool",
-            () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+            () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_HIGH_STOOL = registerBlock("deepslate_brick_high_stool",
-            () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
+            () -> new HighStoolBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> OAK_BENCH = registerBlock("oak_bench",
             () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
@@ -914,13 +912,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_BENCH = registerBlock("warped_bench",
             () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> STONE_BENCH = registerBlock("stone_bench",
-            () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+            () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> COBBLESTONE_BENCH = registerBlock("cobblestone_bench",
-            () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+            () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STONE_BRICK_BENCH = registerBlock("stone_brick_bench",
-            () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+            () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_BENCH = registerBlock("deepslate_brick_bench",
-            () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
+            () -> new BenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> OAK_TABLE = registerBlock("oak_table",
             () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
@@ -945,13 +943,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_TABLE = registerBlock("warped_table",
             () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> STONE_TABLE = registerBlock("stone_table",
-            () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+            () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> COBBLESTONE_TABLE = registerBlock("cobblestone_table",
-            () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+            () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STONE_BRICK_TABLE = registerBlock("stone_brick_table",
-            () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+            () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_TABLE = registerBlock("deepslate_brick_table",
-            () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
+            () -> new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> OAK_LITTLE_TABLE = registerBlock("oak_little_table",
             () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
@@ -976,13 +974,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_LITTLE_TABLE = registerBlock("warped_little_table",
             () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> STONE_LITTLE_TABLE = registerBlock("stone_little_table",
-            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> COBBLESTONE_LITTLE_TABLE = registerBlock("cobblestone_little_table",
-            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion()));
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STONE_BRICK_LITTLE_TABLE = registerBlock("stone_brick_little_table",
-            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEPSLATE_BRICK_LITTLE_TABLE = registerBlock("deepslate_brick_little_table",
-            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion()));
+            () -> new LittleTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).noOcclusion().requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
             () -> new StairBlock(Blocks.WHITE_WOOL.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
@@ -1021,7 +1019,8 @@ public class ModBlocks {
         return BlockBehaviour.Properties.of()
                 .strength(5.0F)
                 .explosionResistance(6.0F)
-                .sound(SoundType.METAL);
+                .sound(SoundType.METAL)
+                .requiresCorrectToolForDrops();
     }
 
     public static final DeferredBlock<Block> ORANGE_IRON_BLOCK = registerBlock("orange_iron_block", () -> new Block(getIronBlockProperties()));

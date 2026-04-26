@@ -218,5 +218,25 @@
         "stream": true
       }
     ]
+  },
+  "blockparty_scratch": {
+    "category": "player",
+    "subtitle": "iyc.blockparty_scratch",
+    "sounds": [
+      {
+        "name": "iyc:blockparty_scratch",
+        "stream": true
+      }
+    ]
+  },
+  "ahhhhhrrr": {
+    "category": "player",
+    "subtitle": "iyc.ahhhhhrrr",
+    "sounds": [
+      {
+        "name": "iyc:ahhhhhrrr",
+        "stream": true
+      }
+    ]
   }
 }

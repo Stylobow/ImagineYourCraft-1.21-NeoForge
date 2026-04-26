@@ -71,8 +71,8 @@ public static final DeferredRegister<CreativeModeTab>CREATIVE_MODE_TAB =
                         output.accept(ModBlocks.RUBIS_ORE);
                         output.accept(ModBlocks.TOPAZE_ORE);
                         output.accept(ModBlocks.SAPHIR_ORE);
-                        output.accept(ModBlocks.LIGNITE_ORE);
                         output.accept(ModBlocks.STEEL_ORE);
+                        output.accept(ModBlocks.LIGNITE_ORE);
                         output.accept(ModBlocks.SLATE_ORE);
                         output.accept(ModBlocks.ADAMANTIUM_ORE);
                         output.accept(ModBlocks.DEEPSLATE_RUBIS_ORE);
