@@ -2,6 +2,7 @@ package fr.stylobow.iyc.item;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
@@ -55,7 +56,7 @@ public enum ModTiers implements Tier {
                     7.0F,
                     2.5F,
                     18,
-                    () -> Ingredient.of(net.minecraft.world.item.Items.EMERALD)
+                    () -> Ingredient.of(Items.EMERALD)
     );
 
     private final int uses;
