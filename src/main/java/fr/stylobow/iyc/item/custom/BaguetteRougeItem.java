@@ -1,10 +1,7 @@
 package fr.stylobow.iyc.item.custom;
 
 import fr.stylobow.iyc.world.gamerule.ModGameRules;
-import it.unimi.dsi.fastutil.ints.IntList;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -13,22 +10,18 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.FireworkExplosion;
-import net.minecraft.world.item.component.Fireworks;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.*;
 
 import java.util.List;
 
-public class TournevisItem extends Item {
+public class BaguetteRougeItem extends Item {
 
-    public TournevisItem(Properties properties) {
+    public BaguetteRougeItem(Properties properties) {
         super(properties);
     }
 
@@ -42,8 +35,7 @@ public class TournevisItem extends Item {
 
             Vec3 startPos = player.getEyePosition();
             Vec3 lookVec = player.getLookAngle();
-            double maxDistance = 75.0D;
-            Vec3 endPos = startPos.add(lookVec.scale(maxDistance));
+            Vec3 endPos = startPos.add(lookVec.scale(20));
 
             BlockHitResult blockHit = level.clip(new ClipContext(
                     startPos,
@@ -73,26 +65,37 @@ public class TournevisItem extends Item {
             }
 
             double distance = startPos.distanceTo(impactPos);
-            for (double i = 0; i < distance; i += 0.5) {
+            for (double i = 0; i < distance; i += 0.4) {
                 Vec3 particlePos = startPos.add(lookVec.scale(i));
-                serverLevel.sendParticles(ParticleTypes.FIREWORK,
+                serverLevel.sendParticles(ParticleTypes.FLAME,
                         particlePos.x, particlePos.y, particlePos.z,
                         1, 0, 0, 0, 0);
             }
 
-            createFirework(serverLevel, impactPos);
+            double radius = 1.2;
+            for (int i = 0; i < 35; i++) {
+                double offsetX = (level.random.nextDouble() - 0.5) * 2 * radius;
+                double offsetY = (level.random.nextDouble() - 0.5) * 2 * radius;
+                double offsetZ = (level.random.nextDouble() - 0.5) * 2 * radius;
 
-            AABB damageBox = new AABB(impactPos, impactPos).inflate(2.5D);
-            List<LivingEntity> targets = level.getEntitiesOfClass(LivingEntity.class, damageBox);
-
-            for (LivingEntity target : targets) {
-                target.hurt(level.damageSources().fireworks(null, player), 7.5f);
+                serverLevel.sendParticles(ParticleTypes.FLAME,
+                        impactPos.x + offsetX, impactPos.y + offsetY, impactPos.z + offsetZ,
+                        1, 0, 0, 0, 0);
             }
 
-            level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                    SoundEvents.FIREWORK_ROCKET_LAUNCH, SoundSource.PLAYERS, 1.0f, 1.0f);
+            AABB effectBox = new AABB(impactPos, impactPos).inflate(1.5D);
+            List<LivingEntity> targets = level.getEntitiesOfClass(LivingEntity.class, effectBox);
 
-            player.getCooldowns().addCooldown(this, 30);
+            for (LivingEntity target : targets) {
+                if (target == player) continue;
+
+                target.igniteForSeconds(5);
+            }
+
+            level.playSound(null, impactPos.x, impactPos.y, impactPos.z,
+                    SoundEvents.BLAZE_AMBIENT, SoundSource.PLAYERS, 1.0f, 1.0f);
+
+            player.getCooldowns().addCooldown(this, 80);
 
             ItemStack stack = player.getItemInHand(hand);
             if (player instanceof ServerPlayer serverPlayer) {
@@ -103,25 +106,5 @@ public class TournevisItem extends Item {
         }
 
         return InteractionResultHolder.success(player.getItemInHand(hand));
-    }
-
-    private void createFirework(Level level, Vec3 pos) {
-        ItemStack rocketStack = new ItemStack(Items.FIREWORK_ROCKET);
-
-        FireworkExplosion explosion = new FireworkExplosion(
-                FireworkExplosion.Shape.SMALL_BALL,
-                IntList.of(0x00FF00),
-                IntList.of(0x00AA00),
-                false,
-                false
-        );
-
-        Fireworks fireworksData = new Fireworks(0, List.of(explosion));
-        rocketStack.set(DataComponents.FIREWORKS, fireworksData);
-
-        FireworkRocketEntity rocketEntity = new FireworkRocketEntity(level, pos.x, pos.y, pos.z, rocketStack);
-        level.addFreshEntity(rocketEntity);
-        level.broadcastEntityEvent(rocketEntity, (byte) 17);
-        rocketEntity.discard();
     }
 }

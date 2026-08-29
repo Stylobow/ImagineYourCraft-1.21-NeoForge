@@ -1,8 +1,11 @@
 package fr.stylobow.iyc.item.custom;
 
+import fr.stylobow.iyc.world.gamerule.ModGameRules;
+import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -21,8 +24,6 @@ import net.minecraft.world.item.component.Fireworks;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.*;
-import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
-import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 
 import java.util.List;
 
@@ -34,6 +35,10 @@ public class BaguetteVioletteItem extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        if (!level.getGameRules().getBoolean(ModGameRules.ALLOW_SPECIAL_ITEMS)) {
+            return InteractionResultHolder.fail(player.getItemInHand(hand));
+        }
+
         if (!level.isClientSide && level instanceof ServerLevel serverLevel) {
 
             Vec3 startPos = player.getEyePosition();
@@ -75,9 +80,12 @@ public class BaguetteVioletteItem extends Item {
                         1, 0, 0, 0, 0);
             }
 
+            level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.FIREWORK_ROCKET_LAUNCH, SoundSource.PLAYERS, 1.0f, 1.0f);
+
             createFirework(serverLevel, impactPos);
 
-            AABB effectBox = new AABB(impactPos, impactPos).inflate(5);
+            AABB effectBox = new AABB(impactPos, impactPos).inflate(4);
             List<LivingEntity> targets = level.getEntitiesOfClass(LivingEntity.class, effectBox);
 
             for (LivingEntity target : targets) {
@@ -98,9 +106,6 @@ public class BaguetteVioletteItem extends Item {
                 }
             }
 
-            level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                    SoundEvents.FIREWORK_ROCKET_LARGE_BLAST, SoundSource.PLAYERS, 1.0f, 1.0f);
-
             player.getCooldowns().addCooldown(this, 120);
 
             ItemStack stack = player.getItemInHand(hand);
@@ -117,9 +122,14 @@ public class BaguetteVioletteItem extends Item {
     private void createFirework(Level level, Vec3 pos) {
         ItemStack rocketStack = new ItemStack(Items.FIREWORK_ROCKET);
 
+        IntList colors = new IntArrayList(new int[]{
+                0xB51880,
+                0x000000,
+        });
+
         FireworkExplosion explosion = new FireworkExplosion(
-                FireworkExplosion.Shape.LARGE_BALL,
-                IntList.of(0xA020F0),
+                FireworkExplosion.Shape.SMALL_BALL,
+                colors,
                 IntList.of(),
                 true,
                 false
@@ -129,6 +139,9 @@ public class BaguetteVioletteItem extends Item {
         rocketStack.set(DataComponents.FIREWORKS, fireworksData);
 
         FireworkRocketEntity rocketEntity = new FireworkRocketEntity(level, pos.x, pos.y, pos.z, rocketStack);
+        rocketEntity.setDeltaMovement(Vec3.ZERO);
+        rocketEntity.setNoGravity(true);
+
         level.addFreshEntity(rocketEntity);
         level.broadcastEntityEvent(rocketEntity, (byte) 17);
         rocketEntity.discard();

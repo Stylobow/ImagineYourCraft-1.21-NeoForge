@@ -1,17 +1,18 @@
 package fr.stylobow.iyc.item.custom;
 
 import fr.stylobow.iyc.world.gamerule.ModGameRules;
+import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
@@ -26,9 +27,9 @@ import net.minecraft.world.phys.*;
 
 import java.util.List;
 
-public class TournevisItem extends Item {
+public class BaguetteVerteItem extends Item {
 
-    public TournevisItem(Properties properties) {
+    public BaguetteVerteItem(Properties properties) {
         super(properties);
     }
 
@@ -42,8 +43,7 @@ public class TournevisItem extends Item {
 
             Vec3 startPos = player.getEyePosition();
             Vec3 lookVec = player.getLookAngle();
-            double maxDistance = 75.0D;
-            Vec3 endPos = startPos.add(lookVec.scale(maxDistance));
+            Vec3 endPos = startPos.add(lookVec.scale(35));
 
             BlockHitResult blockHit = level.clip(new ClipContext(
                     startPos,
@@ -80,24 +80,27 @@ public class TournevisItem extends Item {
                         1, 0, 0, 0, 0);
             }
 
-            createFirework(serverLevel, impactPos);
-
-            AABB damageBox = new AABB(impactPos, impactPos).inflate(2.5D);
-            List<LivingEntity> targets = level.getEntitiesOfClass(LivingEntity.class, damageBox);
-
-            for (LivingEntity target : targets) {
-                target.hurt(level.damageSources().fireworks(null, player), 7.5f);
-            }
-
             level.playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.FIREWORK_ROCKET_LAUNCH, SoundSource.PLAYERS, 1.0f, 1.0f);
 
-            player.getCooldowns().addCooldown(this, 30);
+            createFirework(serverLevel, impactPos);
+
+            AABB effectBox = new AABB(impactPos, impactPos).inflate(4);
+            List<Player> targetPlayers = level.getEntitiesOfClass(Player.class, effectBox);
+
+            for (Player targetPlayer : targetPlayers) {
+                if (player.getTeam() != null && targetPlayer.isAlliedTo(player)) {
+                    targetPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 140, 3));
+                    targetPlayer.heal(8.0F);
+                }
+            }
+
+            player.getCooldowns().addCooldown(this, 250);
 
             ItemStack stack = player.getItemInHand(hand);
             if (player instanceof ServerPlayer serverPlayer) {
                 stack.hurtAndBreak(1, serverLevel, serverPlayer,
-                        item -> player.onEquippedItemBroken(item, LivingEntity.getSlotForHand(hand))
+                        item -> player.onEquippedItemBroken(item, Player.getSlotForHand(hand))
                 );
             }
         }
@@ -108,11 +111,16 @@ public class TournevisItem extends Item {
     private void createFirework(Level level, Vec3 pos) {
         ItemStack rocketStack = new ItemStack(Items.FIREWORK_ROCKET);
 
+        IntList colors = new IntArrayList(new int[]{
+                0x009A00,
+                0x00CD00,
+        });
+
         FireworkExplosion explosion = new FireworkExplosion(
                 FireworkExplosion.Shape.SMALL_BALL,
-                IntList.of(0x00FF00),
-                IntList.of(0x00AA00),
-                false,
+                colors,
+                IntList.of(),
+                true,
                 false
         );
 
@@ -120,6 +128,9 @@ public class TournevisItem extends Item {
         rocketStack.set(DataComponents.FIREWORKS, fireworksData);
 
         FireworkRocketEntity rocketEntity = new FireworkRocketEntity(level, pos.x, pos.y, pos.z, rocketStack);
+        rocketEntity.setDeltaMovement(Vec3.ZERO);
+        rocketEntity.setNoGravity(true);
+
         level.addFreshEntity(rocketEntity);
         level.broadcastEntityEvent(rocketEntity, (byte) 17);
         rocketEntity.discard();

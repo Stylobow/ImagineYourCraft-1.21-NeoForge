@@ -1,7 +1,6 @@
 package fr.stylobow.iyc.client;
 
 import fr.stylobow.iyc.ImagineYourCraft;
-import fr.stylobow.iyc.block.entity.ModBlockEntities;
 import fr.stylobow.iyc.block.entity.ModEntities;
 import fr.stylobow.iyc.client.model.HiddenDoorBakedModel;
 import fr.stylobow.iyc.client.renderer.BombeRenderer;

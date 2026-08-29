@@ -30,20 +30,20 @@ public class ModItems {
     public static final DeferredItem<Item> TOURNEVIS = ITEMS.register("tournevis",
             () -> new TournevisItem(new Item.Properties().stacksTo(1).durability(2000)));
     public static final DeferredItem<Item> L118A = ITEMS.register("l118a",
-            () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
+            () -> new L118AItem(new Item.Properties().stacksTo(1).durability(2000)));
     public static final DeferredItem<Item> SW1911 = ITEMS.register("sw1911",
             () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
 
     public static final DeferredItem<Item> BAGUETTE_BLEUE = ITEMS.register("baguette_bleue",
-            () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
+            () -> new BaguetteBleueItem(new Item.Properties().stacksTo(1).durability(2000)));
     public static final DeferredItem<Item> BAGUETTE_JAUNE = ITEMS.register("baguette_jaune",
-            () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
+            () -> new BaguetteJauneItem(new Item.Properties().stacksTo(1).durability(2000)));
     public static final DeferredItem<Item> BAGUETTE_ORANGE = ITEMS.register("baguette_orange",
-            () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
+            () -> new BaguetteOrangeItem(new Item.Properties().stacksTo(1).durability(2000)));
     public static final DeferredItem<Item> BAGUETTE_ROUGE = ITEMS.register("baguette_rouge",
-            () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
+            () -> new BaguetteRougeItem(new Item.Properties().stacksTo(1).durability(2000)));
     public static final DeferredItem<Item> BAGUETTE_VERTE = ITEMS.register("baguette_verte",
-            () -> new Item(new Item.Properties().stacksTo(1).durability(2000)));
+            () -> new BaguetteVerteItem(new Item.Properties().stacksTo(1).durability(2000)));
     public static final DeferredItem<Item> BAGUETTE_VIOLETTE = ITEMS.register("baguette_violette",
             () -> new BaguetteVioletteItem(new Item.Properties().stacksTo(1).durability(2000)));
 

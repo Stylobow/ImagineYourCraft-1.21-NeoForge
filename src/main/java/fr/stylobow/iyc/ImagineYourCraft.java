@@ -18,6 +18,7 @@ import fr.stylobow.iyc.network.SyncTardisStatusPacket;
 import fr.stylobow.iyc.network.ToggleTardisPacket;
 import fr.stylobow.iyc.screen.ModMenuTypes;
 import fr.stylobow.iyc.sound.ModSounds;
+import fr.stylobow.iyc.world.gamerule.ModGameRules;
 import fr.stylobow.iyc.worldgen.feature.ModFeatures;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FireBlock;
@@ -80,6 +81,7 @@ public class ImagineYourCraft {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
+        ModGameRules.register();
         event.enqueueWork(() -> {
             FireBlock fireblock = (FireBlock) Blocks.FIRE;
             fireblock.setFlammable(ModBlocks.OAK_REVERSED_PLANKS_SLAB.get(), 5, 20);
